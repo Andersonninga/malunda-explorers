@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malunda Explorers — Authentic Tanzania Safari Experiences & Tours</title>
+    <meta name="description" content="Malunda Explorers creates authentic, personalized and thoughtfully designed Tanzania safari experiences across Serengeti, Ngorongoro, Tarangire, and Zanzibar.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<!-- Top Bar -->
+<div class="site-topbar">
+    <div class="container">
+        <div class="topbar-info">
+            <a href="tel:+255784567890"><span>📞</span> +255 784 567 890</a>
+            <a href="https://wa.me/+255784567890?text=Hello%20Malunda%20Explorers,%20I%20am%20inquiring%20about%20a%20safari." target="_blank" rel="noopener"><span>💬</span> WhatsApp Direct</a>
+            <a href="mailto:info@malundaexplorers.com"><span>✉️</span> info@malundaexplorers.com</a>
+        </div>
+        <div class="topbar-tagline">“Explore the Wild. Experience More. Create Memories.”</div>
+    </div>
+</div>
+
+<!-- Main Sticky Header -->
+<header class="site-header">
+    <div class="container">
+        <div class="header-inner">
+            <a href="/" class="site-logo">
+                <img src="/images/logo.png" alt="Malunda Explorers" class="brand-logo-img">
+            </a>
+            <nav class="site-nav" id="siteNav">
+                <ul class="nav-links">
+                    <li><a href="/" class="">Home</a></li>
+                    <li><a href="/destinations/" class="">Destinations</a></li>
+                    <li><a href="/safaris/" class="">Safaris</a></li>
+                    <li><a href="/safari-experiences" class="">Experiences</a></li>
+                    <li><a href="/about" class="">About Us</a></li>
+                    <li><a href="/gallery/" class="">Gallery</a></li>
+                    <li><a href="/contact/" class="">Contact</a></li>
+                    <li><a href="/customer" class="active" style="color:var(--color-accent); font-weight:700;">Find My Booking</a></li>
+                    <li><a href="/admin" style="color:#555;" title="Administration Portal">⚙️ Staff Admin</a></li>
+                </ul>
+            </nav>
+            <div class="header-cta">
+                <a href="/booking/" class="btn btn-primary">Book Your Safari</a>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">☰</button>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="cust-dashboard-wrap">
+    <div class="container" style="max-width: 960px;">
+        <div style="text-align: center; margin-bottom: 2.5rem;">
+            <span class="badge" style="background: var(--color-accent); color: #fff; margin-bottom: 0.8rem;">CUSTOMER PORTAL</span>
+            <h1>Find & Manage Your Booking</h1>
+            <p>Access your official reservation voucher, daily safari itinerary, payment receipts, balance settlement, and modification requests.</p>
+        </div>
+
+        <!-- Lookup Form -->
+        <div class="cust-card" id="lookupFormCard">
+            <h3 style="margin-bottom: 1rem;">Enter Reservation Details</h3>
+            <form id="bookingLookupForm" onsubmit="event.preventDefault(); handleLookupSubmit();">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="lookupRef">Booking Reference Number *</label>
+                        <input type="text" id="lookupRef" class="form-control" placeholder="e.g. ME-2026-3759" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lookupEmail">Lead Traveler Email Address *</label>
+                        <input type="email" id="lookupEmail" class="form-control" placeholder="e.g. awright@example.com" required>
+                    </div>
+                </div>
+                <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap: 1rem; margin-top: 1rem;">
+                    <div style="font-size:0.85rem; color:#666;">🔒 Authorized secure access only. Reference and email must match.</div>
+                    <button type="submit" class="btn btn-primary" id="btnLookup">Access My Reservation →</button>
+                </div>
+            </form>
+            <div id="lookupErrorAlert" style="display:none; margin-top: 1rem; padding: 1rem; background: #fdf3f2; border: 1px solid #f5c2c7; border-radius: 8px; color: #842029;"></div>
+        </div>
+
+        <!-- Dashboard Result Display (Hidden initially) -->
+        <div id="bookingResultCard" style="display:none;">
+            <div class="cust-card">
+                <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap: 1rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem; margin-bottom: 1.5rem;">
+                    <div>
+                        <span style="font-size: 0.8rem; text-transform:uppercase; color:#666; font-weight:700;">Reservation Reference</span>
+                        <h2 id="dispBookingRef" style="color: var(--color-primary); font-size: 2rem; margin: 0.2rem 0;">ME-2026-0000</h2>
+                        <div id="dispCreatedAt" style="font-size: 0.85rem; color: #777;">Booked on October 7, 2026</div>
+                    </div>
+                    <div style="text-align: right;">
+                        <span id="dispStatusBadge" class="badge" style="background: #137333; color:#fff; font-size: 0.95rem; padding: 0.4rem 1rem;">Confirmed</span>
+                        <div id="dispPaymentBadge" style="margin-top: 0.5rem; font-weight: 700; color: #1a73e8; font-size: 0.9rem;">Deposit Paid</div>
+                    </div>
+                </div>
+
+                <!-- Visual Progress Timeline -->
+                <div style="font-size: 0.85rem; font-weight:700; text-transform:uppercase; color:#666;">Safari Status Timeline</div>
+                <div class="timeline-track">
+                    <div class="timeline-step completed">
+                        <div class="timeline-dot">✓</div>
+                        <div class="timeline-title">Request Received</div>
+                    </div>
+                    <div class="timeline-step completed">
+                        <div class="timeline-dot">✓</div>
+                        <div class="timeline-title">Dates Reserved</div>
+                    </div>
+                    <div class="timeline-step active" id="stepDeposit">
+                        <div class="timeline-dot">3</div>
+                        <div class="timeline-title">Deposit Guaranteed</div>
+                    </div>
+                    <div class="timeline-step" id="stepDeparture">
+                        <div class="timeline-dot">4</div>
+                        <div class="timeline-title">Safari Departure</div>
+                    </div>
+                </div>
+
+                <!-- Detailed Information Grid -->
+                <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; background: var(--color-sand-light); padding: 1.5rem; border-radius: 12px; margin: 2rem 0;">
+                    <div>
+                        <span style="font-size: 0.78rem; text-transform:uppercase; color:#666; font-weight:700;">Safari Package</span>
+                        <div id="dispSafariTitle" style="font-weight: 700; color: var(--color-primary-dark); font-size: 1.05rem;">-</div>
+                    </div>
+                    <div>
+                        <span style="font-size: 0.78rem; text-transform:uppercase; color:#666; font-weight:700;">Departure Date</span>
+                        <div id="dispTravelDate" style="font-weight: 700; color: var(--color-primary-dark); font-size: 1.05rem;">-</div>
+                    </div>
+                    <div>
+                        <span style="font-size: 0.78rem; text-transform:uppercase; color:#666; font-weight:700;">Party Size</span>
+                        <div id="dispPartySize" style="font-weight: 700; color: var(--color-primary-dark); font-size: 1.05rem;">-</div>
+                    </div>
+                    <div>
+                        <span style="font-size: 0.78rem; text-transform:uppercase; color:#666; font-weight:700;">Accommodation</span>
+                        <div id="dispAccommTier" style="font-weight: 700; color: var(--color-primary-dark); font-size: 1.05rem;">-</div>
+                    </div>
+                </div>
+
+                <!-- Financial Balance Box -->
+                <div style="border: 2px solid var(--color-border); border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem;">
+                    <h3 style="font-size: 1.2rem; margin-bottom: 1rem;">Payment & Balance Summary</h3>
+                    <div style="display:flex; justify-content:space-between; margin-bottom: 0.6rem; font-size: 0.95rem;">
+                        <span>Total Safari Investment:</span>
+                        <strong id="dispTotalInvestment">$0</strong>
+                    </div>
+                    <div style="display:flex; justify-content:space-between; margin-bottom: 0.6rem; font-size: 0.95rem; color: #137333;">
+                        <span>Deposit Paid:</span>
+                        <strong id="dispDepositPaid">$0</strong>
+                    </div>
+                    <div style="display:flex; justify-content:space-between; font-size: 1.2rem; font-weight: 800; border-top: 1px solid #ddd; padding-top: 0.8rem; color: var(--color-primary-dark);">
+                        <span>Remaining Balance Due:</span>
+                        <span id="dispRemainingBalance" style="color: var(--color-accent); font-family: var(--font-heading);">$0</span>
+                    </div>
+                </div>
+
+                <!-- Interactive Customer Actions -->
+                <div style="display:flex; gap: 1rem; flex-wrap:wrap; justify-content:center;">
+                    <button type="button" class="btn btn-outline-dark" onclick="window.print();">🖨️ Print Official Voucher</button>
+                    <button type="button" class="btn btn-primary" id="btnPayBalance" onclick="openBalancePaymentModal()">💳 Pay Remaining Balance</button>
+                    <button type="button" class="btn btn-outline-dark" onclick="openModifyDatesModal()">📅 Request Date Change</button>
+                    <button type="button" class="btn btn-outline-dark" onclick="openCancelModal()">✕ Request Cancellation</button>
+                    <a id="btnCustWhatsApp" href="https://wa.me/255784567890" target="_blank" rel="noopener" class="btn btn-primary">💬 Concierge WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Balance Payment -->
+<div id="modalBalancePayment" class="modal-overlay">
+    <div class="modal-content">
+        <button type="button" class="modal-close" onclick="closeModal('modalBalancePayment')">✕</button>
+        <h2 style="color: var(--color-primary-dark); margin-bottom: 0.5rem;">Settle Outstanding Safari Balance</h2>
+        <p style="font-size: 0.95rem; color: #666; margin-bottom: 1.5rem;">Secure balance settlement via integrated PCI sandbox gateway.</p>
+        <div style="background: var(--color-sand-light); padding: 1.2rem; border-radius: 8px; margin-bottom: 1.5rem;">
+            <div style="font-size: 0.9rem;">Outstanding Balance: <strong id="modalBalanceAmt" style="font-size: 1.4rem; color: var(--color-accent); font-family: var(--font-heading);">$0</strong></div>
+        </div>
+        <div class="form-group">
+            <label>Payment Method</label>
+            <select id="balancePayMethod" class="form-control">
+                <option value="card">Credit / Debit Card (Instant Sandbox)</option>
+                <option value="bank_transfer">Direct Bank Wire (CRDB Arusha)</option>
+                <option value="mobile_money">Mobile Money (M-Pesa / Tigo)</option>
+            </select>
+        </div>
+        <div style="margin-top: 1.5rem; display:flex; justify-content:flex-end; gap: 0.8rem;">
+            <button type="button" class="btn btn-outline-dark" onclick="closeModal('modalBalancePayment')">Cancel</button>
+            <button type="button" class="btn btn-primary" onclick="submitBalancePayment()">Confirm & Process Payment</button>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Date Modification -->
+<div id="modalModifyDates" class="modal-overlay">
+    <div class="modal-content">
+        <button type="button" class="modal-close" onclick="closeModal('modalModifyDates')">✕</button>
+        <h2 style="color: var(--color-primary-dark); margin-bottom: 0.5rem;">Request Travel Date Modification</h2>
+        <p style="font-size: 0.95rem; color: #666; margin-bottom: 1.5rem;">We accommodate itinerary date changes subject to lodge and permit availability.</p>
+        <div class="form-group">
+            <label for="modNewDate">Desired New Departure Date *</label>
+            <input type="date" id="modNewDate" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="modNotes">Reason / Notes for Modification</label>
+            <textarea id="modNotes" class="form-control" placeholder="Tell us about your flight change or new schedule..."></textarea>
+        </div>
+        <div style="margin-top: 1.5rem; display:flex; justify-content:flex-end; gap: 0.8rem;">
+            <button type="button" class="btn btn-outline-dark" onclick="closeModal('modalModifyDates')">Cancel</button>
+            <button type="button" class="btn btn-primary" onclick="submitModificationRequest()">Submit Modification</button>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Cancellation -->
+<div id="modalCancel" class="modal-overlay">
+    <div class="modal-content">
+        <button type="button" class="modal-close" onclick="closeModal('modalCancel')">✕</button>
+        <h2 style="color: #c5221f; margin-bottom: 0.5rem;">Request Safari Cancellation</h2>
+        <p style="font-size: 0.95rem; color: #666; margin-bottom: 1.5rem;">Cancellations are processed according to our official Booking Terms & Conditions.</p>
+        <div class="form-group">
+            <label for="cancelReason">Reason for Cancellation</label>
+            <textarea id="cancelReason" class="form-control" placeholder="Please let us know why you need to cancel..." required></textarea>
+        </div>
+        <div style="margin-top: 1.5rem; display:flex; justify-content:flex-end; gap: 0.8rem;">
+            <button type="button" class="btn btn-outline-dark" onclick="closeModal('modalCancel')">Keep Reservation</button>
+            <button type="button" class="btn btn-primary" style="background:#c5221f;" onclick="submitCancellationRequest()">Confirm Cancellation Request</button>
+        </div>
+    </div>
+</div>
+
+<script>
+let CURRENT_LOOKUP_BOOKING = null;
+
+// Auto-lookup if query params provided
+window.addEventListener('DOMContentLoaded', () => {
+    const params = new URLSearchParams(window.location.search);
+    const ref = params.get('ref');
+    const email = params.get('email');
+    if (ref && email) {
+        document.getElementById('lookupRef').value = ref;
+        document.getElementById('lookupEmail').value = email;
+        handleLookupSubmit();
+    }
+});
+
+async function handleLookupSubmit() {
+    const ref = document.getElementById('lookupRef').value.trim();
+    const email = document.getElementById('lookupEmail').value.trim();
+    const alertBox = document.getElementById('lookupErrorAlert');
+    alertBox.style.display = 'none';
+
+    try {
+        const res = await fetch('/api/bookings/lookup', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ booking_ref: ref, email })
+        });
+        const data = await res.json();
+        if (!data.success) {
+            alertBox.textContent = data.error || 'Failed to locate reservation.';
+            alertBox.style.display = 'block';
+            return;
+        }
+
+        CURRENT_LOOKUP_BOOKING = data.booking;
+        displayBookingDashboard(data.booking);
+    } catch (err) {
+        alertBox.textContent = 'Network error verifying reservation.';
+        alertBox.style.display = 'block';
+    }
+}
+
+function displayBookingDashboard(b) {
+    document.getElementById('dispBookingRef').textContent = b.booking_ref;
+    document.getElementById('dispCreatedAt').textContent = 'Booked on ' + new Date(b.created_at).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+    document.getElementById('dispStatusBadge').textContent = b.booking_status;
+    document.getElementById('dispPaymentBadge').textContent = b.payment?.payment_status || 'Unpaid';
+    document.getElementById('dispSafariTitle').textContent = b.safari_name;
+    document.getElementById('dispTravelDate').textContent = b.travel_date;
+    document.getElementById('dispPartySize').textContent = (b.travelers?.adults || 1) + ' Adults, ' + (b.travelers?.children || 0) + ' Children';
+    document.getElementById('dispAccommTier').textContent = b.accommodation_name || 'Mid-Range Standard';
+
+    const total = b.pricing?.total_price || 0;
+    const paid = b.payment?.amount_paid || 0;
+    const balance = b.pricing?.balance_due !== undefined ? b.pricing.balance_due : (total - paid);
+
+    document.getElementById('dispTotalInvestment').textContent = '$' + total.toLocaleString();
+    document.getElementById('dispDepositPaid').textContent = '$' + paid.toLocaleString();
+    document.getElementById('dispRemainingBalance').textContent = '$' + balance.toLocaleString();
+    document.getElementById('modalBalanceAmt').textContent = '$' + balance.toLocaleString();
+
+    // Configure WhatsApp Concierge Button
+    const waUrl = 'https://wa.me/255784567890?text=' + encodeURIComponent('Hello Malunda Explorers, I am inquiring regarding my booking ref: ' + b.booking_ref);
+    document.getElementById('btnCustWhatsApp').href = waUrl;
+
+    if (balance <= 0) {
+        document.getElementById('btnPayBalance').style.display = 'none';
+    } else {
+        document.getElementById('btnPayBalance').style.display = 'inline-block';
+    }
+
+    document.getElementById('bookingResultCard').style.display = 'block';
+    document.getElementById('bookingResultCard').scrollIntoView({ behavior: 'smooth' });
+}
+
+function openModal(id) { document.getElementById(id).style.display = 'flex'; }
+function closeModal(id) { document.getElementById(id).style.display = 'none'; }
+function openBalancePaymentModal() { openModal('modalBalancePayment'); }
+function openModifyDatesModal() { openModal('modalModifyDates'); }
+function openCancelModal() { openModal('modalCancel'); }
+
+async function submitBalancePayment() {
+    if (!CURRENT_LOOKUP_BOOKING) return;
+    const method = document.getElementById('balancePayMethod').value;
+    try {
+        const res = await fetch('/api/bookings/balance-payment', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                booking_ref: CURRENT_LOOKUP_BOOKING.booking_ref,
+                email: CURRENT_LOOKUP_BOOKING.customer.email,
+                payment_method: method
+            })
+        });
+        const result = await res.json();
+        if (result.success) {
+            alert('Asante sana! Outstanding balance payment registered.');
+            closeModal('modalBalancePayment');
+            CURRENT_LOOKUP_BOOKING = result.booking;
+            displayBookingDashboard(result.booking);
+        } else {
+            alert(result.error);
+        }
+    } catch (e) {
+        alert('Payment failed: ' + e.message);
+    }
+}
+
+async function submitModificationRequest() {
+    if (!CURRENT_LOOKUP_BOOKING) return;
+    const newDate = document.getElementById('modNewDate').value;
+    const notes = document.getElementById('modNotes').value;
+    if (!newDate) { alert('Please select a requested departure date.'); return; }
+
+    try {
+        const res = await fetch('/api/bookings/modify', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                booking_ref: CURRENT_LOOKUP_BOOKING.booking_ref,
+                email: CURRENT_LOOKUP_BOOKING.customer.email,
+                new_date: newDate,
+                request_notes: notes
+            })
+        });
+        const result = await res.json();
+        if (result.success) {
+            alert(result.message);
+            closeModal('modalModifyDates');
+        } else {
+            alert(result.error);
+        }
+    } catch (e) {
+        alert('Request failed: ' + e.message);
+    }
+}
+
+async function submitCancellationRequest() {
+    if (!CURRENT_LOOKUP_BOOKING) return;
+    const reason = document.getElementById('cancelReason').value;
+    if (!reason) { alert('Please enter the reason for cancellation.'); return; }
+
+    try {
+        const res = await fetch('/api/bookings/cancel', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                booking_ref: CURRENT_LOOKUP_BOOKING.booking_ref,
+                email: CURRENT_LOOKUP_BOOKING.customer.email,
+                cancellation_reason: reason
+            })
+        });
+        const result = await res.json();
+        if (result.success) {
+            alert(result.message);
+            closeModal('modalCancel');
+        } else {
+            alert(result.error);
+        }
+    } catch (e) {
+        alert('Request failed: ' + e.message);
+    }
+}
+</script>
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <img src="/images/logo.png" alt="Malunda Explorers" style="height: 64px; width: auto; object-fit: contain; margin-bottom: 1rem; filter: brightness(0) invert(1);">
+                <h3>MALUNDA EXPLORERS</h3>
+                <div class="footer-tagline">Explore the Wild. Experience More. Create Memories.</div>
+                <p class="footer-desc">
+                    “Your journey into the wild begins here, where every encounter becomes a story worth telling. Discover Tanzania through authentic safari experiences, breathtaking landscapes, and personalized adventures designed around you.”
+                </p>
+                <div class="footer-contact-info">
+                    <div>📍 Safari Way, Plot 42, Arusha, Tanzania</div>
+                    <div>📞 <a href="tel:+255784567890">+255 784 567 890</a></div>
+                    <div>✉️ <a href="mailto:info@malundaexplorers.com">info@malundaexplorers.com</a></div>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/destinations/">Destinations</a></li>
+                    <li><a href="/safaris/">Safari Packages</a></li>
+                    <li><a href="/safari-experiences">Experiences</a></li>
+                    <li><a href="/gallery/">Photo Gallery</a></li>
+                    <li><a href="/contact/">Contact & Custom Safari</a></li>
+                    <li><a href="/customer">Find My Booking</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Destinations</h4>
+                <ul>
+                    <li><a href="/destinations/serengeti/">Serengeti National Park</a></li>
+                    <li><a href="/destinations/ngorongoro/">Ngorongoro Crater</a></li>
+                    <li><a href="/destinations/tarangire/">Tarangire National Park</a></li>
+                    <li><a href="/destinations/lake-manyara/">Lake Manyara</a></li>
+                    <li><a href="/destinations/mount-kilimanjaro/">Mount Kilimanjaro</a></li>
+                    <li><a href="/destinations/zanzibar/">Zanzibar Coast</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Connect & Legal</h4>
+                <ul>
+                    <li><a href="https://wa.me/+255784567890?text=Hello%20Malunda%20Explorers" target="_blank" rel="noopener">WhatsApp Concierge</a></li>
+                    <li><a href="mailto:info@malundaexplorers.com">Direct Email Inquiry</a></li>
+                    <li><a href="/privacy-policy/">Privacy Policy</a></li>
+                    <li><a href="/terms-conditions/">Terms & Conditions</a></li>
+                    <li><a href="/booking-terms/">Booking Terms & Cancellation</a></li>
+                    <li><a href="/payment-policy/">Payment Policy</a></li>
+                    <li><a href="/faq/">Safari FAQs</a></li>
+                    <li><a href="/admin">Staff Administration</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div>© 2026 Malunda Explorers. All Rights Reserved. TALA Tourism Licensed & AMREF Flying Doctors Covered.</div>
+            <div>Arusha, Tanzania • East Africa</div>
+        </div>
+    </div>
+</footer>
+
+<!-- Floating WhatsApp Button -->
+<a href="https://wa.me/+255784567890?text=Hello%20Malunda%20Explorers,%20I%20am%20planning%20a%20safari%20to%20Tanzania%20and%20would%20like%20more%20information." 
+   class="whatsapp-floating-btn" 
+   target="_blank" 
+   rel="noopener" 
+   title="Chat with Malunda Explorers on WhatsApp">
+    <svg class="whatsapp-icon-svg" viewBox="0 0 24 24">
+        <path d="M12.031 2C6.495 2 2 6.495 2 12.031c0 1.996.586 3.86 1.602 5.433L2.055 22l4.676-1.516a10.007 10.007 0 005.3 1.547h.005c5.535 0 10.03-4.495 10.03-10.031 0-2.68-1.043-5.199-2.936-7.091A9.972 9.972 0 0012.031 2zm0 18.257h-.004a8.293 8.293 0 01-4.227-1.156l-.303-.18-2.778.902.9-2.709-.197-.313a8.283 8.283 0 01-1.27-4.47c0-4.577 3.725-8.302 8.302-8.302 2.217 0 4.301.864 5.869 2.432a8.25 8.25 0 012.432 5.87c0 4.578-3.725 8.303-8.302 8.303zm4.551-6.216c-.249-.125-1.477-.729-1.705-.812-.228-.083-.395-.125-.561.125-.166.249-.644.812-.789.979-.145.166-.291.187-.54.062a6.837 6.837 0 01-2.008-1.238 7.545 7.545 0 01-1.39-1.732c-.145-.249-.015-.384.11-.508.112-.112.249-.291.374-.436.125-.145.166-.249.249-.416.083-.166.042-.312-.021-.436-.062-.125-.561-1.352-.769-1.851-.202-.487-.408-.42-.561-.428l-.478-.008c-.166 0-.436.062-.664.312s-.873.853-.873 2.08c0 1.227.893 2.412 1.018 2.578.125.166 1.758 2.685 4.258 3.765.595.257 1.06.41 1.423.525.598.19 1.142.163 1.572.099.48-.072 1.477-.603 1.684-1.185.208-.582.208-1.081.145-1.185-.062-.104-.228-.166-.478-.291z"/>
+    </svg>
+    <span class="whatsapp-label">Chat with Us</span>
+</a>
+
+<div class="mobile-sticky-bar">
+    <div style="display:flex; justify-content:space-between; align-items:center; gap: 1rem;">
+        <div>
+            <div style="color:var(--color-accent); font-size:0.75rem; font-weight:700; text-transform:uppercase;">Every Journey Tells a Story</div>
+            <div style="color:#ffffff; font-size:0.9rem; font-weight:800;">Book Your Tanzania Safari</div>
+        </div>
+        <a href="/booking/" class="btn btn-primary btn-sm">Book Safari</a>
+    </div>
+</div>
+
+<script src="/js/main.js"></script>
+</body>
+</html>

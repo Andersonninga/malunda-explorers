@@ -12,7 +12,7 @@ const crypto = require('crypto');
 
 const PORT = process.env.PORT || 3000;
 const DATA_FILE = path.join(__dirname, 'data', 'safari-data.json');
-const THEME_DIR = path.join(__dirname, 'wp-content', 'themes', 'malunda-explorers');
+const PUBLIC_DIR = path.join(__dirname, 'public');
 
 function loadData() {
   try {
@@ -162,7 +162,7 @@ function renderHeader(data, activePage = '') {
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/wp-content/themes/malunda-explorers/assets/css/main.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
 <!-- Top Bar -->
@@ -182,7 +182,7 @@ function renderHeader(data, activePage = '') {
     <div class="container">
         <div class="header-inner">
             <a href="/" class="site-logo">
-                <img src="/wp-content/themes/malunda-explorers/assets/images/logo.png" alt="Malunda Explorers" class="brand-logo-img">
+                <img src="/images/logo.png" alt="Malunda Explorers" class="brand-logo-img">
             </a>
             <nav class="site-nav" id="siteNav">
                 <ul class="nav-links">
@@ -221,7 +221,7 @@ function renderFooter(data) {
     <div class="container">
         <div class="footer-top">
             <div class="footer-brand">
-                <img src="/wp-content/themes/malunda-explorers/assets/images/logo.png" alt="Malunda Explorers" style="height: 64px; width: auto; object-fit: contain; margin-bottom: 1rem; filter: brightness(0) invert(1);">
+                <img src="/images/logo.png" alt="Malunda Explorers" style="height: 64px; width: auto; object-fit: contain; margin-bottom: 1rem; filter: brightness(0) invert(1);">
                 <h3>MALUNDA EXPLORERS</h3>
                 <div class="footer-tagline">${tagline}</div>
                 <p class="footer-desc">
@@ -300,7 +300,7 @@ function renderFooter(data) {
     </div>
 </div>
 
-<script src="/wp-content/themes/malunda-explorers/assets/js/main.js"></script>
+<script src="/js/main.js"></script>
 </body>
 </html>
 `;
@@ -311,33 +311,33 @@ const server = http.createServer((req, res) => {
   const parsed = url.parse(req.url, true);
   const pathname = parsed.pathname;
 
-  // Serve static files from wp-content/themes/malunda-explorers/assets
-  if (pathname.startsWith('/wp-content/themes/malunda-explorers/assets/')) {
-    const relPath = pathname.replace('/wp-content/themes/malunda-explorers/assets/', '');
-    const filePath = path.join(THEME_DIR, 'assets', relPath);
+  // Serve static files from public directory (CSS, JS, Images, etc.)
+  if (pathname.startsWith('/css/') || pathname.startsWith('/js/') || pathname.startsWith('/images/')) {
+    const filePath = path.join(PUBLIC_DIR, pathname);
     if (fs.existsSync(filePath) && fs.statSync(filePath).isFile()) {
-      let ext = path.extname(filePath).toLowerCase();
-      let mime = 'text/plain';
-      if (ext === '.css') mime = 'text/css';
-      else if (ext === '.js') mime = 'application/javascript';
-      else if (ext === '.jpg' || ext === '.jpeg') mime = 'image/jpeg';
-      else if (ext === '.png') mime = 'image/png';
-      else if (ext === '.svg') mime = 'image/svg+xml';
-      res.writeHead(200, { 'Content-Type': mime });
+      const ext = path.extname(filePath).toLowerCase();
+      const mimeTypes = {
+        '.css': 'text/css; charset=utf-8',
+        '.js': 'application/javascript; charset=utf-8',
+        '.jpg': 'image/jpeg',
+        '.jpeg': 'image/jpeg',
+        '.png': 'image/png',
+        '.svg': 'image/svg+xml',
+        '.webp': 'image/webp',
+        '.ico': 'image/x-icon',
+        '.json': 'application/json'
+      };
+      res.writeHead(200, { 'Content-Type': mimeTypes[ext] || 'application/octet-stream', 'Cache-Control': 'public, max-age=86400' });
       return fs.createReadStream(filePath).pipe(res);
-    } else {
-      res.writeHead(404, { 'Content-Type': 'text/plain' });
-      return res.end('File Not Found');
     }
   }
-
-  // Also support /assets/images/ direct references
+  // Fallback for legacy /assets/images/ paths
   if (pathname.startsWith('/assets/images/')) {
     const relPath = pathname.replace('/assets/images/', '');
-    const filePath = path.join(THEME_DIR, 'assets', 'images', relPath);
+    const filePath = path.join(PUBLIC_DIR, 'images', relPath);
     if (fs.existsSync(filePath) && fs.statSync(filePath).isFile()) {
-      let ext = path.extname(filePath).toLowerCase();
-      let mime = ext === '.png' ? 'image/png' : 'image/jpeg';
+      const ext = path.extname(filePath).toLowerCase();
+      const mime = ext === '.png' ? 'image/png' : 'image/jpeg';
       res.writeHead(200, { 'Content-Type': mime });
       return fs.createReadStream(filePath).pipe(res);
     }
@@ -359,6 +359,102 @@ const server = http.createServer((req, res) => {
       let mime = ext === '.png' ? 'image/png' : 'image/jpeg';
       res.writeHead(200, { 'Content-Type': mime });
       return fs.createReadStream(rootImgPath).pipe(res);
+    }
+  }
+
+  // Frontend Page Route Mapping (serves pure HTML from public/)
+  const pageRouteMap = {
+    '/': 'index.html',
+    '/index.html': 'index.html',
+    '/safaris': 'safaris.html',
+    '/safaris/': 'safaris.html',
+    '/packages': 'safaris.html',
+    '/destinations': 'destinations.html',
+    '/destinations/': 'destinations.html',
+    '/booking': 'booking.html',
+    '/booking/': 'booking.html',
+    '/about': 'about.html',
+    '/about/': 'about.html',
+    '/about-us': 'about.html',
+    '/about-us/': 'about.html',
+    '/safari-experiences': 'experiences.html',
+    '/safari-experiences/': 'experiences.html',
+    '/experiences': 'experiences.html',
+    '/gallery': 'gallery.html',
+    '/gallery/': 'gallery.html',
+    '/contact': 'contact.html',
+    '/contact/': 'contact.html',
+    '/faq': 'faq.html',
+    '/faq/': 'faq.html',
+    '/privacy': 'privacy.html',
+    '/privacy-policy': 'privacy.html',
+    '/privacy-policy/': 'privacy.html',
+    '/terms': 'terms.html',
+    '/terms-conditions': 'terms.html',
+    '/terms-conditions/': 'terms.html',
+    '/booking-terms': 'booking-terms.html',
+    '/booking-terms/': 'booking-terms.html',
+    '/customer': 'customer.html',
+    '/customer/': 'customer.html',
+    '/booking-lookup': 'customer.html',
+    '/booking-lookup/': 'customer.html',
+    '/admin': 'admin.html',
+    '/admin/': 'admin.html',
+    '/admin/bookings': 'admin.html',
+    '/admin/bookings/': 'admin.html'
+  };
+
+  if (pageRouteMap[pathname]) {
+    const htmlPath = path.join(PUBLIC_DIR, pageRouteMap[pathname]);
+    if (fs.existsSync(htmlPath)) {
+      res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
+      return fs.createReadStream(htmlPath).pipe(res);
+    }
+  }
+
+  // Check for static safari detail pages
+  if (pathname.startsWith('/safaris/')) {
+    const slug = pathname.replace('/safaris/', '').replace(/\/$/, '');
+    const candidates = [
+      'safari-' + slug + '.html',
+      'safari-northern-circuit.html',
+      'safari-serengeti-migration.html',
+      'safari-bush-to-beach.html',
+      'safari-tarangire-ngorongoro.html',
+      'safari-kilimanjaro.html',
+      'safari-luxury-honeymoon.html'
+    ];
+    for (const f of candidates) {
+      if (f.includes(slug.split('-')[0]) || f.includes(slug.split('-')[1] || 'xyz')) {
+        const p = path.join(PUBLIC_DIR, f);
+        if (fs.existsSync(p)) {
+          res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
+          return fs.createReadStream(p).pipe(res);
+        }
+      }
+    }
+  }
+
+  // Check for static destination detail pages
+  if (pathname.startsWith('/destinations/')) {
+    const slug = pathname.replace('/destinations/', '').replace(/\/$/, '');
+    const destCandidates = [
+      'destination-' + slug + '.html',
+      'destination-serengeti.html',
+      'destination-ngorongoro.html',
+      'destination-tarangire.html',
+      'destination-manyara.html',
+      'destination-kilimanjaro.html',
+      'destination-zanzibar.html'
+    ];
+    for (const f of destCandidates) {
+      if (f.includes(slug.split('-')[0])) {
+        const p = path.join(PUBLIC_DIR, f);
+        if (fs.existsSync(p)) {
+          res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
+          return fs.createReadStream(p).pipe(res);
+        }
+      }
     }
   }
 
@@ -1320,7 +1416,7 @@ const server = http.createServer((req, res) => {
 </section>
 
 <!-- Final CTA -->
-<section class="final-cta-section" style="background: linear-gradient(rgba(15, 34, 21, 0.82), rgba(15, 34, 21, 0.92)), url('/wp-content/themes/malunda-explorers/assets/images/serengeti_migration.jpg') center/cover; padding: 7rem 1.5rem; color: #fff; text-align: center;">
+<section class="final-cta-section" style="background: linear-gradient(rgba(15, 34, 21, 0.82), rgba(15, 34, 21, 0.92)), url('/images/serengeti_migration.jpg') center/cover; padding: 7rem 1.5rem; color: #fff; text-align: center;">
     <div class="container-narrow">
         <span class="badge" style="background: var(--color-accent); color: #fff; margin-bottom: 1rem;">YOUR JOURNEY BEGINS</span>
         <h2 style="color: #fff; font-size: clamp(2.2rem, 4vw, 3.5rem); margin-bottom: 1.2rem;">Your Adventure Is Closer Than You Think</h2>
@@ -1340,7 +1436,7 @@ const server = http.createServer((req, res) => {
   // 2. ABOUT US
   if (pathname === '/about-us' || pathname === '/about-us/') {
     const html = `
-<section style="background: linear-gradient(rgba(15, 34, 21, 0.75), rgba(15, 34, 21, 0.85)), url('/wp-content/themes/malunda-explorers/assets/images/malunda-safari-010.jpg') center/cover; padding: 6rem 1.5rem 5rem; color: #fff; text-align: center;">
+<section style="background: linear-gradient(rgba(15, 34, 21, 0.75), rgba(15, 34, 21, 0.85)), url('/images/malunda-safari-010.jpg') center/cover; padding: 6rem 1.5rem 5rem; color: #fff; text-align: center;">
     <div class="container-narrow">
         <span class="badge" style="margin-bottom: 1rem;">WHO WE ARE</span>
         <h1 style="color: #fff; margin-bottom: 1rem;">About Malunda Explorers</h1>
@@ -1430,7 +1526,7 @@ const server = http.createServer((req, res) => {
   // 3. DESTINATIONS DIRECTORY
   if (pathname === '/destinations' || pathname === '/destinations/') {
     const html = `
-<section style="background: linear-gradient(rgba(15, 34, 21, 0.75), rgba(15, 34, 21, 0.85)), url('/wp-content/themes/malunda-explorers/assets/images/serengeti_migration.jpg') center/cover; padding: 6rem 1.5rem 5rem; color: #fff; text-align: center;">
+<section style="background: linear-gradient(rgba(15, 34, 21, 0.75), rgba(15, 34, 21, 0.85)), url('/images/serengeti_migration.jpg') center/cover; padding: 6rem 1.5rem 5rem; color: #fff; text-align: center;">
     <div class="container-narrow">
         <span class="badge" style="margin-bottom: 1rem;">ICONIC AFRICAN WILDERNESS</span>
         <h1 style="color: #fff; margin-bottom: 1rem;">Tanzania Safari Destinations</h1>
@@ -1580,7 +1676,7 @@ const server = http.createServer((req, res) => {
     const selectedDuration = parsed.query.duration || '';
 
     const html = `
-<section style="background: linear-gradient(rgba(15, 34, 21, 0.75), rgba(15, 34, 21, 0.85)), url('/wp-content/themes/malunda-explorers/assets/images/malunda-safari-046.jpg') center/cover; padding: 6rem 1.5rem 5rem; color: #fff; text-align: center;">
+<section style="background: linear-gradient(rgba(15, 34, 21, 0.75), rgba(15, 34, 21, 0.85)), url('/images/malunda-safari-046.jpg') center/cover; padding: 6rem 1.5rem 5rem; color: #fff; text-align: center;">
     <div class="container-narrow">
         <span class="badge" style="margin-bottom: 1rem;">CURATED ITINERARIES</span>
         <h1 style="color: #fff; margin-bottom: 1rem;">Tanzania Safari Packages</h1>
@@ -1866,7 +1962,7 @@ function proceedToBookingWithParams(pkgId) {
   // 5. EXPERIENCES
   if (pathname === '/safari-experiences' || pathname === '/safari-experiences/') {
     const html = `
-<section style="background: linear-gradient(rgba(15, 34, 21, 0.75), rgba(15, 34, 21, 0.85)), url('/wp-content/themes/malunda-explorers/assets/images/malunda-safari-047.jpg') center/cover; padding: 6rem 1.5rem 5rem; color: #fff; text-align: center;">
+<section style="background: linear-gradient(rgba(15, 34, 21, 0.75), rgba(15, 34, 21, 0.85)), url('/images/malunda-safari-047.jpg') center/cover; padding: 6rem 1.5rem 5rem; color: #fff; text-align: center;">
     <div class="container-narrow">
         <span class="badge" style="margin-bottom: 1rem;">SIGNATURE ADVENTURES</span>
         <h1 style="color: #fff; margin-bottom: 1rem;">Safari Experiences & Services</h1>
@@ -2220,7 +2316,7 @@ function proceedToBookingWithParams(pkgId) {
     </div>
 </div>
 <script>window.MALUNDA_EMBEDDED_DATA = ${JSON.stringify(data)};</script>
-<script src="/wp-content/themes/malunda-explorers/assets/js/booking-engine.js"></script>
+<script src="/js/booking-engine.js"></script>
 `;
     return res.end(renderHeader(data, 'booking') + html + renderFooter(data));
   }
@@ -2577,7 +2673,7 @@ async function submitCancellationRequest() {
   // 8. PHOTO GALLERY (With Category Filter & Lightbox)
   if (pathname === '/gallery' || pathname === '/gallery/') {
     const html = `
-<section style="background: linear-gradient(rgba(15, 34, 21, 0.75), rgba(15, 34, 21, 0.85)), url('/wp-content/themes/malunda-explorers/assets/images/malunda-safari-011.jpg') center/cover; padding: 6rem 1.5rem 5rem; color: #fff; text-align: center;">
+<section style="background: linear-gradient(rgba(15, 34, 21, 0.75), rgba(15, 34, 21, 0.85)), url('/images/malunda-safari-011.jpg') center/cover; padding: 6rem 1.5rem 5rem; color: #fff; text-align: center;">
     <div class="container-narrow">
         <span class="badge" style="margin-bottom: 1rem;">VISUAL CHRONICLES</span>
         <h1 style="color: #fff; margin-bottom: 1rem;">Tanzania Wildlife & Safari Gallery</h1>
@@ -2661,7 +2757,7 @@ function closeLightboxDirect() {
   // 9. CONTACT & CUSTOM SAFARI REQUEST
   if (pathname === '/contact' || pathname === '/contact/') {
     const html = `
-<section style="background: linear-gradient(rgba(15, 34, 21, 0.75), rgba(15, 34, 21, 0.85)), url('/wp-content/themes/malunda-explorers/assets/images/malunda-safari-048.jpg') center/cover; padding: 6rem 1.5rem 5rem; color: #fff; text-align: center;">
+<section style="background: linear-gradient(rgba(15, 34, 21, 0.75), rgba(15, 34, 21, 0.85)), url('/images/malunda-safari-048.jpg') center/cover; padding: 6rem 1.5rem 5rem; color: #fff; text-align: center;">
     <div class="container-narrow">
         <span class="badge" style="margin-bottom: 1rem;">GET IN TOUCH</span>
         <h1 style="color: #fff; margin-bottom: 1rem;">Let's Start Planning Your Journey</h1>
@@ -2840,7 +2936,7 @@ async function submitCustomInquiry() {
 
     const html = `
 <script type="application/ld+json">${JSON.stringify(faqSchema)}</script>
-<section style="background: linear-gradient(rgba(15, 34, 21, 0.75), rgba(15, 34, 21, 0.85)), url('/wp-content/themes/malunda-explorers/assets/images/malunda-safari-010.jpg') center/cover; padding: 6rem 1.5rem 5rem; color: #fff; text-align: center;">
+<section style="background: linear-gradient(rgba(15, 34, 21, 0.75), rgba(15, 34, 21, 0.85)), url('/images/malunda-safari-010.jpg') center/cover; padding: 6rem 1.5rem 5rem; color: #fff; text-align: center;">
     <div class="container-narrow">
         <span class="badge" style="margin-bottom: 1rem;">TRAVELER ADVISORY</span>
         <h1 style="color: #fff; margin-bottom: 1rem;">Safari Questions & Answers</h1>
@@ -2926,7 +3022,7 @@ async function submitCustomInquiry() {
   }
 
   // 12. FULL ADMINISTRATION DASHBOARD (Tabs: Overview, Bookings, Packages, Availability, Payments, Inquiries, Settings)
-  if (pathname === '/admin' || pathname === '/admin/' || pathname === '/admin/bookings' || pathname === '/admin/bookings/' || pathname === '/wp-admin' || pathname === '/wp-admin/') {
+  if (pathname === '/admin' || pathname === '/admin/' || pathname === '/admin/bookings' || pathname === '/admin/bookings/' || pathname === '/admin' || pathname === '/admin') {
     const totalBookings = data.bookings.length;
     const confirmedCount = data.bookings.filter(b => b.booking_status === 'Confirmed' || b.booking_status === 'Fully Paid').length;
     const pendingCount = data.bookings.filter(b => b.booking_status === 'Pending' || b.booking_status === 'Pending Inquiry').length;

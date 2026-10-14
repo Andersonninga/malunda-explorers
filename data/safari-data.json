@@ -33,7 +33,7 @@
         "description": "Secure your dates and lodges today with only 30% down."
       }
     ],
-    "logo": "/wp-content/themes/malunda-explorers/assets/images/logo.png",
+    "logo": "/images/logo.png",
     "hero_headline": "Every Journey Tells a Story",
     "hero_description": "Your journey into the wild begins here, where every encounter becomes a story worth telling. Discover Tanzania through authentic safari experiences, breathtaking landscapes, and personalized adventures designed around you."
   },
@@ -44,8 +44,8 @@
       "name": "Serengeti National Park",
       "subtitle": "Endless Plains & The Great Wildebeest Migration",
       "description": "Vast plains, extraordinary wildlife and some of Africa's most unforgettable natural spectacles. Serengeti is the crown jewel of African wilderness, hosting over two million wildebeest and zebras on their eternal migration journey.",
-      "hero_image": "/wp-content/themes/malunda-explorers/assets/images/serengeti_migration.jpg",
-      "thumbnail": "/wp-content/themes/malunda-explorers/assets/images/serengeti_migration.jpg",
+      "hero_image": "/images/serengeti_migration.jpg",
+      "thumbnail": "/images/serengeti_migration.jpg",
       "wildlife_highlights": [
         "Big Five (Lion, Leopard, Elephant, Buffalo, Rhino)",
         "Great Wildebeest Migration",
@@ -64,9 +64,9 @@
       ],
       "coordinates": "-2.3333, 34.8333",
       "gallery": [
-        "/wp-content/themes/malunda-explorers/assets/images/serengeti_migration.jpg",
-        "/wp-content/themes/malunda-explorers/assets/images/malunda-safari-010.jpg",
-        "/wp-content/themes/malunda-explorers/assets/images/malunda-safari-046.jpg"
+        "/images/serengeti_migration.jpg",
+        "/images/malunda-safari-010.jpg",
+        "/images/malunda-safari-046.jpg"
       ]
     },
     {
@@ -75,8 +75,8 @@
       "name": "Ngorongoro Crater",
       "subtitle": "The Eighth Wonder of the World & Wildlife Sanctuary",
       "description": "Descend into one of Africa's most remarkable wildlife destinations, where dramatic landscapes surround an extraordinary concentration of wildlife. A pristine 600m deep volcanic caldera housing over 25,000 large animals.",
-      "hero_image": "/wp-content/themes/malunda-explorers/assets/images/ngorongoro_crater.jpg",
-      "thumbnail": "/wp-content/themes/malunda-explorers/assets/images/ngorongoro_crater.jpg",
+      "hero_image": "/images/ngorongoro_crater.jpg",
+      "thumbnail": "/images/ngorongoro_crater.jpg",
       "wildlife_highlights": [
         "Endangered Black Rhino",
         "Dense pride of lions",
@@ -94,8 +94,8 @@
       ],
       "coordinates": "-3.2428, 35.4897",
       "gallery": [
-        "/wp-content/themes/malunda-explorers/assets/images/ngorongoro_crater.jpg",
-        "/wp-content/themes/malunda-explorers/assets/images/malunda-safari-011.jpg"
+        "/images/ngorongoro_crater.jpg",
+        "/images/malunda-safari-011.jpg"
       ]
     },
     {
@@ -104,8 +104,8 @@
       "name": "Tarangire National Park",
       "subtitle": "Land of Giants, Ancient Baobabs & Elephant Herds",
       "description": "Known for its magnificent elephants, ancient baobabs and distinctive landscapes, Tarangire offers a quieter and deeply rewarding safari experience along the scenic Tarangire River.",
-      "hero_image": "/wp-content/themes/malunda-explorers/assets/images/Tarangire.jpeg",
-      "thumbnail": "/wp-content/themes/malunda-explorers/assets/images/Tarangire.jpeg",
+      "hero_image": "/images/Tarangire.jpeg",
+      "thumbnail": "/images/Tarangire.jpeg",
       "wildlife_highlights": [
         "Enormous elephant herds (up to 300 individuals)",
         "Ancient thousand-year-old baobabs",
@@ -123,8 +123,8 @@
       ],
       "coordinates": "-3.8333, 36.0000",
       "gallery": [
-        "/wp-content/themes/malunda-explorers/assets/images/Tarangire.jpeg",
-        "/wp-content/themes/malunda-explorers/assets/images/malunda-safari-100.jpg"
+        "/images/Tarangire.jpeg",
+        "/images/malunda-safari-100.jpg"
       ]
     },
     {
@@ -133,8 +133,8 @@
       "name": "Lake Manyara National Park",
       "subtitle": "Rift Valley Jewel & Tree-Climbing Lions",
       "description": "A compact and diverse ecosystem where forests, wetlands, open plains and wildlife come together beneath the dramatic Rift Valley landscape, famous for tree-climbing lions and flamingo flocks.",
-      "hero_image": "/wp-content/themes/malunda-explorers/assets/images/malunda-safari-015.jpg",
-      "thumbnail": "/wp-content/themes/malunda-explorers/assets/images/malunda-safari-015.jpg",
+      "hero_image": "/images/malunda-safari-015.jpg",
+      "thumbnail": "/images/malunda-safari-015.jpg",
       "wildlife_highlights": [
         "Legendary tree-climbing lions",
         "Massive baboon troops",
@@ -153,8 +153,8 @@
       ],
       "coordinates": "-3.5000, 35.8333",
       "gallery": [
-        "/wp-content/themes/malunda-explorers/assets/images/malunda-safari-015.jpg",
-        "/wp-content/themes/malunda-explorers/assets/images/malunda-safari-048.jpg"
+        "/images/malunda-safari-015.jpg",
+        "/images/malunda-safari-048.jpg"
       ]
     },
     {
@@ -163,8 +163,8 @@
       "name": "Mount Kilimanjaro",
       "subtitle": "Roof of Africa & Highest Free-Standing Mountain",
       "description": "Experience the presence of Africa's highest mountain (5,895m), whether as the centerpiece of your journey with a summit expedition or as part of a scenic wider Tanzanian adventure.",
-      "hero_image": "/wp-content/themes/malunda-explorers/assets/images/malunda-safari-038.jpg",
-      "thumbnail": "/wp-content/themes/malunda-explorers/assets/images/malunda-safari-038.jpg",
+      "hero_image": "/images/malunda-safari-038.jpg",
+      "thumbnail": "/images/malunda-safari-038.jpg",
       "wildlife_highlights": [
         "Blue monkeys & colobus in rainforest",
         "Alpine vegetation",
@@ -182,8 +182,8 @@
       ],
       "coordinates": "-3.0674, 37.3556",
       "gallery": [
-        "/wp-content/themes/malunda-explorers/assets/images/malunda-safari-038.jpg",
-        "/wp-content/themes/malunda-explorers/assets/images/malunda-safari-039.jpg"
+        "/images/malunda-safari-038.jpg",
+        "/images/malunda-safari-039.jpg"
       ]
     },
     {
@@ -192,8 +192,8 @@
       "name": "Zanzibar Archipelago",
       "subtitle": "Turquoise Waters, Spice Island & Stone Town Heritage",
       "description": "Complete your African journey with warm Indian Ocean waters, rich history, beautiful beaches and the distinctive character of Zanzibar. The perfect bush-to-beach finale.",
-      "hero_image": "/wp-content/themes/malunda-explorers/assets/images/zanzibar_beach.jpg",
-      "thumbnail": "/wp-content/themes/malunda-explorers/assets/images/zanzibar_beach.jpg",
+      "hero_image": "/images/zanzibar_beach.jpg",
+      "thumbnail": "/images/zanzibar_beach.jpg",
       "wildlife_highlights": [
         "Bottlenose dolphins at Kizimkazi",
         "Green turtles at Mnemba Atoll",
@@ -211,8 +211,8 @@
       ],
       "coordinates": "-6.1659, 39.2026",
       "gallery": [
-        "/wp-content/themes/malunda-explorers/assets/images/zanzibar_beach.jpg",
-        "/wp-content/themes/malunda-explorers/assets/images/malunda-safari-054.jpg"
+        "/images/zanzibar_beach.jpg",
+        "/images/malunda-safari-054.jpg"
       ]
     }
   ],
@@ -221,63 +221,63 @@
       "id": "private-safaris",
       "title": "Private Safaris",
       "short_desc": "Exclusive 4x4 vehicle and dedicated safari guide tailored completely to your schedule, pace, and interests.",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/malunda-safari-016.jpg",
+      "image": "/images/malunda-safari-016.jpg",
       "badge": "Ultimate Privacy"
     },
     {
       "id": "tailor-made-safaris",
       "title": "Tailor-Made Safaris",
       "short_desc": "Bespoke itineraries crafted from scratch by our Arusha experts to fulfill your unique dream African safari.",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/malunda-safari-017.jpg",
+      "image": "/images/malunda-safari-017.jpg",
       "badge": "100% Custom"
     },
     {
       "id": "luxury-safaris",
       "title": "Luxury Safaris",
       "short_desc": "Stay in premier five-star luxury tented lodges with gourmet dining, plunge pools, and bush champagne breakfasts.",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/malunda-safari-018.jpg",
+      "image": "/images/malunda-safari-018.jpg",
       "badge": "5-Star Wilderness"
     },
     {
       "id": "classic-safaris",
       "title": "Classic Safaris",
       "short_desc": "The quintessential Tanzania wildlife adventure with authentic mid-range safari lodges and legendary game drives.",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/malunda-safari-019.jpg",
+      "image": "/images/malunda-safari-019.jpg",
       "badge": "Authentic Journey"
     },
     {
       "id": "honeymoon-safaris",
       "title": "Honeymoon Safaris",
       "short_desc": "Intimate savannah sunsets, romantic candlelit bush dinners, private suites, and seamless Zanzibar beach extensions.",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/malunda-safari-020.jpg",
+      "image": "/images/malunda-safari-020.jpg",
       "badge": "Romance in the Wild"
     },
     {
       "id": "family-safaris",
       "title": "Family Safaris",
       "short_desc": "Thoughtfully planned adventures for all ages with spacious family suites, educational wildlife tracking, and flexible days.",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/malunda-safari-021.jpg",
+      "image": "/images/malunda-safari-021.jpg",
       "badge": "All Generations"
     },
     {
       "id": "great-migration-safaris",
       "title": "Great Migration Safaris",
       "short_desc": "Positioned right where the herd is moving: river crossings in northern Serengeti or the southern calving grounds.",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/malunda-safari-022.jpg",
+      "image": "/images/malunda-safari-022.jpg",
       "badge": "Natural Wonder"
     },
     {
       "id": "cultural-experiences",
       "title": "Cultural Experiences",
       "short_desc": "Meaningful encounters with Hadzabe hunter-gatherers, Datoga blacksmiths, and authentic Maasai pastoralists.",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/malunda-safari-023.jpg",
+      "image": "/images/malunda-safari-023.jpg",
       "badge": "Deep Heritage"
     },
     {
       "id": "day-trips",
       "title": "Day Trips",
       "short_desc": "Short, immersive wildlife and cultural day excursions departing conveniently from Arusha or Moshi.",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/malunda-safari-024.jpg",
+      "image": "/images/malunda-safari-024.jpg",
       "badge": "Quick Escapes"
     }
   ],
@@ -299,7 +299,7 @@
       "accommodation_level": "Mid-range & Luxury Tented Camps",
       "base_price": 3450,
       "featured": true,
-      "image": "/wp-content/themes/malunda-explorers/assets/images/malunda-safari-010.jpg",
+      "image": "/images/malunda-safari-010.jpg",
       "overview": "Our premier, most celebrated Tanzanian safari. Experience the full spectrum of Northern Tanzania's wildlife ecosystems: the elephant-rich woodlands of Tarangire, the rift valley waters of Manyara, three glorious days on the boundless Serengeti plains, culminating in an awe-inspiring descent into the Ngorongoro Crater.",
       "highlights": [
         "Complete exploration of all 4 Northern Circuit national parks",
@@ -379,7 +379,7 @@
       "accommodation_level": "Mid-range Safari Camps",
       "base_price": 2190,
       "featured": true,
-      "image": "/wp-content/themes/malunda-explorers/assets/images/ngorongoro_crater.jpg",
+      "image": "/images/ngorongoro_crater.jpg",
       "overview": "A meticulously curated 5-day journey spotlighting Tanzania's two most iconic wilderness gems: the vast Serengeti and the dramatic Ngorongoro Crater. Perfect for travelers seeking world-class wildlife within an efficient timeframe.",
       "highlights": [
         "Two full days deep inside the Serengeti National Park",
@@ -444,7 +444,7 @@
       "accommodation_level": "Luxury Mobile Tented Camps",
       "base_price": 4850,
       "featured": true,
-      "image": "/wp-content/themes/malunda-explorers/assets/images/serengeti_migration.jpg",
+      "image": "/images/serengeti_migration.jpg",
       "overview": "Designed specifically around the movements of the Great Migration. From dramatic river crossings along the northern Mara River with stalking crocodiles to the southern calving plains, this safari puts you front row to the world's most intense wildlife drama.",
       "highlights": [
         "Follow the mega-herds of 1.5+ million wildebeest and zebras",
@@ -523,7 +523,7 @@
       "accommodation_level": "Mid-range Safari Lodge",
       "base_price": 1250,
       "featured": false,
-      "image": "/wp-content/themes/malunda-explorers/assets/images/malunda-safari-028.jpg",
+      "image": "/images/malunda-safari-028.jpg",
       "overview": "The ideal short Tanzanian safari for travelers with limited time or those combining business in Arusha with an authentic wilderness escape. Experience the elephants of Tarangire and the wonders of Ngorongoro Crater in three action-packed days.",
       "highlights": [
         "Unforgettable elephant herds in Tarangire",
@@ -575,7 +575,7 @@
       "accommodation_level": "Ultra-Luxury Lodges & Camps",
       "base_price": 5900,
       "featured": true,
-      "image": "/wp-content/themes/malunda-explorers/assets/images/malunda-safari-046.jpg",
+      "image": "/images/malunda-safari-046.jpg",
       "overview": "For the discerning traveler who expects the highest standard of luxury, privacy, and personalized service. Stay in handpicked luxury sanctuaries with fine dining, private plunge pools, and top-tier senior safari naturalists.",
       "highlights": [
         "Stay at legendary luxury properties like Four Seasons or Sanctuary Camps",
@@ -644,7 +644,7 @@
       "accommodation_level": "Romantic Boutique Lodges & Beach Resort",
       "base_price": 4200,
       "featured": true,
-      "image": "/wp-content/themes/malunda-explorers/assets/images/zanzibar_beach.jpg",
+      "image": "/images/zanzibar_beach.jpg",
       "overview": "The ultimate African romantic escape. Begin with 5 nights immersed in the drama and beauty of the Serengeti and Ngorongoro Crater, then fly directly to the tropical paradise of Zanzibar for 3 nights of barefoot beach relaxation and sunset dhow cruises.",
       "highlights": [
         "Private candlelit bush dinners under the African stars",
@@ -727,7 +727,7 @@
       "accommodation_level": "Family Suites & Swimming Pool Lodges",
       "base_price": 2800,
       "featured": false,
-      "image": "/wp-content/themes/malunda-explorers/assets/images/malunda-safari-047.jpg",
+      "image": "/images/malunda-safari-047.jpg",
       "overview": "Specially designed for families traveling with children or teenagers. Shorter driving distances, child-friendly safari lodges with swimming pools, interactive bushcraft and animal tracking lessons led by patient, certified guides.",
       "highlights": [
         "Junior Ranger wildlife tracking certificate for kids",
@@ -795,7 +795,7 @@
       "accommodation_level": "Alpine Mountain Camping & Safari Lodge",
       "base_price": 3950,
       "featured": false,
-      "image": "/wp-content/themes/malunda-explorers/assets/images/malunda-safari-038.jpg",
+      "image": "/images/malunda-safari-038.jpg",
       "overview": "Combine the triumphant achievement of standing at Uhuru Peak (5,895m) with the well-deserved reward of a 3-day wildlife safari through Tarangire and Ngorongoro Crater.",
       "highlights": [
         "6-day Machame Route with high acclimatization success rate",
@@ -962,7 +962,7 @@
       "rating": 5,
       "quote": "Malunda Explorers delivered the journey of a lifetime. From our guide Peter's uncanny ability to spot leopards in the Serengeti to the breathtaking sunrise over Ngorongoro, every detail was executed with quiet professionalism and genuine warmth. We felt in safe, expert hands every second.",
       "date": "August 2026",
-      "photo": "/wp-content/themes/malunda-explorers/assets/images/malunda-safari-033.jpg"
+      "photo": "/images/malunda-safari-033.jpg"
     },
     {
       "id": 2,
@@ -972,7 +972,7 @@
       "rating": 5,
       "quote": "Traveling with three kids aged 8, 12, and 15 can be daunting, but Malunda Explorers made it effortless. The customized Land Cruiser had plenty of room and charging ports, the lodges were incredible, and our children still talk about the Hadzabe archery lesson. Truly authentic!",
       "date": "July 2026",
-      "photo": "/wp-content/themes/malunda-explorers/assets/images/malunda-safari-034.jpg"
+      "photo": "/images/malunda-safari-034.jpg"
     },
     {
       "id": 3,
@@ -982,7 +982,7 @@
       "rating": 5,
       "quote": "Our honeymoon was pure perfection. The private bush dinner under the Serengeti stars was tears-in-eyes magical, followed by three blissful days in Zanzibar. Malunda’s local perspective and thoughtfulness set them far apart from commercial operators.",
       "date": "September 2026",
-      "photo": "/wp-content/themes/malunda-explorers/assets/images/malunda-safari-035.jpg"
+      "photo": "/images/malunda-safari-035.jpg"
     }
   ],
   "faqs": [
@@ -1047,676 +1047,727 @@
       "id": 3,
       "category": "safari-vehicles",
       "title": "Cheetah Surveying the Serengeti Plains #3",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/malunda-safari-038.jpg",
+      "image": "/images/malunda-safari-038.jpg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 4,
       "category": "camps-lodges",
       "title": "Ngorongoro Crater Caldera at Dawn #4",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/malunda-safari-039.jpg",
+      "image": "/images/malunda-safari-039.jpg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 8,
       "category": "kilimanjaro",
       "title": "Maasai Traditional Gathering & Dance #8",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/malunda-safari-043.jpg",
+      "image": "/images/malunda-safari-043.jpg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 10,
       "category": "landscapes",
       "title": "Flamingos Grazing at Lake Manyara #10",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/malunda-safari-045.jpg",
+      "image": "/images/malunda-safari-045.jpg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 11,
       "category": "safari-vehicles",
       "title": "Sunset Over the African Wilderness #11",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/malunda-safari-046.jpg",
+      "image": "/images/malunda-safari-046.jpg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 12,
       "category": "camps-lodges",
       "title": "Baby Elephant Playing with Herd #12",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/malunda-safari-047.jpg",
+      "image": "/images/malunda-safari-047.jpg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 13,
       "category": "people-culture",
       "title": "Leopard Camouflaged in Acacia Tree #13",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/malunda-safari-048.jpg",
+      "image": "/images/malunda-safari-048.jpg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 17,
       "category": "wildlife",
       "title": "Safari Sundowner Campfire Gathering #17",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/malunda-safari-052.jpg",
+      "image": "/images/malunda-safari-052.jpg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 18,
       "category": "landscapes",
       "title": "Kilimanjaro View Above Clouds #18",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/malunda-safari-053.jpg",
+      "image": "/images/malunda-safari-053.jpg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 19,
       "category": "safari-vehicles",
       "title": "Zanzibar Beach & Coastal Waters #19",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/malunda-safari-054.jpg",
+      "image": "/images/malunda-safari-054.jpg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 20,
       "category": "camps-lodges",
       "title": "Safari Vehicle Crossing Water Stream #20",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/malunda-safari-055.jpg",
+      "image": "/images/malunda-safari-055.jpg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 21,
       "category": "people-culture",
       "title": "Maasai Beadwork & Cultural Exchange #21",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/malunda-safari-056.jpg",
+      "image": "/images/malunda-safari-056.jpg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 22,
       "category": "tanzania",
       "title": "Tree-Climbing Lion in Lake Manyara #22",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/malunda-safari-057.jpg",
+      "image": "/images/malunda-safari-057.jpg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 23,
       "category": "zanzibar",
       "title": "Black Rhino Sighting in Ngorongoro #23",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/malunda-safari-058.jpg",
+      "image": "/images/malunda-safari-058.jpg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 24,
       "category": "kilimanjaro",
       "title": "Bush Breakfast in Northern Serengeti #24",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/malunda-safari-059.jpg",
+      "image": "/images/malunda-safari-059.jpg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 25,
       "category": "wildlife",
       "title": "African Lion Pride Resting on Kopje #25",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/malunda-safari-060.jpg",
+      "image": "/images/malunda-safari-060.jpg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 27,
       "category": "safari-vehicles",
       "title": "Cheetah Surveying the Serengeti Plains #27",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/malunda-safari-062.jpg",
+      "image": "/images/malunda-safari-062.jpg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 28,
       "category": "camps-lodges",
       "title": "Ngorongoro Crater Caldera at Dawn #28",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/malunda-safari-063.jpg",
+      "image": "/images/malunda-safari-063.jpg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 29,
       "category": "people-culture",
       "title": "Baobabs Along Tarangire Riverbed #29",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/malunda-safari-064.jpg",
+      "image": "/images/malunda-safari-064.jpg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 30,
       "category": "tanzania",
       "title": "Custom 4x4 Safari Land Cruiser on Game Drive #30",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/malunda-safari-065.jpg",
+      "image": "/images/malunda-safari-065.jpg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 31,
       "category": "zanzibar",
       "title": "Luxury Bush Tented Suite Deck #31",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/malunda-safari-066.jpg",
+      "image": "/images/malunda-safari-066.jpg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 32,
       "category": "kilimanjaro",
       "title": "Maasai Traditional Gathering & Dance #32",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/malunda-safari-067.jpg",
+      "image": "/images/malunda-safari-067.jpg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 34,
       "category": "landscapes",
       "title": "Flamingos Grazing at Lake Manyara #34",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/malunda-safari-069.jpg",
+      "image": "/images/malunda-safari-069.jpg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 40,
       "category": "kilimanjaro",
       "title": "Buffalo Herd Near Waterhole #40",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/malunda-safari-075.jpg",
+      "image": "/images/malunda-safari-075.jpg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 44,
       "category": "camps-lodges",
       "title": "Safari Vehicle Crossing Water Stream #44",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/malunda-safari-079.jpg",
+      "image": "/images/malunda-safari-079.jpg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 45,
       "category": "people-culture",
       "title": "Maasai Beadwork & Cultural Exchange #45",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/malunda-safari-080.jpg",
+      "image": "/images/malunda-safari-080.jpg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 46,
       "category": "tanzania",
       "title": "Tree-Climbing Lion in Lake Manyara #46",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/malunda-safari-081.jpg",
+      "image": "/images/malunda-safari-081.jpg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 47,
       "category": "zanzibar",
       "title": "Black Rhino Sighting in Ngorongoro #47",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/malunda-safari-082.jpg",
+      "image": "/images/malunda-safari-082.jpg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 48,
       "category": "kilimanjaro",
       "title": "Bush Breakfast in Northern Serengeti #48",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/malunda-safari-083.jpg",
+      "image": "/images/malunda-safari-083.jpg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 49,
       "category": "wildlife",
       "title": "African Lion Pride Resting on Kopje #49",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/malunda-safari-084.jpg",
+      "image": "/images/malunda-safari-084.jpg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 50,
       "category": "landscapes",
       "title": "Matriarch Elephant Leading Herd #50",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/malunda-safari-085.jpg",
+      "image": "/images/malunda-safari-085.jpg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 51,
       "category": "safari-vehicles",
       "title": "Cheetah Surveying the Serengeti Plains #51",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/malunda-safari-086.jpg",
+      "image": "/images/malunda-safari-086.jpg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 52,
       "category": "camps-lodges",
       "title": "Ngorongoro Crater Caldera at Dawn #52",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/malunda-safari-087.jpg",
+      "image": "/images/malunda-safari-087.jpg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 53,
       "category": "people-culture",
       "title": "Baobabs Along Tarangire Riverbed #53",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/malunda-safari-088.jpg",
+      "image": "/images/malunda-safari-088.jpg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 54,
       "category": "tanzania",
       "title": "Custom 4x4 Safari Land Cruiser on Game Drive #54",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/malunda-safari-089.jpg",
+      "image": "/images/malunda-safari-089.jpg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 55,
       "category": "zanzibar",
       "title": "Luxury Bush Tented Suite Deck #55",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/malunda-safari-090.jpg",
+      "image": "/images/malunda-safari-090.jpg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 56,
       "category": "kilimanjaro",
       "title": "Maasai Traditional Gathering & Dance #56",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/malunda-safari-091.jpg",
+      "image": "/images/malunda-safari-091.jpg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 38,
       "category": "vehicles",
       "title": "Custom 4x4 Safari Land Cruiser on Game Drive",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/malunda-safari-001.jpg",
+      "image": "/images/malunda-safari-001.jpg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 39,
       "category": "accommodations",
       "title": "Luxury Bush Tented Camp at Dusk",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/malunda-safari-002.jpg",
+      "image": "/images/malunda-safari-002.jpg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 40,
       "category": "cultural",
       "title": "Authentic Maasai Cultural Boma Experience",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/malunda-safari-003.jpg",
+      "image": "/images/malunda-safari-003.jpg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 41,
       "category": "wildlife",
       "title": "Tanzania Wildlife Safari Encounter",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/malunda-safari-010.jpg",
+      "image": "/images/malunda-safari-010.jpg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 42,
       "category": "vehicles",
       "title": "Custom 4x4 Safari Land Cruiser on Game Drive",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/malunda-safari-011.jpg",
+      "image": "/images/malunda-safari-011.jpg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 43,
       "category": "accommodations",
       "title": "Luxury Bush Tented Camp at Dusk",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/malunda-safari-015.jpg",
+      "image": "/images/malunda-safari-015.jpg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 44,
       "category": "cultural",
       "title": "Authentic Maasai Cultural Boma Experience",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/malunda-safari-021 - Copy (2).jpg",
+      "image": "/images/malunda-safari-021 - Copy (2).jpg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 45,
       "category": "wildlife",
       "title": "Tanzania Wildlife Safari Encounter",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/malunda-safari-028.jpg",
+      "image": "/images/malunda-safari-028.jpg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 46,
       "category": "vehicles",
       "title": "Custom 4x4 Safari Land Cruiser on Game Drive",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/malunda-safari-100.jpg",
+      "image": "/images/malunda-safari-100.jpg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 47,
       "category": "landscapes",
       "title": "Ngorongoro Crater Caldera",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/ngorongoro_crater.jpg",
+      "image": "/images/ngorongoro_crater.jpg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 48,
       "category": "wildlife",
       "title": "The Great Wildebeest Migration, Serengeti",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/serengeti_migration.jpg",
+      "image": "/images/serengeti_migration.jpg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 49,
       "category": "landscapes",
       "title": "Tarangire Baobab Valley",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/Tarangire.jpeg",
+      "image": "/images/Tarangire.jpeg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 50,
       "category": "vehicles",
       "title": "Custom 4x4 Safari Land Cruiser on Game Drive",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/WhatsApp Image 2026-10-07 at 19.57.52.jpeg",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.57.52.jpeg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 51,
       "category": "accommodations",
       "title": "Luxury Bush Tented Camp at Dusk",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/WhatsApp Image 2026-10-07 at 19.57.53.jpeg",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.57.53.jpeg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 52,
       "category": "cultural",
       "title": "Authentic Maasai Cultural Boma Experience",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/WhatsApp Image 2026-10-07 at 19.57.54.jpeg",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.57.54.jpeg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 53,
       "category": "wildlife",
       "title": "Tanzania Wildlife Safari Encounter",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/WhatsApp Image 2026-10-07 at 19.58.06 (1).jpeg",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.06 (1).jpeg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 54,
       "category": "vehicles",
       "title": "Custom 4x4 Safari Land Cruiser on Game Drive",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/WhatsApp Image 2026-10-07 at 19.58.06 (2).jpeg",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.06 (2).jpeg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 55,
       "category": "accommodations",
       "title": "Luxury Bush Tented Camp at Dusk",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/WhatsApp Image 2026-10-07 at 19.58.06 (3).jpeg",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.06 (3).jpeg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 56,
       "category": "cultural",
       "title": "Authentic Maasai Cultural Boma Experience",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/WhatsApp Image 2026-10-07 at 19.58.06.jpeg",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.06.jpeg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 57,
       "category": "wildlife",
       "title": "Tanzania Wildlife Safari Encounter",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/WhatsApp Image 2026-10-07 at 19.58.07 (1).jpeg",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.07 (1).jpeg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 58,
       "category": "vehicles",
       "title": "Custom 4x4 Safari Land Cruiser on Game Drive",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/WhatsApp Image 2026-10-07 at 19.58.07 (2).jpeg",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.07 (2).jpeg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 59,
       "category": "accommodations",
       "title": "Luxury Bush Tented Camp at Dusk",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/WhatsApp Image 2026-10-07 at 19.58.07.jpeg",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.07.jpeg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 60,
       "category": "cultural",
       "title": "Authentic Maasai Cultural Boma Experience",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/WhatsApp Image 2026-10-07 at 19.58.08 (1).jpeg",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.08 (1).jpeg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 61,
       "category": "wildlife",
       "title": "Tanzania Wildlife Safari Encounter",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/WhatsApp Image 2026-10-07 at 19.58.08 (2).jpeg",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.08 (2).jpeg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 62,
       "category": "vehicles",
       "title": "Custom 4x4 Safari Land Cruiser on Game Drive",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/WhatsApp Image 2026-10-07 at 19.58.08 (3).jpeg",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.08 (3).jpeg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 63,
       "category": "accommodations",
       "title": "Luxury Bush Tented Camp at Dusk",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/WhatsApp Image 2026-10-07 at 19.58.08 (4).jpeg",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.08 (4).jpeg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 64,
       "category": "cultural",
       "title": "Authentic Maasai Cultural Boma Experience",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/WhatsApp Image 2026-10-07 at 19.58.08.jpeg",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.08.jpeg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 65,
       "category": "wildlife",
       "title": "Tanzania Wildlife Safari Encounter",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/WhatsApp Image 2026-10-07 at 19.58.09 (1).jpeg",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.09 (1).jpeg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 66,
       "category": "vehicles",
       "title": "Custom 4x4 Safari Land Cruiser on Game Drive",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/WhatsApp Image 2026-10-07 at 19.58.09 (2).jpeg",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.09 (2).jpeg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 67,
       "category": "accommodations",
       "title": "Luxury Bush Tented Camp at Dusk",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/WhatsApp Image 2026-10-07 at 19.58.09 (3).jpeg",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.09 (3).jpeg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 68,
       "category": "cultural",
       "title": "Authentic Maasai Cultural Boma Experience",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/WhatsApp Image 2026-10-07 at 19.58.09.jpeg",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.09.jpeg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 69,
       "category": "wildlife",
       "title": "Tanzania Wildlife Safari Encounter",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/WhatsApp Image 2026-10-07 at 19.58.10 (1).jpeg",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.10 (1).jpeg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 70,
       "category": "vehicles",
       "title": "Custom 4x4 Safari Land Cruiser on Game Drive",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/WhatsApp Image 2026-10-07 at 19.58.10 (2).jpeg",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.10 (2).jpeg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 71,
       "category": "accommodations",
       "title": "Luxury Bush Tented Camp at Dusk",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/WhatsApp Image 2026-10-07 at 19.58.10 (3).jpeg",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.10 (3).jpeg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 72,
       "category": "cultural",
       "title": "Authentic Maasai Cultural Boma Experience",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/WhatsApp Image 2026-10-07 at 19.58.10.jpeg",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.10.jpeg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 73,
       "category": "wildlife",
       "title": "Tanzania Wildlife Safari Encounter",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/WhatsApp Image 2026-10-07 at 19.58.11 (1).jpeg",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.11 (1).jpeg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 74,
       "category": "vehicles",
       "title": "Custom 4x4 Safari Land Cruiser on Game Drive",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/WhatsApp Image 2026-10-07 at 19.58.11 (2).jpeg",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.11 (2).jpeg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 75,
       "category": "accommodations",
       "title": "Luxury Bush Tented Camp at Dusk",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/WhatsApp Image 2026-10-07 at 19.58.11 (3).jpeg",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.11 (3).jpeg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 76,
       "category": "cultural",
       "title": "Authentic Maasai Cultural Boma Experience",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/WhatsApp Image 2026-10-07 at 19.58.11.jpeg",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.11.jpeg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 77,
       "category": "wildlife",
       "title": "Tanzania Wildlife Safari Encounter",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/WhatsApp Image 2026-10-07 at 19.58.12 (1).jpeg",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.12 (1).jpeg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 78,
       "category": "vehicles",
       "title": "Custom 4x4 Safari Land Cruiser on Game Drive",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/WhatsApp Image 2026-10-07 at 19.58.12 (2).jpeg",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.12 (2).jpeg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 79,
       "category": "accommodations",
       "title": "Luxury Bush Tented Camp at Dusk",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/WhatsApp Image 2026-10-07 at 19.58.12.jpeg",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.12.jpeg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 80,
       "category": "cultural",
       "title": "Authentic Maasai Cultural Boma Experience",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/WhatsApp Image 2026-10-07 at 19.58.13 (1).jpeg",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.13 (1).jpeg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 81,
       "category": "wildlife",
       "title": "Tanzania Wildlife Safari Encounter",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/WhatsApp Image 2026-10-07 at 19.58.13 (2).jpeg",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.13 (2).jpeg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 82,
       "category": "vehicles",
       "title": "Custom 4x4 Safari Land Cruiser on Game Drive",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/WhatsApp Image 2026-10-07 at 19.58.13 (3).jpeg",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.13 (3).jpeg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 83,
       "category": "accommodations",
       "title": "Luxury Bush Tented Camp at Dusk",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/WhatsApp Image 2026-10-07 at 19.58.13 (4).jpeg",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.13 (4).jpeg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 84,
       "category": "cultural",
       "title": "Authentic Maasai Cultural Boma Experience",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/WhatsApp Image 2026-10-07 at 19.58.13.jpeg",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.13.jpeg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 85,
       "category": "wildlife",
       "title": "Tanzania Wildlife Safari Encounter",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/WhatsApp Image 2026-10-07 at 19.58.14 (1).jpeg",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.14 (1).jpeg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 86,
       "category": "vehicles",
       "title": "Custom 4x4 Safari Land Cruiser on Game Drive",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/WhatsApp Image 2026-10-07 at 19.58.14 (2).jpeg",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.14 (2).jpeg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 87,
       "category": "accommodations",
       "title": "Luxury Bush Tented Camp at Dusk",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/WhatsApp Image 2026-10-07 at 19.58.14.jpeg",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.14.jpeg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 88,
       "category": "cultural",
       "title": "Authentic Maasai Cultural Boma Experience",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/WhatsApp Image 2026-10-07 at 19.58.15 (1).jpeg",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.15 (1).jpeg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 89,
       "category": "wildlife",
       "title": "Tanzania Wildlife Safari Encounter",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/WhatsApp Image 2026-10-07 at 19.58.15 (2).jpeg",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.15 (2).jpeg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 90,
       "category": "vehicles",
       "title": "Custom 4x4 Safari Land Cruiser on Game Drive",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/WhatsApp Image 2026-10-07 at 19.58.15.jpeg",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.15.jpeg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 91,
       "category": "accommodations",
       "title": "Luxury Bush Tented Camp at Dusk",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/WhatsApp Image 2026-10-07 at 19.58.16 (2).jpeg",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.16 (2).jpeg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 92,
       "category": "cultural",
       "title": "Authentic Maasai Cultural Boma Experience",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/WhatsApp Image 2026-10-07 at 19.58.17.jpeg",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.17.jpeg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 93,
       "category": "wildlife",
       "title": "Tanzania Wildlife Safari Encounter",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/WhatsApp Image 2026-10-07 at 19.58.18.jpeg",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.18.jpeg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 94,
       "category": "vehicles",
       "title": "Custom 4x4 Safari Land Cruiser on Game Drive",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/WhatsApp Image 2026-10-07 at 19.58.19 (1).jpeg",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.19 (1).jpeg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 95,
       "category": "accommodations",
       "title": "Luxury Bush Tented Camp at Dusk",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/WhatsApp Image 2026-10-07 at 19.58.19.jpeg",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.19.jpeg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     },
     {
       "id": 96,
       "category": "zanzibar",
       "title": "Zanzibar White Sands & Turquoise Ocean",
-      "image": "/wp-content/themes/malunda-explorers/assets/images/zanzibar_beach.jpg",
+      "image": "/images/zanzibar_beach.jpg",
       "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
     }
   ],
   "bookings": [
+    {
+      "booking_ref": "ME-2026-3784",
+      "created_at": "2026-10-14T14:45:21.792Z",
+      "safari_id": "7-day-northern-circuit-signature",
+      "safari_name": "7-Day Northern Circuit Signature Safari",
+      "travel_date": "2027-04-14",
+      "duration_days": 7,
+      "travelers": {
+        "adults": 2,
+        "children": 0,
+        "rooms": 1,
+        "children_ages": "",
+        "special_requirements": ""
+      },
+      "accommodation_tier": "mid-range",
+      "accommodation_name": "Mid-Range Safari Lodges",
+      "extras": [],
+      "customer": {
+        "full_name": "Eleanor Vance",
+        "email": "test.traveler.mv881zo8@example.com",
+        "phone": "+1 555 789 0123",
+        "country": "Canada",
+        "contact_method": "WhatsApp",
+        "flight_info": "",
+        "dietary": "",
+        "special_requests": "",
+        "pickup_location": "Kilimanjaro International Airport (JRO)"
+      },
+      "pricing": {
+        "total_price": 6900,
+        "deposit_required": 2070,
+        "balance_due": 0,
+        "base_rate": 3450,
+        "currency": "USD"
+      },
+      "payment": {
+        "method": "card",
+        "payment_type": "deposit",
+        "payment_status": "Fully Paid",
+        "amount_paid": 9970,
+        "transaction_id": "TXN-85DB22BE"
+      },
+      "booking_status": "Confirmed",
+      "internal_notes": "Online booking registered. Welcome pack and safari itinerary queued.",
+      "modification_request": {
+        "requested_at": "2026-10-14T14:45:21.803Z",
+        "new_date": "2026-11-20",
+        "notes": "Flight rescheduled by airline",
+        "status": "Pending Review"
+      }
+    },
     {
       "booking_ref": "ME-2026-5277",
       "created_at": "2026-10-14T12:44:41.777Z",
@@ -2055,6 +2106,23 @@
   ],
   "inquiries": [
     {
+      "id": "INQ-MV881ZPY",
+      "created_at": "2026-10-14T14:45:21.814Z",
+      "full_name": "Marcus & Clara Vance",
+      "email": "marcus@example.com",
+      "phone": "+44 7900 123456",
+      "country": "United Kingdom",
+      "travel_dates": "August 2027",
+      "travelers": "2 Adults",
+      "duration": "8-10 days",
+      "budget": "$5,000 - $8,000",
+      "destinations": "Serengeti, Ngorongoro, Zanzibar",
+      "safari_style": "Luxury Tented Safari",
+      "accommodation": "Luxury Boutique Camps",
+      "message": "Looking for a private safari with hot air balloon over Serengeti.",
+      "status": "New Inquiry"
+    },
+    {
       "id": "INQ-MV83QTAV",
       "created_at": "2026-10-14T12:44:41.815Z",
       "full_name": "Marcus & Clara Vance",
@@ -2124,6 +2192,40 @@
     }
   ],
   "payment_transactions": [
+    {
+      "transaction_id": "TXN-MAN-MV881ZQ3",
+      "booking_ref": "ME-2026-3784",
+      "payment_method": "Bank Wire Transfer",
+      "amount": 1000,
+      "currency": "USD",
+      "status": "completed",
+      "gateway": "Admin Manual Entry (Receipt #CRDB-889911)",
+      "created_at": "2026-10-14T14:45:21.819Z",
+      "verified": true
+    },
+    {
+      "transaction_id": "TXN-WEBHOOK-1791989121806",
+      "booking_ref": "ME-2026-3784",
+      "payment_method": "Stripe Verified",
+      "amount": 6900,
+      "currency": "USD",
+      "status": "completed",
+      "gateway": "Stripe Verified",
+      "created_at": "2026-10-14T14:45:21.808Z",
+      "verified": true
+    },
+    {
+      "transaction_id": "TXN-85DB22BE",
+      "booking_ref": "ME-2026-3784",
+      "payment_method": "card",
+      "payment_type": "deposit",
+      "amount": 2070,
+      "currency": "USD",
+      "status": "completed",
+      "gateway": "Secure PCI Card Sandbox",
+      "created_at": "2026-10-14T14:45:21.792Z",
+      "verified": true
+    },
     {
       "transaction_id": "TXN-MAN-MV83QTB0",
       "booking_ref": "ME-2026-5277",
@@ -2245,6 +2347,34 @@
   ],
   "capacity_per_departure": 6,
   "audit_logs": [
+    {
+      "timestamp": "2026-10-14T14:45:21.819Z",
+      "action": "OFFLINE_PAYMENT_RECORDED",
+      "ref": "ME-2026-3784",
+      "actor": "Admin Staff",
+      "details": "Recorded offline payment of $1000 via Bank Wire Transfer. Receipt: CRDB-889911. Note: Received wire transfer at Arusha HQ"
+    },
+    {
+      "timestamp": "2026-10-14T14:45:21.808Z",
+      "action": "WEBHOOK_PROCESSED",
+      "ref": "ME-2026-3784",
+      "actor": "Payment Gateway",
+      "details": "Received verified payment webhook for $6900. Status: completed"
+    },
+    {
+      "timestamp": "2026-10-14T14:45:21.803Z",
+      "action": "MODIFICATION_REQUESTED",
+      "ref": "ME-2026-3784",
+      "actor": "test.traveler.mv881zo8@example.com",
+      "details": "Requested new travel date: 2026-11-20. Note: Flight rescheduled by airline"
+    },
+    {
+      "timestamp": "2026-10-14T14:45:21.792Z",
+      "action": "BOOKING_CREATED",
+      "ref": "ME-2026-3784",
+      "actor": "Eleanor Vance (test.traveler.mv881zo8@example.com)",
+      "details": "Booking created for 7-Day Northern Circuit Signature Safari on 2027-04-14. Total: $6900"
+    },
     {
       "timestamp": "2026-10-14T12:44:41.820Z",
       "action": "OFFLINE_PAYMENT_RECORDED",
