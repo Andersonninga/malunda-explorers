@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vivutio Vikuu vya Safari Tanzania — Malunda Explorers</title>
+    <meta name="description" content="Gundua uzuri wa Zanzibar, Ngorongoro na Serengeti pamoja na Malunda Explorers. Safari za kipekee, fukwe za kifahari na wanyamapori wa kuvutia.">
+    
+    <!-- Google Fonts Matching Theme -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --color-primary: #183321;          /* Deep Serengeti Green */
+            --color-primary-dark: #0f2215;     /* Night Wilderness */
+            --color-primary-light: #2c4d36;    /* Acacia Green */
+            --color-accent: #c8933b;           /* Savannah Sunset Gold */
+            --color-accent-hover: #b5802b;     /* Rich Amber */
+            --color-accent-light: #f7eedf;     /* Champagne tint */
+            --color-earth: #8f5334;            /* African Terracotta */
+            --color-sand: #f5f0e6;             /* Warm African Sand */
+            --color-sand-light: #fbf9f4;       /* Morning Mist Cream */
+            --color-dark: #191c1a;             /* Volcanic Charcoal */
+            --color-dark-muted: #49504a;       /* Muted Charcoal */
+            --color-border: rgba(24, 51, 33, 0.12);
+            --color-border-subtle: #eae5d9;
+            --font-heading: 'Playfair Display', Georgia, serif;
+            --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
+            --shadow-md: 0 8px 24px rgba(24, 51, 33, 0.08);
+            --shadow-lg: 0 16px 40px rgba(24, 51, 33, 0.12);
+            --shadow-hover: 0 20px 48px rgba(24, 51, 33, 0.18);
+            --radius-md: 12px;
+            --radius-lg: 20px;
+            --radius-xl: 32px;
+            --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--color-sand-light);
+            color: var(--color-dark);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: var(--font-heading);
+            color: var(--color-primary-dark);
+            line-height: 1.25;
+            font-weight: 700;
+        }
+
+        a {
+            color: var(--color-primary);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        /* Top Bar */
+        .site-topbar {
+            background-color: var(--color-primary-dark);
+            color: var(--color-sand);
+            font-size: 0.85rem;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .container {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .topbar-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .topbar-info {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        .topbar-info a {
+            color: var(--color-sand);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .topbar-info a:hover {
+            color: var(--color-accent);
+        }
+
+        .topbar-tagline {
+            font-family: var(--font-heading);
+            font-style: italic;
+            color: var(--color-accent);
+        }
+
+        /* Header */
+        .site-header {
+            background: #ffffff;
+            border-bottom: 1px solid var(--color-border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.9rem 0;
+        }
+
+        .site-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+        }
+
+        .site-logo img {
+            height: 48px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .brand-text h2 {
+            font-size: 1.35rem;
+            color: var(--color-primary);
+            letter-spacing: 0.05em;
+            margin: 0;
+            line-height: 1;
+        }
+
+        .brand-text span {
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: 0.22em;
+            color: var(--color-accent);
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 1.75rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: var(--color-primary);
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--color-accent);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.8rem 1.8rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.92rem;
+            cursor: pointer;
+            transition: var(--transition);
+            border: 2px solid transparent;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background-color: var(--color-accent);
+            color: #ffffff;
+            box-shadow: 0 4px 14px rgba(200, 147, 59, 0.35);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--color-accent-hover);
+            color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(200, 147, 59, 0.45);
+        }
+
+        .btn-outline-dark {
+            border-color: var(--color-primary);
+            color: var(--color-primary);
+            background: transparent;
+        }
+
+        .btn-outline-dark:hover {
+            background: var(--color-primary);
+            color: #ffffff;
+        }
+
+        .btn-sm {
+            padding: 0.55rem 1.25rem;
+            font-size: 0.82rem;
+        }
+
+        /* Hero Banner */
+        .page-hero {
+            position: relative;
+            background: linear-gradient(rgba(15, 34, 21, 0.78), rgba(15, 34, 21, 0.88)), url('images/serengeti_migration.jpg') center/cover no-repeat;
+            padding: 6rem 1.5rem 5rem;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .badge-pill {
+            display: inline-block;
+            background: var(--color-accent);
+            color: #ffffff;
+            font-size: 0.75rem;
+            font-weight: 800;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            padding: 0.35rem 1.1rem;
+            border-radius: 50px;
+            margin-bottom: 1rem;
+        }
+
+        .page-hero h1 {
+            color: #ffffff;
+            font-size: clamp(2.3rem, 5vw, 3.8rem);
+            margin-bottom: 1rem;
+        }
+
+        .page-hero p {
+            color: var(--color-sand);
+            font-size: 1.15rem;
+            max-width: 760px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        /* Stats Strip */
+        .stats-strip {
+            background: #ffffff;
+            border-bottom: 1px solid var(--color-border);
+            padding: 2rem 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 2.2rem;
+            color: var(--color-accent);
+            margin-bottom: 0.2rem;
+        }
+
+        .stat-item span {
+            font-size: 0.82rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: var(--color-dark-muted);
+            letter-spacing: 0.08em;
+        }
+
+        /* Destinations Section */
+        .section {
+            padding: 5rem 0;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 760px;
+            margin: 0 auto 3.5rem;
+        }
+
+        .section-subtitle {
+            display: inline-block;
+            font-size: 0.8rem;
+            font-weight: 800;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--color-accent);
+            margin-bottom: 0.5rem;
+        }
+
+        .destinations-list {
+            display: flex;
+            flex-direction: column;
+            gap: 3.5rem;
+        }
+
+        .destination-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            background: #ffffff;
+            padding: 2.8rem;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--color-border);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+
+        .destination-row:hover {
+            box-shadow: var(--shadow-hover);
+            transform: translateY(-4px);
+        }
+
+        .destination-row.reverse .dest-media {
+            order: 1;
+        }
+
+        .destination-row.reverse .dest-info {
+            order: 2;
+        }
+
+        .dest-media {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            height: 420px;
+        }
+
+        .dest-media img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.8s ease;
+        }
+
+        .destination-row:hover .dest-media img {
+            transform: scale(1.05);
+        }
+
+        .media-tag {
+            position: absolute;
+            top: 1.2rem;
+            left: 1.2rem;
+            background: var(--color-primary-dark);
+            color: var(--color-accent);
+            font-size: 0.75rem;
+            font-weight: 800;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            padding: 0.35rem 0.9rem;
+            border-radius: 50px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+
+        .dest-info h2 {
+            font-size: 2.2rem;
+            margin-bottom: 0.3rem;
+            color: var(--color-primary-dark);
+        }
+
+        .dest-subtitle {
+            font-family: var(--font-heading);
+            font-style: italic;
+            color: var(--color-accent);
+            font-size: 1.15rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .dest-description {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: var(--color-dark-muted);
+            margin-bottom: 1.8rem;
+        }
+
+        .meta-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1.8rem;
+            background: var(--color-sand-light);
+            padding: 1.2rem 1.4rem;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--color-border-subtle);
+        }
+
+        .meta-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            color: var(--color-dark-muted);
+            font-weight: 700;
+            display: block;
+            margin-bottom: 0.2rem;
+        }
+
+        .meta-val {
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: var(--color-primary-dark);
+        }
+
+        .highlights-title {
+            font-size: 0.82rem;
+            text-transform: uppercase;
+            color: var(--color-primary);
+            font-weight: 800;
+            display: block;
+            margin-bottom: 0.6rem;
+            letter-spacing: 0.05em;
+        }
+
+        .tags-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .tag-pill {
+            background: var(--color-sand);
+            color: var(--color-primary-dark);
+            font-size: 0.82rem;
+            font-weight: 600;
+            padding: 0.35rem 0.85rem;
+            border-radius: 50px;
+            border: 1px solid var(--color-border-subtle);
+        }
+
+        .action-row {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        /* Gallery Row */
+        .section-gallery {
+            background: var(--color-sand);
+            padding: 5rem 0;
+            border-top: 1px solid var(--color-border-subtle);
+            border-bottom: 1px solid var(--color-border-subtle);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .gallery-card {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            height: 280px;
+        }
+
+        .gallery-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .gallery-card:hover img {
+            transform: scale(1.08);
+        }
+
+        .gallery-card-content {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(15, 34, 21, 0.85) 0%, transparent 60%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 1.5rem;
+            color: #ffffff;
+        }
+
+        .gallery-card-content h3 {
+            color: #ffffff;
+            font-size: 1.35rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .gallery-card-content span {
+            font-size: 0.85rem;
+            color: var(--color-accent);
+            font-weight: 600;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+            color: #ffffff;
+            padding: 5rem 1.5rem;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            color: #ffffff;
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            color: var(--color-sand);
+            font-size: 1.15rem;
+            max-width: 620px;
+            margin: 0 auto 2.5rem;
+            line-height: 1.8;
+        }
+
+        /* Footer */
+        .site-footer {
+            background: var(--color-primary-dark);
+            color: var(--color-sand);
+            padding: 4.5rem 0 2rem;
+            border-top: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3.5rem;
+        }
+
+        .footer-brand h3 {
+            color: #ffffff;
+            font-size: 1.4rem;
+            margin-bottom: 0.3rem;
+            letter-spacing: 0.05em;
+        }
+
+        .footer-tagline {
+            color: var(--color-accent);
+            font-style: italic;
+            font-family: var(--font-heading);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-desc {
+            font-size: 0.92rem;
+            color: rgba(245, 240, 230, 0.75);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-col h4 {
+            color: #ffffff;
+            font-size: 1.05rem;
+            margin-bottom: 1.2rem;
+            font-family: var(--font-body);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.65rem;
+        }
+
+        .footer-col ul li a {
+            color: rgba(245, 240, 230, 0.75);
+            font-size: 0.92rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--color-accent);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.08);
+            padding-top: 2rem;
+            text-align: center;
+            font-size: 0.85rem;
+            color: rgba(245, 240, 230, 0.55);
+        }
+
+        @media (max-width: 992px) {
+            .destination-row, .destination-row.reverse {
+                grid-template-columns: 1fr;
+            }
+            .destination-row.reverse .dest-media {
+                order: 0;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .destination-row {
+                padding: 1.5rem;
+            }
+            .dest-media {
+                height: 280px;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            .meta-box {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="site-topbar">
+        <div class="container">
+            <div class="topbar-inner">
+                <div class="topbar-info">
+                    <a href="tel:+255784567890"><span>📞</span> +255 784 567 890</a>
+                    <a href="https://wa.me/255784567890" target="_blank" rel="noopener"><span>💬</span> WhatsApp Direct</a>
+                    <a href="mailto:info@malundaexplorers.com"><span>✉️</span> info@malundaexplorers.com</a>
+                </div>
+                <div class="topbar-tagline">“Every journey tells a story.”</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container">
+            <div class="header-inner">
+                <a href="http://localhost:3000/" class="site-logo">
+                    <img src="images/logo.png" alt="Malunda Explorers" onerror="this.style.display='none'">
+                    <div class="brand-text">
+                        <h2>MALUNDA EXPLORERS</h2>
+                        <span>Authentic Tanzania Safaris</span>
+                    </div>
+                </a>
+                <nav class="site-nav">
+                    <ul class="nav-links">
+                        <li><a href="http://localhost:3000/">Home</a></li>
+                        <li><a href="http://localhost:3000/destinations/" class="active">Destinations</a></li>
+                        <li><a href="http://localhost:3000/safaris/">Safaris</a></li>
+                        <li><a href="http://localhost:3000/safari-experiences/">Experiences</a></li>
+                        <li><a href="http://localhost:3000/about-us/">About Us</a></li>
+                        <li><a href="http://localhost:3000/contact/">Contact</a></li>
+                    </ul>
+                </nav>
+                <div>
+                    <a href="http://localhost:3000/booking/" class="btn btn-primary btn-sm">PLAN YOUR SAFARI</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <span class="badge-pill">ICONIC AFRICAN WILDERNESS</span>
+            <h1>Vivutio Vikuu vya Tanzania</h1>
+            <p>
+                Gundua maeneo maarufu zaidi ya kitalii Afrika Mashariki — kuanzia savanna zisizo na kikomo za Serengeti, bonde la volkeno la Ngorongoro, hadi fukwe safi za kitalii za Zanzibar.
+            </p>
+        </div>
+    </section>
+
+    <!-- Stats Strip -->
+    <div class="stats-strip">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>1.5M+</h3>
+                    <span>Wanyama Serengeti</span>
+                </div>
+                <div class="stat-item">
+                    <h3>UNESCO</h3>
+                    <span>Urithi wa Dunia</span>
+                </div>
+                <div class="stat-item">
+                    <h3>25,000+</h3>
+                    <span>Wanyama Ngorongoro</span>
+                </div>
+                <div class="stat-item">
+                    <h3>54km</h3>
+                    <span>Pwani Safi Zanzibar</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Destinations List -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">DESTINATION SHOWCASE</span>
+                <h2>Maeneo Yenye Hadithi ya Pekee</h2>
+                <p>Kila kivutio kimebeba picha na sifa halisi zinazotoa muonekano halisi wa uzoefu unaomsubiri mgeni wako.</p>
+            </div>
+
+            <div class="destinations-list">
+
+                <!-- 1. SERENGETI -->
+                <div class="destination-row" id="serengeti">
+                    <div class="dest-info">
+                        <span class="section-subtitle">01 · Savanna & Wanyamapori</span>
+                        <h2>Serengeti National Park</h2>
+                        <div class="dest-subtitle">Endless Plains & The Great Wildebeest Migration</div>
+                        <p class="dest-description">
+                            Nyanda kubwa zisizo na mwisho, maelfu ya wanyamapori na moja ya maajabu makuu ya dunia — Uhamisho Mkubwa (Great Migration). Zaidi ya wanyama milioni mbili wa nyumbu na punda milia hupita hapa kila mwaka wakitafuta malisho, wakifuatiliwa kwa ukaribu na simba, chui na duma.
+                        </p>
+                        
+                        <div class="meta-box">
+                            <div>
+                                <span class="meta-label">Muda Unaopendekezwa</span>
+                                <div class="meta-val">Siku 3 - 5</div>
+                            </div>
+                            <div>
+                                <span class="meta-label">Msimu Bora wa Kutembelea</span>
+                                <div class="meta-val">Mwaka mzima (Julai - Oktoba kwa mito)</div>
+                            </div>
+                        </div>
+
+                        <span class="highlights-title">Vivutio Vikuu vya Wanyama:</span>
+                        <div class="tags-wrap">
+                            <span class="tag-pill">🦁 Big Five (Simba, Chui, Tembo, Nyati, Kifaru)</span>
+                            <span class="tag-pill">🦓 Great Migration (Nyumbu 1.5M+)</span>
+                            <span class="tag-pill">🎈 Safari ya Puto la Angani (Balloon Safari)</span>
+                            <span class="tag-pill">🌅 Machweo ya Jua ya Savanna</span>
+                        </div>
+
+                        <div class="action-row">
+                            <a href="http://localhost:3000/booking/?dest=serengeti" class="btn btn-primary">Panga Safari ya Serengeti</a>
+                            <a href="http://localhost:3000/destinations/serengeti/" class="btn btn-outline-dark">Soma Maelezo Zaidi</a>
+                        </div>
+                    </div>
+
+                    <div class="dest-media">
+                        <span class="media-tag">Great Migration</span>
+                        <img src="images/serengeti_migration.jpg" alt="Serengeti Great Migration">
+                    </div>
+                </div>
+
+                <!-- 2. NGORONGORO -->
+                <div class="destination-row reverse" id="ngorongoro">
+                    <div class="dest-info">
+                        <span class="section-subtitle">02 · Ajabu ya Nane ya Dunia</span>
+                        <h2>Ngorongoro Crater</h2>
+                        <div class="dest-subtitle">The Eighth Wonder of the World & Wildlife Sanctuary</div>
+                        <p class="dest-description">
+                            Shuka ndani ya bonde la volkeno lenye kina cha mita 600 na ukubwa wa kilomita 260 za mraba — Edeni halisi ya wanyama. Ngorongoro inahifadhi zaidi ya wanyamapori wakubwa 25,000, ikiwa ni pamoja na vifaru weusi walio hatarini kutoweka, makundi makubwa ya simba, na ndege flamingo kwenye Ziwa Magadi.
+                        </p>
+                        
+                        <div class="meta-box">
+                            <div>
+                                <span class="meta-label">Muda Unaopendekezwa</span>
+                                <div class="meta-val">Siku 1 - 2</div>
+                            </div>
+                            <div>
+                                <span class="meta-label">Msimu Bora wa Kutembelea</span>
+                                <div class="meta-val">Mwaka mzima (Msimu wa kiangazi Juni - Oktoba)</div>
+                            </div>
+                        </div>
+
+                        <span class="highlights-title">Vivutio Vikuu vya Wanyama:</span>
+                        <div class="tags-wrap">
+                            <span class="tag-pill">🦏 Kifaru Mweusi (Endangered Black Rhino)</span>
+                            <span class="tag-pill">🦁 Makundi ya Simba ya Bonde</span>
+                            <span class="tag-pill">🦩 Maelfu ya Flamingo Ziwa Magadi</span>
+                            <span class="tag-pill">🏛️ Bonde la Kihistoria la Olduvai Gorge</span>
+                        </div>
+
+                        <div class="action-row">
+                            <a href="http://localhost:3000/booking/?dest=ngorongoro" class="btn btn-primary">Panga Safari ya Ngorongoro</a>
+                            <a href="http://localhost:3000/destinations/ngorongoro/" class="btn btn-outline-dark">Soma Maelezo Zaidi</a>
+                        </div>
+                    </div>
+
+                    <div class="dest-media">
+                        <span class="media-tag">World Heritage</span>
+                        <img src="images/ngorongoro_crater.jpg" alt="Ngorongoro Crater Caldera">
+                    </div>
+                </div>
+
+                <!-- 3. ZANZIBAR -->
+                <div class="destination-row" id="zanzibar">
+                    <div class="dest-info">
+                        <span class="section-subtitle">03 · Kisiwa cha Viungo & Fukwe</span>
+                        <h2>Zanzibar Archipelago</h2>
+                        <div class="dest-subtitle">Turquoise Waters, Spice Island & Stone Town Heritage</div>
+                        <p class="dest-description">
+                            Kamilisha safari yako ya Afrika kwa maji ya joto ya Bahari ya Hindi, mchanga mweupe unaong'aa, na harufu ya karafuu na viungo. Zanzibar inatoa utulivu wa kipekee baada ya safari ya porini (Bush to Beach) — safari za majahazi (Dhow), mbizi kwenye matumbawe ya Mnemba, na mitaa ya kihistoria ya Stone Town.
+                        </p>
+                        
+                        <div class="meta-box">
+                            <div>
+                                <span class="meta-label">Muda Unaopendekezwa</span>
+                                <div class="meta-val">Siku 3 - 5</div>
+                            </div>
+                            <div>
+                                <span class="meta-label">Msimu Bora wa Kutembelea</span>
+                                <div class="meta-val">Juni - Oktoba na Desemba - Februari</div>
+                            </div>
+                        </div>
+
+                        <span class="highlights-title">Vivutio Vikuu vya Kisiwani:</span>
+                        <div class="tags-wrap">
+                            <span class="tag-pill">⛵ Dhow Sunset Cruise na Chakula cha Baharini</span>
+                            <span class="tag-pill">🏝️ Fukwe Safi za Nungwi na Kendwa</span>
+                            <span class="tag-pill">🐬 Pomboo (Dolphins) Kizimkazi na Mnemba</span>
+                            <span class="tag-pill">🏰 Mji Mkongwe wa Stone Town (UNESCO)</span>
+                        </div>
+
+                        <div class="action-row">
+                            <a href="http://localhost:3000/booking/?dest=zanzibar" class="btn btn-primary">Panga Likizo ya Zanzibar</a>
+                            <a href="http://localhost:3000/destinations/zanzibar/" class="btn btn-outline-dark">Soma Maelezo Zaidi</a>
+                        </div>
+                    </div>
+
+                    <div class="dest-media">
+                        <span class="media-tag">Spice Island</span>
+                        <img src="images/zanzibar_beach.jpg" alt="Zanzibar Beach Turquoise Waters">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Visual Gallery Row -->
+    <section class="section-gallery">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">PHOTO GALLERY</span>
+                <h2>Picha za Moja kwa Moja</h2>
+                <p>Muonekano wa kuvutia uliopangwa kulingana na muundo rasmi wa Malunda Explorers.</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-card">
+                    <img src="images/serengeti_migration.jpg" alt="Serengeti">
+                    <div class="gallery-card-content">
+                        <h3>Serengeti National Park</h3>
+                        <span>Uhamisho Mkubwa & Savana</span>
+                    </div>
+                </div>
+                <div class="gallery-card">
+                    <img src="images/ngorongoro_crater.jpg" alt="Ngorongoro">
+                    <div class="gallery-card-content">
+                        <h3>Ngorongoro Crater</h3>
+                        <span>Bonde la Volkeno & Wanyama 25,000+</span>
+                    </div>
+                </div>
+                <div class="gallery-card">
+                    <img src="images/zanzibar_beach.jpg" alt="Zanzibar">
+                    <div class="gallery-card-content">
+                        <h3>Zanzibar Archipelago</h3>
+                        <span>Fukwe Safi & Majahazi ya Kienyeji</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <span class="badge-pill" style="background: rgba(255,255,255,0.15);">TAILOR-MADE TANZANIA SAFARI</span>
+            <h2>Uko Tayari Kuanza Safari Yako?</h2>
+            <p>
+                Wasiliana na wataalamu wetu wa Malunda Explorers ili kuandaa ratiba maalum inayokidhi bajeti na matarajio ya mteja wako.
+            </p>
+            <div style="display:flex; justify-content:center; gap: 1rem; flex-wrap:wrap;">
+                <a href="http://localhost:3000/booking/" class="btn btn-primary">Anza Kupanga Sasa</a>
+                <a href="https://wa.me/255784567890" target="_blank" rel="noopener" class="btn" style="background:#25D366; color:#fff;">💬 WhatsApp Direct</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Site Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>MALUNDA EXPLORERS</h3>
+                    <div class="footer-tagline">Explore the Wild. Experience More. Create Memories.</div>
+                    <p class="footer-desc">
+                        Safari na huduma za kipekee zilizobuniwa kwa umakini mkubwa kwa wasafiri wanaotafuta matukio halisi ya porini, mandhari nzuri na kumbukumbu zisizosahaulika.
+                    </p>
+                    <div>📍 Safari Way, Plot 42, Arusha, Tanzania</div>
+                    <div>📞 +255 784 567 890</div>
+                    <div>✉️ info@malundaexplorers.com</div>
+                </div>
+                <div class="footer-col">
+                    <h4>Vivutio</h4>
+                    <ul>
+                        <li><a href="#serengeti">Serengeti</a></li>
+                        <li><a href="#ngorongoro">Ngorongoro</a></li>
+                        <li><a href="#zanzibar">Zanzibar</a></li>
+                        <li><a href="http://localhost:3000/destinations/">Tarangire</a></li>
+                        <li><a href="http://localhost:3000/destinations/">Kilimanjaro</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Kurasa</h4>
+                    <ul>
+                        <li><a href="http://localhost:3000/">Home</a></li>
+                        <li><a href="http://localhost:3000/destinations/">Destinations</a></li>
+                        <li><a href="http://localhost:3000/safaris/">Safaris</a></li>
+                        <li><a href="http://localhost:3000/booking/">Booking</a></li>
+                        <li><a href="http://localhost:3000/about-us/">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Mawasiliano</h4>
+                    <ul>
+                        <li><a href="https://wa.me/255784567890">WhatsApp Direct</a></li>
+                        <li><a href="mailto:info@malundaexplorers.com">Barua Pepe</a></li>
+                        <li><a href="tel:+255784567890">Piga Simu</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                © 2026 Malunda Explorers. Haki zote zimehifadhiwa. TALA Tourism Licensed & AMREF Covered.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

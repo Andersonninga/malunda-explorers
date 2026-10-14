@@ -1,0 +1,842 @@
+
+<div style="background: #f0f0f1; min-height: 100vh; padding: 2rem 1.5rem; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;">
+    <div class="container" style="max-width: 1400px;">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 2rem; flex-wrap:wrap; gap: 1rem;">
+            <div>
+                <a href="index.html" style="font-size:0.85rem; color:#666; text-decoration:none; display:inline-block; margin-bottom: 0.3rem;">← Back to Malunda Explorers Live Site</a>
+                <h1 style="font-size: 1.8rem; font-weight: 700; color: #183321; margin: 0; display:flex; align-items:center; gap: 0.6rem;">
+                    <span>🦁</span> Malunda Explorers — Staff Operations & Reservation Portal
+                </h1>
+                <p style="margin: 0.2rem 0 0; color:#555; font-size: 0.92rem;">Comprehensive booking management, packages, departures availability, payments & website settings</p>
+            </div>
+            <div style="display:flex; gap: 0.8rem;">
+                <a href="/admin/export-csv" class="btn btn-primary btn-sm">📥 Export All Bookings (CSV)</a>
+                <a href="booking.html" class="btn btn-outline-dark btn-sm" target="_blank">+ New Reservation</a>
+            </div>
+        </div>
+
+        <!-- KPI Cards -->
+        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.2rem; margin-bottom: 2rem;">
+            <div style="background:#fff; padding: 1.5rem; border-radius: 8px; border: 1px solid #ccd0d4; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
+                <div style="font-size: 0.75rem; text-transform:uppercase; color:#666; font-weight:700;">Total Bookings</div>
+                <div style="font-size: 2rem; font-weight: 800; color: #183321; margin-top: 0.3rem;">7</div>
+            </div>
+            <div style="background:#fff; padding: 1.5rem; border-radius: 8px; border: 1px solid #ccd0d4; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
+                <div style="font-size: 0.75rem; text-transform:uppercase; color:#666; font-weight:700;">Confirmed Active</div>
+                <div style="font-size: 2rem; font-weight: 800; color: #137333; margin-top: 0.3rem;">6</div>
+            </div>
+            <div style="background:#fff; padding: 1.5rem; border-radius: 8px; border: 1px solid #ccd0d4; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
+                <div style="font-size: 0.75rem; text-transform:uppercase; color:#666; font-weight:700;">Pending Inquiries</div>
+                <div style="font-size: 2rem; font-weight: 800; color: #b06000; margin-top: 0.3rem;">1</div>
+            </div>
+            <div style="background:#fff; padding: 1.5rem; border-radius: 8px; border: 1px solid #ccd0d4; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
+                <div style="font-size: 0.75rem; text-transform:uppercase; color:#666; font-weight:700;">Total Pipeline Revenue</div>
+                <div style="font-size: 2rem; font-weight: 800; color: #c8933b; margin-top: 0.3rem;">$56,356</div>
+            </div>
+            <div style="background:#fff; padding: 1.5rem; border-radius: 8px; border: 1px solid #ccd0d4; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
+                <div style="font-size: 0.75rem; text-transform:uppercase; color:#666; font-weight:700;">Payments Received</div>
+                <div style="font-size: 2rem; font-weight: 800; color: #137333; margin-top: 0.3rem;">$33,345</div>
+            </div>
+            <div style="background:#fff; padding: 1.5rem; border-radius: 8px; border: 1px solid #ccd0d4; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
+                <div style="font-size: 0.75rem; text-transform:uppercase; color:#666; font-weight:700;">Outstanding Balances</div>
+                <div style="font-size: 2rem; font-weight: 800; color: #c5221f; margin-top: 0.3rem;">$23,011</div>
+            </div>
+        </div>
+
+        <!-- Navigation Tabs -->
+        <div class="admin-tab-nav">
+            <button type="button" class="admin-tab-btn active" onclick="switchAdminTab('tabBookings')">📋 All Bookings (7)</button>
+            <button type="button" class="admin-tab-btn" onclick="switchAdminTab('tabPackages')">🦁 Safari Packages (8)</button>
+            <button type="button" class="admin-tab-btn" onclick="switchAdminTab('tabAvailability')">📅 Availability & Capacity</button>
+            <button type="button" class="admin-tab-btn" onclick="switchAdminTab('tabPayments')">💳 Payment Transactions (10)</button>
+            <button type="button" class="admin-tab-btn" onclick="switchAdminTab('tabInquiries')">✉️ Inquiries (4)</button>
+            <button type="button" class="admin-tab-btn" onclick="switchAdminTab('tabSettings')">⚙️ Site Settings</button>
+        </div>
+
+        <!-- TAB 1: BOOKINGS TABLE -->
+        <div id="tabBookings" class="admin-tab-content active">
+            <div style="background: #fff; border-radius: 8px; border: 1px solid #ccd0d4; box-shadow: 0 1px 3px rgba(0,0,0,0.04); overflow: hidden;">
+                <div style="padding: 1rem 1.5rem; background: #fafafa; border-bottom: 1px solid #eee; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap: 1rem;">
+                    <input type="text" id="adminSearchInput" placeholder="Filter by customer, reference, email, country..." style="min-width: 280px; padding: 0.5rem 0.8rem; border: 1px solid #ccc; border-radius: 4px; font-size: 0.9rem;" oninput="filterAdminTable()">
+                    <select id="adminStatusFilter" style="padding: 0.5rem 0.8rem; border: 1px solid #ccc; border-radius: 4px; font-size: 0.9rem;" onchange="filterAdminTable()">
+                        <option value="">All Booking Statuses</option>
+                        <option value="Confirmed">Confirmed</option>
+                        <option value="Pending">Pending / Inquiries</option>
+                        <option value="Deposit Paid">Deposit Paid</option>
+                        <option value="Fully Paid">Fully Paid</option>
+                        <option value="Cancelled">Cancelled</option>
+                    </select>
+                </div>
+
+                <div style="overflow-x: auto;">
+                    <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.9rem;">
+                        <thead>
+                            <tr style="background: #f6f7f7; border-bottom: 1px solid #dcdcde;">
+                                <th style="padding: 0.8rem 1rem; font-weight:700;">Ref Code</th>
+                                <th style="padding: 0.8rem 1rem; font-weight:700;">Customer</th>
+                                <th style="padding: 0.8rem 1rem; font-weight:700;">Safari Package</th>
+                                <th style="padding: 0.8rem 1rem; font-weight:700;">Travel Date</th>
+                                <th style="padding: 0.8rem 1rem; font-weight:700;">Party</th>
+                                <th style="padding: 0.8rem 1rem; font-weight:700;">Total Price</th>
+                                <th style="padding: 0.8rem 1rem; font-weight:700;">Payment Status</th>
+                                <th style="padding: 0.8rem 1rem; font-weight:700;">Booking Status</th>
+                                <th style="padding: 0.8rem 1rem; font-weight:700;">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="adminTableRows">
+                            
+                            <tr style="border-bottom: 1px solid #eee;" data-search="me-2026-5277 eleanor vance test.traveler.mv83qt93@example.com canada" data-status="Confirmed">
+                                <td style="padding: 0.8rem 1rem; font-weight:700; color:#183321;">ME-2026-5277</td>
+                                <td style="padding: 0.8rem 1rem;">
+                                    <strong>Eleanor Vance</strong><br>
+                                    <small style="color:#666;">test.traveler.mv83qt93@example.com • +1 555 789 0123</small>
+                                </td>
+                                <td style="padding: 0.8rem 1rem;">7-Day Northern Circuit Signature Safari</td>
+                                <td style="padding: 0.8rem 1rem;"><strong>2027-04-11</strong></td>
+                                <td style="padding: 0.8rem 1rem;">2 Ad, 0 Ch</td>
+                                <td style="padding: 0.8rem 1rem;"><strong>$6,900</strong></td>
+                                <td style="padding: 0.8rem 1rem;">
+                                    <span style="display:inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 700; background: #e8f0fe; color: #1a73e8;">
+                                        Fully Paid
+                                    </span>
+                                </td>
+                                <td style="padding: 0.8rem 1rem;">
+                                    <span style="display:inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 700; background: #e6f4ea; color: #137333;">
+                                        Confirmed
+                                    </span>
+                                </td>
+                                <td style="padding: 0.8rem 1rem;">
+                                    <button type="button" class="btn btn-outline-dark btn-sm" style="padding: 0.3rem 0.6rem; font-size: 0.78rem;" onclick="viewBookingDetails('ME-2026-5277')">Manage</button>
+                                </td>
+                            </tr>
+                            
+                            <tr style="border-bottom: 1px solid #eee;" data-search="me-2026-3759  awright@example.com united kingdom" data-status="Confirmed">
+                                <td style="padding: 0.8rem 1rem; font-weight:700; color:#183321;">ME-2026-3759</td>
+                                <td style="padding: 0.8rem 1rem;">
+                                    <strong>Anonymous</strong><br>
+                                    <small style="color:#666;">awright@example.com • +44 7123 456789</small>
+                                </td>
+                                <td style="padding: 0.8rem 1rem;">7-Day Northern Circuit Signature Safari</td>
+                                <td style="padding: 0.8rem 1rem;"><strong>2026-12-20</strong></td>
+                                <td style="padding: 0.8rem 1rem;">2 Ad, 0 Ch</td>
+                                <td style="padding: 0.8rem 1rem;"><strong>$0</strong></td>
+                                <td style="padding: 0.8rem 1rem;">
+                                    <span style="display:inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 700; background: #e8f0fe; color: #1a73e8;">
+                                        Deposit Paid
+                                    </span>
+                                </td>
+                                <td style="padding: 0.8rem 1rem;">
+                                    <span style="display:inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 700; background: #e6f4ea; color: #137333;">
+                                        Confirmed
+                                    </span>
+                                </td>
+                                <td style="padding: 0.8rem 1rem;">
+                                    <button type="button" class="btn btn-outline-dark btn-sm" style="padding: 0.3rem 0.6rem; font-size: 0.78rem;" onclick="viewBookingDetails('ME-2026-3759')">Manage</button>
+                                </td>
+                            </tr>
+                            
+                            <tr style="border-bottom: 1px solid #eee;" data-search="me-2026-8320  andersonninga43@gmail.com tanzania" data-status="Confirmed">
+                                <td style="padding: 0.8rem 1rem; font-weight:700; color:#183321;">ME-2026-8320</td>
+                                <td style="padding: 0.8rem 1rem;">
+                                    <strong>Anonymous</strong><br>
+                                    <small style="color:#666;">andersonninga43@gmail.com • +255625838226</small>
+                                </td>
+                                <td style="padding: 0.8rem 1rem;">5-Day Serengeti & Ngorongoro Explorer</td>
+                                <td style="padding: 0.8rem 1rem;"><strong>2026-10-22</strong></td>
+                                <td style="padding: 0.8rem 1rem;">1 Ad, 0 Ch</td>
+                                <td style="padding: 0.8rem 1rem;"><strong>$0</strong></td>
+                                <td style="padding: 0.8rem 1rem;">
+                                    <span style="display:inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 700; background: #e8f0fe; color: #1a73e8;">
+                                        Deposit Paid
+                                    </span>
+                                </td>
+                                <td style="padding: 0.8rem 1rem;">
+                                    <span style="display:inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 700; background: #e6f4ea; color: #137333;">
+                                        Confirmed
+                                    </span>
+                                </td>
+                                <td style="padding: 0.8rem 1rem;">
+                                    <button type="button" class="btn btn-outline-dark btn-sm" style="padding: 0.3rem 0.6rem; font-size: 0.78rem;" onclick="viewBookingDetails('ME-2026-8320')">Manage</button>
+                                </td>
+                            </tr>
+                            
+                            <tr style="border-bottom: 1px solid #eee;" data-search="me-2026-0001 marcus & sarah jenkins marcus.jenkins@example.co.uk united kingdom" data-status="Confirmed">
+                                <td style="padding: 0.8rem 1rem; font-weight:700; color:#183321;">ME-2026-0001</td>
+                                <td style="padding: 0.8rem 1rem;">
+                                    <strong>Marcus & Sarah Jenkins</strong><br>
+                                    <small style="color:#666;">marcus.jenkins@example.co.uk • +44 7700 900123</small>
+                                </td>
+                                <td style="padding: 0.8rem 1rem;">7-Day Northern Circuit Signature Safari</td>
+                                <td style="padding: 0.8rem 1rem;"><strong>2026-11-15</strong></td>
+                                <td style="padding: 0.8rem 1rem;">2 Ad, 0 Ch</td>
+                                <td style="padding: 0.8rem 1rem;"><strong>$11,263</strong></td>
+                                <td style="padding: 0.8rem 1rem;">
+                                    <span style="display:inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 700; background: #e8f0fe; color: #1a73e8;">
+                                        Deposit Paid
+                                    </span>
+                                </td>
+                                <td style="padding: 0.8rem 1rem;">
+                                    <span style="display:inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 700; background: #e6f4ea; color: #137333;">
+                                        Confirmed
+                                    </span>
+                                </td>
+                                <td style="padding: 0.8rem 1rem;">
+                                    <button type="button" class="btn btn-outline-dark btn-sm" style="padding: 0.3rem 0.6rem; font-size: 0.78rem;" onclick="viewBookingDetails('ME-2026-0001')">Manage</button>
+                                </td>
+                            </tr>
+                            
+                            <tr style="border-bottom: 1px solid #eee;" data-search="me-2026-0002 henrik lindqvist henrik.l@nordic-travel.se sweden" data-status="Fully Paid">
+                                <td style="padding: 0.8rem 1rem; font-weight:700; color:#183321;">ME-2026-0002</td>
+                                <td style="padding: 0.8rem 1rem;">
+                                    <strong>Henrik Lindqvist</strong><br>
+                                    <small style="color:#666;">henrik.l@nordic-travel.se • +46 70 123 4567</small>
+                                </td>
+                                <td style="padding: 0.8rem 1rem;">5-Day Serengeti & Ngorongoro Explorer</td>
+                                <td style="padding: 0.8rem 1rem;"><strong>2026-12-05</strong></td>
+                                <td style="padding: 0.8rem 1rem;">4 Ad, 0 Ch</td>
+                                <td style="padding: 0.8rem 1rem;"><strong>$10,270</strong></td>
+                                <td style="padding: 0.8rem 1rem;">
+                                    <span style="display:inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 700; background: #e8f0fe; color: #1a73e8;">
+                                        Fully Paid
+                                    </span>
+                                </td>
+                                <td style="padding: 0.8rem 1rem;">
+                                    <span style="display:inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 700; background: #fef7e0; color: #b06000;">
+                                        Fully Paid
+                                    </span>
+                                </td>
+                                <td style="padding: 0.8rem 1rem;">
+                                    <button type="button" class="btn btn-outline-dark btn-sm" style="padding: 0.3rem 0.6rem; font-size: 0.78rem;" onclick="viewBookingDetails('ME-2026-0002')">Manage</button>
+                                </td>
+                            </tr>
+                            
+                            <tr style="border-bottom: 1px solid #eee;" data-search="me-2026-0003 lucas & sophia moreau sophia.moreau@paris-design.fr france" data-status="Confirmed">
+                                <td style="padding: 0.8rem 1rem; font-weight:700; color:#183321;">ME-2026-0003</td>
+                                <td style="padding: 0.8rem 1rem;">
+                                    <strong>Lucas & Sophia Moreau</strong><br>
+                                    <small style="color:#666;">sophia.moreau@paris-design.fr • +33 6 12 34 56 78</small>
+                                </td>
+                                <td style="padding: 0.8rem 1rem;">9-Day Bush to Beach: Romance & Zanzibar</td>
+                                <td style="padding: 0.8rem 1rem;"><strong>2027-01-10</strong></td>
+                                <td style="padding: 0.8rem 1rem;">2 Ad, 0 Ch</td>
+                                <td style="padding: 0.8rem 1rem;"><strong>$12,600</strong></td>
+                                <td style="padding: 0.8rem 1rem;">
+                                    <span style="display:inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 700; background: #e8f0fe; color: #1a73e8;">
+                                        Deposit Paid
+                                    </span>
+                                </td>
+                                <td style="padding: 0.8rem 1rem;">
+                                    <span style="display:inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 700; background: #e6f4ea; color: #137333;">
+                                        Confirmed
+                                    </span>
+                                </td>
+                                <td style="padding: 0.8rem 1rem;">
+                                    <button type="button" class="btn btn-outline-dark btn-sm" style="padding: 0.3rem 0.6rem; font-size: 0.78rem;" onclick="viewBookingDetails('ME-2026-0003')">Manage</button>
+                                </td>
+                            </tr>
+                            
+                            <tr style="border-bottom: 1px solid #eee;" data-search="me-2026-0004 christopher vance cvance@wildlifephotos.com united states" data-status="Pending">
+                                <td style="padding: 0.8rem 1rem; font-weight:700; color:#183321;">ME-2026-0004</td>
+                                <td style="padding: 0.8rem 1rem;">
+                                    <strong>Christopher Vance</strong><br>
+                                    <small style="color:#666;">cvance@wildlifephotos.com • +1 415 889 2011</small>
+                                </td>
+                                <td style="padding: 0.8rem 1rem;">8-Day Great Migration & Mara River Crossing</td>
+                                <td style="padding: 0.8rem 1rem;"><strong>2027-08-15</strong></td>
+                                <td style="padding: 0.8rem 1rem;">2 Ad, 0 Ch</td>
+                                <td style="padding: 0.8rem 1rem;"><strong>$15,323</strong></td>
+                                <td style="padding: 0.8rem 1rem;">
+                                    <span style="display:inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 700; background: #e8f0fe; color: #1a73e8;">
+                                        Unpaid
+                                    </span>
+                                </td>
+                                <td style="padding: 0.8rem 1rem;">
+                                    <span style="display:inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 700; background: #fef7e0; color: #b06000;">
+                                        Pending
+                                    </span>
+                                </td>
+                                <td style="padding: 0.8rem 1rem;">
+                                    <button type="button" class="btn btn-outline-dark btn-sm" style="padding: 0.3rem 0.6rem; font-size: 0.78rem;" onclick="viewBookingDetails('ME-2026-0004')">Manage</button>
+                                </td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB 2: PACKAGES MANAGEMENT -->
+        <div id="tabPackages" class="admin-tab-content">
+            <div style="background: #fff; border-radius: 8px; border: 1px solid #ccd0d4; padding: 2rem;">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 1.5rem;">
+                    <h3>Safari Packages Directory</h3>
+                    <button type="button" class="btn btn-primary btn-sm" onclick="openPackageModal()">+ Add New Package</button>
+                </div>
+                <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem;">
+                    
+                    <div style="border: 1px solid #e0e0e0; border-radius: 8px; padding: 1.2rem; background: #fafafa;">
+                        <img src="images/malunda-safari-010.jpg" alt="7-Day Northern Circuit Signature Safari" style="width: 100%; height: 160px; object-fit: cover; border-radius: 6px; margin-bottom: 0.8rem;">
+                        <h4 style="margin: 0 0 0.4rem; font-size: 1.1rem;">7-Day Northern Circuit Signature Safari</h4>
+                        <div style="font-size: 0.85rem; color: #666; margin-bottom: 0.8rem;">
+                            🕒 7 Days • From <strong>$3,450</strong><br>
+                            Style: Classic & Private
+                        </div>
+                        <div style="display:flex; gap: 0.5rem;">
+                            <a href="safari-northern-circuit.html" class="btn btn-outline-dark btn-sm" target="_blank">View Live</a>
+                            <button type="button" class="btn btn-primary btn-sm" onclick="editPackage('7-day-northern-circuit-signature')">Edit</button>
+                        </div>
+                    </div>
+                    
+                    <div style="border: 1px solid #e0e0e0; border-radius: 8px; padding: 1.2rem; background: #fafafa;">
+                        <img src="images/ngorongoro_crater.jpg" alt="5-Day Serengeti & Ngorongoro Explorer" style="width: 100%; height: 160px; object-fit: cover; border-radius: 6px; margin-bottom: 0.8rem;">
+                        <h4 style="margin: 0 0 0.4rem; font-size: 1.1rem;">5-Day Serengeti & Ngorongoro Explorer</h4>
+                        <div style="font-size: 0.85rem; color: #666; margin-bottom: 0.8rem;">
+                            🕒 5 Days • From <strong>$2,190</strong><br>
+                            Style: Classic & Tailor-Made
+                        </div>
+                        <div style="display:flex; gap: 0.5rem;">
+                            <a href="/safaris/5-day-serengeti-ngorongoro-safari/" class="btn btn-outline-dark btn-sm" target="_blank">View Live</a>
+                            <button type="button" class="btn btn-primary btn-sm" onclick="editPackage('5-day-serengeti-ngorongoro-safari')">Edit</button>
+                        </div>
+                    </div>
+                    
+                    <div style="border: 1px solid #e0e0e0; border-radius: 8px; padding: 1.2rem; background: #fafafa;">
+                        <img src="images/serengeti_migration.jpg" alt="8-Day Great Migration & Mara River Crossing" style="width: 100%; height: 160px; object-fit: cover; border-radius: 6px; margin-bottom: 0.8rem;">
+                        <h4 style="margin: 0 0 0.4rem; font-size: 1.1rem;">8-Day Great Migration & Mara River Crossing</h4>
+                        <div style="font-size: 0.85rem; color: #666; margin-bottom: 0.8rem;">
+                            🕒 8 Days • From <strong>$4,850</strong><br>
+                            Style: Wildlife Special & Photographic
+                        </div>
+                        <div style="display:flex; gap: 0.5rem;">
+                            <a href="/safaris/great-migration-safari/" class="btn btn-outline-dark btn-sm" target="_blank">View Live</a>
+                            <button type="button" class="btn btn-primary btn-sm" onclick="editPackage('great-migration-safari')">Edit</button>
+                        </div>
+                    </div>
+                    
+                    <div style="border: 1px solid #e0e0e0; border-radius: 8px; padding: 1.2rem; background: #fafafa;">
+                        <img src="images/malunda-safari-028.jpg" alt="3-Day Tanzania Classic Safari" style="width: 100%; height: 160px; object-fit: cover; border-radius: 6px; margin-bottom: 0.8rem;">
+                        <h4 style="margin: 0 0 0.4rem; font-size: 1.1rem;">3-Day Tanzania Classic Safari</h4>
+                        <div style="font-size: 0.85rem; color: #666; margin-bottom: 0.8rem;">
+                            🕒 3 Days • From <strong>$1,250</strong><br>
+                            Style: Classic Safari
+                        </div>
+                        <div style="display:flex; gap: 0.5rem;">
+                            <a href="/safaris/3-day-tanzania-classic-safari/" class="btn btn-outline-dark btn-sm" target="_blank">View Live</a>
+                            <button type="button" class="btn btn-primary btn-sm" onclick="editPackage('3-day-tanzania-classic-safari')">Edit</button>
+                        </div>
+                    </div>
+                    
+                    <div style="border: 1px solid #e0e0e0; border-radius: 8px; padding: 1.2rem; background: #fafafa;">
+                        <img src="images/malunda-safari-046.jpg" alt="6-Day Royal Wilderness Luxury Safari" style="width: 100%; height: 160px; object-fit: cover; border-radius: 6px; margin-bottom: 0.8rem;">
+                        <h4 style="margin: 0 0 0.4rem; font-size: 1.1rem;">6-Day Royal Wilderness Luxury Safari</h4>
+                        <div style="font-size: 0.85rem; color: #666; margin-bottom: 0.8rem;">
+                            🕒 6 Days • From <strong>$5,900</strong><br>
+                            Style: Luxury Safari
+                        </div>
+                        <div style="display:flex; gap: 0.5rem;">
+                            <a href="/safaris/luxury-tanzania-safari/" class="btn btn-outline-dark btn-sm" target="_blank">View Live</a>
+                            <button type="button" class="btn btn-primary btn-sm" onclick="editPackage('luxury-tanzania-safari')">Edit</button>
+                        </div>
+                    </div>
+                    
+                    <div style="border: 1px solid #e0e0e0; border-radius: 8px; padding: 1.2rem; background: #fafafa;">
+                        <img src="images/zanzibar_beach.jpg" alt="9-Day Bush to Beach: Romance & Zanzibar" style="width: 100%; height: 160px; object-fit: cover; border-radius: 6px; margin-bottom: 0.8rem;">
+                        <h4 style="margin: 0 0 0.4rem; font-size: 1.1rem;">9-Day Bush to Beach: Romance & Zanzibar</h4>
+                        <div style="font-size: 0.85rem; color: #666; margin-bottom: 0.8rem;">
+                            🕒 9 Days • From <strong>$4,200</strong><br>
+                            Style: Honeymoon & Romantic
+                        </div>
+                        <div style="display:flex; gap: 0.5rem;">
+                            <a href="/safaris/honeymoon-safari-zanzibar/" class="btn btn-outline-dark btn-sm" target="_blank">View Live</a>
+                            <button type="button" class="btn btn-primary btn-sm" onclick="editPackage('honeymoon-safari-zanzibar')">Edit</button>
+                        </div>
+                    </div>
+                    
+                    <div style="border: 1px solid #e0e0e0; border-radius: 8px; padding: 1.2rem; background: #fafafa;">
+                        <img src="images/malunda-safari-047.jpg" alt="6-Day Family Tanzania Safari & Discovery" style="width: 100%; height: 160px; object-fit: cover; border-radius: 6px; margin-bottom: 0.8rem;">
+                        <h4 style="margin: 0 0 0.4rem; font-size: 1.1rem;">6-Day Family Tanzania Safari & Discovery</h4>
+                        <div style="font-size: 0.85rem; color: #666; margin-bottom: 0.8rem;">
+                            🕒 6 Days • From <strong>$2,800</strong><br>
+                            Style: Family Safari
+                        </div>
+                        <div style="display:flex; gap: 0.5rem;">
+                            <a href="/safaris/family-tanzania-safari/" class="btn btn-outline-dark btn-sm" target="_blank">View Live</a>
+                            <button type="button" class="btn btn-primary btn-sm" onclick="editPackage('family-tanzania-safari')">Edit</button>
+                        </div>
+                    </div>
+                    
+                    <div style="border: 1px solid #e0e0e0; border-radius: 8px; padding: 1.2rem; background: #fafafa;">
+                        <img src="images/malunda-safari-038.jpg" alt="10-Day Kilimanjaro Summit & Wildlife Combo" style="width: 100%; height: 160px; object-fit: cover; border-radius: 6px; margin-bottom: 0.8rem;">
+                        <h4 style="margin: 0 0 0.4rem; font-size: 1.1rem;">10-Day Kilimanjaro Summit & Wildlife Combo</h4>
+                        <div style="font-size: 0.85rem; color: #666; margin-bottom: 0.8rem;">
+                            🕒 10 Days • From <strong>$3,950</strong><br>
+                            Style: Trekking & Adventure Safari
+                        </div>
+                        <div style="display:flex; gap: 0.5rem;">
+                            <a href="/safaris/kilimanjaro-machame-safari/" class="btn btn-outline-dark btn-sm" target="_blank">View Live</a>
+                            <button type="button" class="btn btn-primary btn-sm" onclick="editPackage('kilimanjaro-machame-safari')">Edit</button>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB 3: AVAILABILITY & CAPACITY CALENDAR -->
+        <div id="tabAvailability" class="admin-tab-content">
+            <div style="background: #fff; border-radius: 8px; border: 1px solid #ccd0d4; padding: 2rem;">
+                <h3>Departure Capacity & Blackout Dates</h3>
+                <p style="color: #666; font-size: 0.95rem; margin-bottom: 1.5rem;">Manage maximum seats per departure cruiser (standard: 6 seats) and toggle blackout dates.</p>
+                <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+                    <div style="background: #fafafa; padding: 1.5rem; border-radius: 8px;">
+                        <h4>Current Vehicle Capacity Setting</h4>
+                        <div style="display:flex; align-items:center; gap: 1rem; margin-top: 1rem;">
+                            <input type="number" id="settingCapacity" value="6" style="width: 80px; padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px;">
+                            <button type="button" class="btn btn-primary btn-sm" onclick="saveCapacitySetting()">Update Max Capacity</button>
+                        </div>
+                    </div>
+                    <div style="background: #fafafa; padding: 1.5rem; border-radius: 8px;">
+                        <h4>Blackout / Sold-Out Dates</h4>
+                        <div style="display:flex; gap: 0.8rem; margin: 1rem 0;">
+                            <input type="date" id="newBlackoutDate" style="padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px;">
+                            <button type="button" class="btn btn-outline-dark btn-sm" onclick="addBlackoutDate()">+ Add Blackout Date</button>
+                        </div>
+                        <div style="display:flex; gap: 0.4rem; flex-wrap:wrap;">
+                            
+                            <span style="background: #fdf3f2; color: #842029; padding: 4px 8px; border-radius: 4px; font-size: 0.85rem; border: 1px solid #f5c2c7; display:inline-flex; align-items:center; gap: 0.4rem;">
+                                2026-12-25 <button type="button" onclick="removeBlackoutDate('2026-12-25')" style="background:none; border:none; cursor:pointer; color:#842029; font-weight:bold;">✕</button>
+                            </span>
+                            
+                            <span style="background: #fdf3f2; color: #842029; padding: 4px 8px; border-radius: 4px; font-size: 0.85rem; border: 1px solid #f5c2c7; display:inline-flex; align-items:center; gap: 0.4rem;">
+                                2027-01-01 <button type="button" onclick="removeBlackoutDate('2027-01-01')" style="background:none; border:none; cursor:pointer; color:#842029; font-weight:bold;">✕</button>
+                            </span>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB 4: PAYMENTS & REFUNDS -->
+        <div id="tabPayments" class="admin-tab-content">
+            <div style="background: #fff; border-radius: 8px; border: 1px solid #ccd0d4; padding: 2rem;">
+                <h3>Payment Transactions Ledger</h3>
+                <p style="color: #666; font-size: 0.95rem; margin-bottom: 1.5rem;">Audit log of all online sandbox card transactions, bank wire receipts, and mobile money entries.</p>
+                <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.9rem;">
+                    <thead>
+                        <tr style="background: #f6f7f7; border-bottom: 1px solid #dcdcde;">
+                            <th style="padding: 0.8rem 1rem;">Transaction ID</th>
+                            <th style="padding: 0.8rem 1rem;">Booking Ref</th>
+                            <th style="padding: 0.8rem 1rem;">Method / Gateway</th>
+                            <th style="padding: 0.8rem 1rem;">Amount</th>
+                            <th style="padding: 0.8rem 1rem;">Status</th>
+                            <th style="padding: 0.8rem 1rem;">Timestamp</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr style="border-bottom: 1px solid #eee;">
+                            <td style="padding: 0.8rem 1rem; font-weight:700;">TXN-MAN-MV83QTB0</td>
+                            <td style="padding: 0.8rem 1rem;"><a href="javascript:viewBookingDetails('ME-2026-5277')">ME-2026-5277</a></td>
+                            <td style="padding: 0.8rem 1rem;">Admin Manual Entry (Receipt #CRDB-889911)</td>
+                            <td style="padding: 0.8rem 1rem; font-weight:700; color: #137333;">$1,000</td>
+                            <td style="padding: 0.8rem 1rem;"><span style="color:#137333; font-weight:700;">✓ completed</span></td>
+                            <td style="padding: 0.8rem 1rem; color: #666;">14/10/2026, 15:44:41</td>
+                        </tr>
+                        
+                        <tr style="border-bottom: 1px solid #eee;">
+                            <td style="padding: 0.8rem 1rem; font-weight:700;">TXN-WEBHOOK-1791981881807</td>
+                            <td style="padding: 0.8rem 1rem;"><a href="javascript:viewBookingDetails('ME-2026-5277')">ME-2026-5277</a></td>
+                            <td style="padding: 0.8rem 1rem;">Stripe Verified</td>
+                            <td style="padding: 0.8rem 1rem; font-weight:700; color: #137333;">$6,900</td>
+                            <td style="padding: 0.8rem 1rem;"><span style="color:#137333; font-weight:700;">✓ completed</span></td>
+                            <td style="padding: 0.8rem 1rem; color: #666;">14/10/2026, 15:44:41</td>
+                        </tr>
+                        
+                        <tr style="border-bottom: 1px solid #eee;">
+                            <td style="padding: 0.8rem 1rem; font-weight:700;">TXN-967408D2</td>
+                            <td style="padding: 0.8rem 1rem;"><a href="javascript:viewBookingDetails('ME-2026-5277')">ME-2026-5277</a></td>
+                            <td style="padding: 0.8rem 1rem;">Secure PCI Card Sandbox</td>
+                            <td style="padding: 0.8rem 1rem; font-weight:700; color: #137333;">$2,070</td>
+                            <td style="padding: 0.8rem 1rem;"><span style="color:#137333; font-weight:700;">✓ completed</span></td>
+                            <td style="padding: 0.8rem 1rem; color: #666;">14/10/2026, 15:44:41</td>
+                        </tr>
+                        
+                        <tr style="border-bottom: 1px solid #eee;">
+                            <td style="padding: 0.8rem 1rem; font-weight:700;">TXN-MAN-MV83JVE4</td>
+                            <td style="padding: 0.8rem 1rem;"><a href="javascript:viewBookingDetails('ME-2026-8236')">ME-2026-8236</a></td>
+                            <td style="padding: 0.8rem 1rem;">Admin Manual Entry (Receipt #CRDB-889911)</td>
+                            <td style="padding: 0.8rem 1rem; font-weight:700; color: #137333;">$1,000</td>
+                            <td style="padding: 0.8rem 1rem;"><span style="color:#137333; font-weight:700;">✓ completed</span></td>
+                            <td style="padding: 0.8rem 1rem; color: #666;">14/10/2026, 15:39:17</td>
+                        </tr>
+                        
+                        <tr style="border-bottom: 1px solid #eee;">
+                            <td style="padding: 0.8rem 1rem; font-weight:700;">TXN-WEBHOOK-1791981557911</td>
+                            <td style="padding: 0.8rem 1rem;"><a href="javascript:viewBookingDetails('ME-2026-8236')">ME-2026-8236</a></td>
+                            <td style="padding: 0.8rem 1rem;">Stripe Verified</td>
+                            <td style="padding: 0.8rem 1rem; font-weight:700; color: #137333;">$6,900</td>
+                            <td style="padding: 0.8rem 1rem;"><span style="color:#137333; font-weight:700;">✓ completed</span></td>
+                            <td style="padding: 0.8rem 1rem; color: #666;">14/10/2026, 15:39:17</td>
+                        </tr>
+                        
+                        <tr style="border-bottom: 1px solid #eee;">
+                            <td style="padding: 0.8rem 1rem; font-weight:700;">TXN-031D81CC</td>
+                            <td style="padding: 0.8rem 1rem;"><a href="javascript:viewBookingDetails('ME-2026-8236')">ME-2026-8236</a></td>
+                            <td style="padding: 0.8rem 1rem;">Secure PCI Card Sandbox</td>
+                            <td style="padding: 0.8rem 1rem; font-weight:700; color: #137333;">$2,070</td>
+                            <td style="padding: 0.8rem 1rem;"><span style="color:#137333; font-weight:700;">✓ completed</span></td>
+                            <td style="padding: 0.8rem 1rem; color: #666;">14/10/2026, 15:39:17</td>
+                        </tr>
+                        
+                        <tr style="border-bottom: 1px solid #eee;">
+                            <td style="padding: 0.8rem 1rem; font-weight:700;">TXN-MAN-MV83IKL3</td>
+                            <td style="padding: 0.8rem 1rem;"><a href="javascript:viewBookingDetails('ME-2026-1824')">ME-2026-1824</a></td>
+                            <td style="padding: 0.8rem 1rem;">Admin Manual Entry (Receipt #CRDB-889911)</td>
+                            <td style="padding: 0.8rem 1rem; font-weight:700; color: #137333;">$1,000</td>
+                            <td style="padding: 0.8rem 1rem;"><span style="color:#137333; font-weight:700;">✓ completed</span></td>
+                            <td style="padding: 0.8rem 1rem; color: #666;">14/10/2026, 15:38:17</td>
+                        </tr>
+                        
+                        <tr style="border-bottom: 1px solid #eee;">
+                            <td style="padding: 0.8rem 1rem; font-weight:700;">TXN-WEBHOOK-1791981497258</td>
+                            <td style="padding: 0.8rem 1rem;"><a href="javascript:viewBookingDetails('ME-2026-1824')">ME-2026-1824</a></td>
+                            <td style="padding: 0.8rem 1rem;">Stripe Verified</td>
+                            <td style="padding: 0.8rem 1rem; font-weight:700; color: #137333;">$6,900</td>
+                            <td style="padding: 0.8rem 1rem;"><span style="color:#137333; font-weight:700;">✓ completed</span></td>
+                            <td style="padding: 0.8rem 1rem; color: #666;">14/10/2026, 15:38:17</td>
+                        </tr>
+                        
+                        <tr style="border-bottom: 1px solid #eee;">
+                            <td style="padding: 0.8rem 1rem; font-weight:700;">TXN-33BA1749</td>
+                            <td style="padding: 0.8rem 1rem;"><a href="javascript:viewBookingDetails('ME-2026-1824')">ME-2026-1824</a></td>
+                            <td style="padding: 0.8rem 1rem;">Secure PCI Card Sandbox</td>
+                            <td style="padding: 0.8rem 1rem; font-weight:700; color: #137333;">$2,070</td>
+                            <td style="padding: 0.8rem 1rem;"><span style="color:#137333; font-weight:700;">✓ completed</span></td>
+                            <td style="padding: 0.8rem 1rem; color: #666;">14/10/2026, 15:38:17</td>
+                        </tr>
+                        
+                        <tr style="border-bottom: 1px solid #eee;">
+                            <td style="padding: 0.8rem 1rem; font-weight:700;">TXN-01WXP88T</td>
+                            <td style="padding: 0.8rem 1rem;"><a href="javascript:viewBookingDetails('ME-2026-3759')">ME-2026-3759</a></td>
+                            <td style="padding: 0.8rem 1rem;">Stripe Sandbox</td>
+                            <td style="padding: 0.8rem 1rem; font-weight:700; color: #137333;">$3,435</td>
+                            <td style="padding: 0.8rem 1rem;"><span style="color:#137333; font-weight:700;">✓ completed</span></td>
+                            <td style="padding: 0.8rem 1rem; color: #666;">07/10/2026, 19:35:00</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- TAB 5: INQUIRIES -->
+        <div id="tabInquiries" class="admin-tab-content">
+            <div style="background: #fff; border-radius: 8px; border: 1px solid #ccd0d4; padding: 2rem;">
+                <h3>Tailor-Made Safari Inquiries</h3>
+                <p style="color: #666; font-size: 0.95rem; margin-bottom: 1.5rem;">Custom safari requests submitted through the /contact/ form.</p>
+                <div style="display:flex; flex-direction:column; gap: 1rem;">
+                    
+                    <div style="border: 1px solid #e0e0e0; border-radius: 8px; padding: 1.2rem; background: #fafafa;">
+                        <div style="display:flex; justify-content:space-between; margin-bottom: 0.5rem;">
+                            <strong>Marcus & Clara Vance (marcus@example.com)</strong>
+                            <span style="font-size: 0.8rem; color:#666;">14/10/2026, 15:44:41</span>
+                        </div>
+                        <div style="font-size: 0.9rem; color: #555; margin-bottom: 0.5rem;">
+                            📞 <strong>+44 7900 123456</strong> • Country: United Kingdom • Dates: August 2027 • Budget: $5,000 - $8,000
+                        </div>
+                        <div style="font-size: 0.92rem; background:#fff; padding: 0.8rem; border-radius: 6px; border: 1px solid #eee;">
+                            “Looking for a private safari with hot air balloon over Serengeti.”
+                        </div>
+                    </div>
+                    
+                    <div style="border: 1px solid #e0e0e0; border-radius: 8px; padding: 1.2rem; background: #fafafa;">
+                        <div style="display:flex; justify-content:space-between; margin-bottom: 0.5rem;">
+                            <strong>Marcus & Clara Vance (marcus@example.com)</strong>
+                            <span style="font-size: 0.8rem; color:#666;">14/10/2026, 15:43:08</span>
+                        </div>
+                        <div style="font-size: 0.9rem; color: #555; margin-bottom: 0.5rem;">
+                            📞 <strong>+44 7900 123456</strong> • Country: United Kingdom • Dates: August 2027 • Budget: $5,000 - $8,000
+                        </div>
+                        <div style="font-size: 0.92rem; background:#fff; padding: 0.8rem; border-radius: 6px; border: 1px solid #eee;">
+                            “Looking for a private safari with hot air balloon over Serengeti.”
+                        </div>
+                    </div>
+                    
+                    <div style="border: 1px solid #e0e0e0; border-radius: 8px; padding: 1.2rem; background: #fafafa;">
+                        <div style="display:flex; justify-content:space-between; margin-bottom: 0.5rem;">
+                            <strong>Marcus & Clara Vance (marcus@example.com)</strong>
+                            <span style="font-size: 0.8rem; color:#666;">14/10/2026, 15:39:17</span>
+                        </div>
+                        <div style="font-size: 0.9rem; color: #555; margin-bottom: 0.5rem;">
+                            📞 <strong>+44 7900 123456</strong> • Country: United Kingdom • Dates: August 2027 • Budget: $5,000 - $8,000
+                        </div>
+                        <div style="font-size: 0.92rem; background:#fff; padding: 0.8rem; border-radius: 6px; border: 1px solid #eee;">
+                            “Looking for a private safari with hot air balloon over Serengeti.”
+                        </div>
+                    </div>
+                    
+                    <div style="border: 1px solid #e0e0e0; border-radius: 8px; padding: 1.2rem; background: #fafafa;">
+                        <div style="display:flex; justify-content:space-between; margin-bottom: 0.5rem;">
+                            <strong>Marcus & Clara Vance (marcus@example.com)</strong>
+                            <span style="font-size: 0.8rem; color:#666;">14/10/2026, 15:38:17</span>
+                        </div>
+                        <div style="font-size: 0.9rem; color: #555; margin-bottom: 0.5rem;">
+                            📞 <strong>+44 7900 123456</strong> • Country: United Kingdom • Dates: August 2027 • Budget: $5,000 - $8,000
+                        </div>
+                        <div style="font-size: 0.92rem; background:#fff; padding: 0.8rem; border-radius: 6px; border: 1px solid #eee;">
+                            “Looking for a private safari with hot air balloon over Serengeti.”
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB 6: SETTINGS -->
+        <div id="tabSettings" class="admin-tab-content">
+            <div style="background: #fff; border-radius: 8px; border: 1px solid #ccd0d4; padding: 2rem; max-width: 800px;">
+                <h3>Company Profile & Operations Settings</h3>
+                <form id="adminSettingsForm" onsubmit="event.preventDefault(); saveAdminSettings();">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Company Phone</label>
+                            <input type="text" id="setPhone" class="form-control" value="+255 784 567 890">
+                        </div>
+                        <div class="form-group">
+                            <label>WhatsApp Number (Direct)</label>
+                            <input type="text" id="setWhatsApp" class="form-control" value="+255784567890">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Official Email</label>
+                            <input type="email" id="setEmail" class="form-control" value="info@malundaexplorers.com">
+                        </div>
+                        <div class="form-group">
+                            <label>Deposit Percentage (%)</label>
+                            <input type="number" id="setDepositPct" class="form-control" value="30">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Brand Tagline</label>
+                        <input type="text" id="setTagline" class="form-control" value="Explore the Wild. Experience More. Create Memories.">
+                    </div>
+                    <div class="form-group">
+                        <label>Physical Address</label>
+                        <input type="text" id="setAddress" class="form-control" value="Safari Way, Plot 42, Arusha, Tanzania">
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="margin-top: 1rem;">Save All Settings</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Booking Details -->
+<div id="adminModal" class="modal-overlay">
+    <div class="modal-content" style="max-width: 700px;">
+        <button type="button" class="modal-close" onclick="closeAdminModal()">✕</button>
+        <h2 id="modalTitle" style="margin-bottom: 0.5rem; color: var(--color-primary-dark);">Reservation Record</h2>
+        <div id="modalBody" style="line-height: 1.7; font-size: 0.95rem;"></div>
+        
+        <!-- Offline Payment Recording section -->
+        <div style="margin-top: 1.5rem; padding: 1.2rem; background: #eef7ed; border-radius: 8px;">
+            <h4 style="margin: 0 0 0.5rem; color: #137333;">Record Offline / Wire Payment</h4>
+            <div style="display:flex; gap: 0.8rem; flex-wrap:wrap;">
+                <input type="number" id="offlinePayAmount" placeholder="Amount ($)" style="width: 120px; padding: 0.4rem; border: 1px solid #ccc; border-radius: 4px;">
+                <select id="offlinePayMethod" style="padding: 0.4rem; border: 1px solid #ccc; border-radius: 4px;">
+                    <option value="CRDB Bank Wire SWIFT">Bank Wire Transfer</option>
+                    <option value="M-Pesa Mobile Money">M-Pesa</option>
+                    <option value="Cash at Arusha HQ">Cash</option>
+                </select>
+                <input type="text" id="offlinePayReceipt" placeholder="Receipt / Ref #" style="width: 140px; padding: 0.4rem; border: 1px solid #ccc; border-radius: 4px;">
+                <button type="button" class="btn btn-primary btn-sm" onclick="recordOfflinePayment()">Record Payment</button>
+            </div>
+        </div>
+
+        <div style="margin-top: 1.5rem; display:flex; gap: 0.8rem; justify-content: flex-end;">
+            <button type="button" class="btn btn-outline-dark btn-sm" onclick="closeAdminModal()">Close</button>
+            <button type="button" class="btn btn-primary btn-sm" onclick="updateCurrentBookingStatus()">Save Status Changes</button>
+        </div>
+    </div>
+</div>
+
+<script>
+const BOOKINGS_DATA = [{"booking_ref":"ME-2026-5277","created_at":"2026-10-14T12:44:41.777Z","safari_id":"7-day-northern-circuit-signature","safari_name":"7-Day Northern Circuit Signature Safari","travel_date":"2027-04-11","duration_days":7,"travelers":{"adults":2,"children":0,"rooms":1,"children_ages":"","special_requirements":""},"accommodation_tier":"mid-range","accommodation_name":"Mid-Range Safari Lodges","extras":[],"customer":{"full_name":"Eleanor Vance","email":"test.traveler.mv83qt93@example.com","phone":"+1 555 789 0123","country":"Canada","contact_method":"WhatsApp","flight_info":"","dietary":"","special_requests":"","pickup_location":"Kilimanjaro International Airport (JRO)"},"pricing":{"total_price":6900,"deposit_required":2070,"balance_due":0,"base_rate":3450,"currency":"USD"},"payment":{"method":"card","payment_type":"deposit","payment_status":"Fully Paid","amount_paid":9970,"transaction_id":"TXN-967408D2"},"booking_status":"Confirmed","internal_notes":"Online booking registered. Welcome pack and safari itinerary queued.","modification_request":{"requested_at":"2026-10-14T12:44:41.787Z","new_date":"2026-11-20","notes":"Flight rescheduled by airline","status":"Pending Review"}},{"booking_ref":"ME-2026-3759","created_at":"2026-10-07T16:33:43.405Z","safari_id":"7-day-northern-circuit-signature","safari_name":"7-Day Northern Circuit Signature Safari","travel_date":"2026-12-20","duration_days":7,"travelers":{"adults":2,"children":0,"rooms":1},"accommodation_tier":"luxury","accommodation_name":"Luxury Tented Lodges","extras":[],"customer":{"fullName":"Alexander Wright","email":"awright@example.com","phone":"+44 7123 456789","country":"United Kingdom"},"pricing":{"total":11450,"depositAmount":3435,"balanceDue":8015},"payment":{"method":"card","payment_status":"Deposit Paid","amount_paid":3435,"transaction_id":"TXN-01WXP88T"},"booking_status":"Confirmed","internal_notes":"Online booking registered. Welcome pack queued."},{"booking_ref":"ME-2026-8320","created_at":"2026-10-07T16:21:36.855Z","safari_id":"5-day-serengeti-ngorongoro-safari","safari_name":"5-Day Serengeti & Ngorongoro Explorer","travel_date":"2026-10-22","duration_days":5,"travelers":{"adults":1,"children":0,"rooms":1,"special_requirements":"testing Additionnal"},"accommodation_tier":"budget","accommodation_name":"Budget","extras":["olduvai_gorge"],"customer":{"fullName":"Anderson Ninga","email":"andersonninga43@gmail.com","phone":"+255625838226","whatsapp":"+255625838226","country":"Tanzania","contactMethod":"Email","flightInfo":"KLM","dietary":"Vegeterian","specialRequests":"testing Additionnal"},"pricing":{"basePricePerAdult":2190,"adjustedPerAdult":1862,"adultsTotal":1862,"childrenTotal":0,"extrasTotal":45,"subtotal":1907,"total":1907,"depositAmount":572,"balanceDue":1335},"payment":{"method":"card","payment_status":"Deposit Paid","amount_paid":572,"transaction_id":"TXN-ST64KUHG"},"booking_status":"Confirmed","internal_notes":"Online booking registered. Welcome pack queued."},{"booking_ref":"ME-2026-0001","created_at":"2026-09-28T10:15:00Z","safari_id":"7-day-northern-circuit-signature","safari_name":"7-Day Northern Circuit Signature Safari","travel_date":"2026-11-15","duration_days":7,"travelers":{"adults":2,"children":0,"rooms":1,"special_requirements":"Vegetarian meals requested for one traveler."},"accommodation_tier":"luxury","accommodation_name":"Luxury Tented Lodges","extras":["balloon_safari","airport_transfers"],"customer":{"full_name":"Marcus & Sarah Jenkins","email":"marcus.jenkins@example.co.uk","phone":"+44 7700 900123","whatsapp":"+447700900123","country":"United Kingdom","contact_method":"WhatsApp","flight_info":"KLM Flight 569 arriving JRO 20:30"},"pricing":{"base_per_person":3450,"tier_multiplier":1.45,"adjusted_base_per_person":5002.5,"total_travelers_price":10005,"extras_total":1258,"subtotal":11263,"taxes":0,"total_price":11263,"deposit_required":3378.9,"balance_due":7884.1},"payment":{"method":"card","method_name":"Credit / Debit Card (Visa)","amount_paid":3378.9,"payment_status":"Deposit Paid","transaction_id":"TXN-CRD-984210"},"booking_status":"Confirmed","internal_notes":"Lodge rooms confirmed at Melia Serengeti and Ngorongoro Serena. Balloon flight voucher issued with Serengeti Balloon Safaris."},{"booking_ref":"ME-2026-0002","created_at":"2026-10-01T14:40:00Z","safari_id":"5-day-serengeti-ngorongoro-safari","safari_name":"5-Day Serengeti & Ngorongoro Explorer","travel_date":"2026-12-05","duration_days":5,"travelers":{"adults":4,"children":0,"rooms":2,"special_requirements":"Please arrange twin beds for room 2."},"accommodation_tier":"mid-range","accommodation_name":"Mid-Range Safari Lodges","extras":["maasai_visit","private_vehicle"],"customer":{"full_name":"Henrik Lindqvist","email":"henrik.l@nordic-travel.se","phone":"+46 70 123 4567","whatsapp":"+46701234567","country":"Sweden","contact_method":"Email","flight_info":"Ethiopian Airlines ET815 arriving JRO 12:45"},"pricing":{"base_per_person":2190,"tier_multiplier":1,"adjusted_base_per_person":2190,"total_travelers_price":8760,"extras_total":1510,"subtotal":10270,"taxes":0,"total_price":10270,"deposit_required":3081,"balance_due":7189},"payment":{"method":"bank_transfer","method_name":"Direct Bank Wire Transfer","amount_paid":10270,"payment_status":"Fully Paid","transaction_id":"WIRE-SEB-5510294"},"booking_status":"Fully Paid","internal_notes":"Full payment received via CRDB SWIFT wire. Guide assigned: Jackson Mushi."},{"booking_ref":"ME-2026-0003","created_at":"2026-10-05T09:20:00Z","safari_id":"9-day-honeymoon-safari-zanzibar","safari_name":"9-Day Bush to Beach: Romance & Zanzibar","travel_date":"2027-01-10","duration_days":9,"travelers":{"adults":2,"children":0,"rooms":1,"special_requirements":"Honeymoon celebration, flower bed decoration."},"accommodation_tier":"luxury","accommodation_name":"Romantic Boutique Lodges & Resort","extras":["celebration_package","bush_dinner"],"customer":{"full_name":"Lucas & Sophia Moreau","email":"sophia.moreau@paris-design.fr","phone":"+33 6 12 34 56 78","whatsapp":"+33612345678","country":"France","contact_method":"WhatsApp","flight_info":"Air France AF812 to JRO, departing ZNZ on Qatar Airways"},"pricing":{"base_per_person":4200,"tier_multiplier":1.45,"adjusted_base_per_person":6090,"total_travelers_price":12180,"extras_total":420,"subtotal":12600,"taxes":0,"total_price":12600,"deposit_required":3780,"balance_due":8820},"payment":{"method":"deposit_only","method_name":"Deposit Payment (30%)","amount_paid":3780,"payment_status":"Deposit Paid","transaction_id":"TXN-STRIPE-88219"},"booking_status":"Confirmed","internal_notes":"Honeymoon welcome champagne confirmed at Melia Serengeti and The Residence Zanzibar."},{"booking_ref":"ME-2026-0004","created_at":"2026-10-06T16:10:00Z","safari_id":"great-migration-safari","safari_name":"8-Day Great Migration & Mara River Crossing","travel_date":"2027-08-15","duration_days":8,"travelers":{"adults":2,"children":0,"rooms":1,"special_requirements":"Photography focus - please ensure window seats and charging adapters."},"accommodation_tier":"luxury","accommodation_name":"Luxury Mobile Tented Camps","extras":["balloon_safari","airport_transfers"],"customer":{"full_name":"Christopher Vance","email":"cvance@wildlifephotos.com","phone":"+1 415 889 2011","whatsapp":"+14158892011","country":"United States","contact_method":"Email","flight_info":"Delta/KLM into JRO"},"pricing":{"base_per_person":4850,"tier_multiplier":1.45,"adjusted_base_per_person":7032.5,"total_travelers_price":14065,"extras_total":1258,"subtotal":15323,"taxes":0,"total_price":15323,"deposit_required":4596.9,"balance_due":10726.1},"payment":{"method":"card","method_name":"Credit Card","amount_paid":0,"payment_status":"Unpaid","transaction_id":""},"booking_status":"Pending","internal_notes":"Pending client credit card auth for deposit. Kogatende migration camp held on 48h provisional hold."}];
+let currentActiveRef = null;
+
+function switchAdminTab(tabId) {
+    document.querySelectorAll('.admin-tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.admin-tab-content').forEach(c => c.classList.remove('active'));
+    event.target.classList.add('active');
+    document.getElementById(tabId).classList.add('active');
+}
+
+function filterAdminTable() {
+    const q = document.getElementById('adminSearchInput').value.toLowerCase();
+    const st = document.getElementById('adminStatusFilter').value;
+    const rows = document.querySelectorAll('#adminTableRows tr');
+    rows.forEach(r => {
+        const text = r.getAttribute('data-search') || '';
+        const status = r.getAttribute('data-status') || '';
+        const matchQ = !q || text.includes(q);
+        const matchSt = !st || status === st;
+        r.style.display = (matchQ && matchSt) ? '' : 'none';
+    });
+}
+
+function viewBookingDetails(ref) {
+    const b = BOOKINGS_DATA.find(x => x.booking_ref === ref);
+    if (!b) return;
+    currentActiveRef = ref;
+    document.getElementById('modalTitle').textContent = 'Reservation: ' + b.booking_ref;
+    
+    let html = '<div style="background:#fbf9f4; padding: 1.2rem; border-radius: 8px; margin-bottom: 1.2rem;">';
+    html += '<strong>Safari:</strong> ' + b.safari_name + '<br>';
+    html += '<strong>Travel Date:</strong> ' + b.travel_date + ' (' + b.duration_days + ' Days)<br>';
+    html += '<strong>Customer:</strong> ' + b.customer.full_name + ' (' + b.customer.email + ')<br>';
+    html += '<strong>Phone/WhatsApp:</strong> ' + b.customer.phone + ' | <strong>Country:</strong> ' + b.customer.country + '<br>';
+    html += '<strong>Party:</strong> ' + (b.travelers?.adults || 1) + ' Adults, ' + (b.travelers?.children || 0) + ' Children<br>';
+    html += '<strong>Pickup:</strong> ' + (b.customer.pickup_location || 'Arusha/JRO') + '<br>';
+    html += '<strong>Dietary/Special:</strong> ' + (b.customer.dietary || 'None') + ' ' + (b.travelers?.special_requirements || '') + '<br>';
+    html += '<strong>Total Price:</strong> $' + (b.pricing?.total_price || 0).toLocaleString() + ' | <strong>Deposit Paid:</strong> $' + (b.payment?.amount_paid || 0).toLocaleString() + '<br>';
+    html += '</div>';
+
+    html += '<div style="margin-bottom: 1rem;">';
+    html += '<label><strong>Update Booking Status:</strong></label><br>';
+    html += '<select id="editBookingStatus" class="form-control" style="margin-top: 0.3rem;">';
+    ['Pending Inquiry', 'Pending Approval', 'Awaiting Payment', 'Partially Paid', 'Confirmed', 'Completed', 'Cancelled', 'Refunded'].forEach(s => {
+        html += '<option value="' + s + '" ' + (b.booking_status === s ? 'selected' : '') + '>' + s + '</option>';
+    });
+    html += '</select></div>';
+
+    html += '<div style="margin-bottom: 1rem;">';
+    html += '<label><strong>Update Payment Status:</strong></label><br>';
+    html += '<select id="editPaymentStatus" class="form-control" style="margin-top: 0.3rem;">';
+    ['Unpaid', 'Deposit Paid', 'Partially Paid', 'Fully Paid', 'Refunded'].forEach(ps => {
+        html += '<option value="' + ps + '" ' + (b.payment.payment_status === ps ? 'selected' : '') + '>' + ps + '</option>';
+    });
+    html += '</select></div>';
+
+    html += '<div style="margin-bottom: 1rem;">';
+    html += '<label><strong>Internal Operational Notes:</strong></label><br>';
+    html += '<textarea id="editInternalNotes" class="form-control" style="margin-top:0.3rem;">' + (b.internal_notes || '') + '</textarea>';
+    html += '</div>';
+
+    document.getElementById('modalBody').innerHTML = html;
+    document.getElementById('adminModal').style.display = 'flex';
+}
+
+function closeAdminModal() {
+    document.getElementById('adminModal').style.display = 'none';
+}
+
+async function updateCurrentBookingStatus() {
+    if (!currentActiveRef) return;
+    const bStatus = document.getElementById('editBookingStatus').value;
+    const pStatus = document.getElementById('editPaymentStatus').value;
+    const notes = document.getElementById('editInternalNotes').value;
+
+    try {
+        const res = await fetch('/api/admin/update-status', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                ref: currentActiveRef,
+                booking_status: bStatus,
+                payment_status: pStatus,
+                notes: notes
+            })
+        });
+        const d = await res.json();
+        if (d.success) {
+            alert('Booking status updated successfully.');
+            location.reload();
+        } else {
+            alert(d.error);
+        }
+    } catch (e) {
+        alert('Update failed: ' + e.message);
+    }
+}
+
+async function recordOfflinePayment() {
+    if (!currentActiveRef) return;
+    const amt = document.getElementById('offlinePayAmount').value;
+    const method = document.getElementById('offlinePayMethod').value;
+    const receipt = document.getElementById('offlinePayReceipt').value;
+    if (!amt) { alert('Please enter payment amount.'); return; }
+
+    try {
+        const res = await fetch('/api/admin/record-payment', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                ref: currentActiveRef,
+                amount: amt,
+                method: method,
+                receipt_no: receipt,
+                notes: 'Recorded via admin modal'
+            })
+        });
+        const d = await res.json();
+        if (d.success) {
+            alert('Offline payment registered.');
+            location.reload();
+        } else {
+            alert(d.error);
+        }
+    } catch (e) {
+        alert('Failed: ' + e.message);
+    }
+}
+
+async function saveCapacitySetting() {
+    const cap = document.getElementById('settingCapacity').value;
+    await fetch('/api/admin/availability', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ capacity: cap })
+    });
+    alert('Capacity setting updated.');
+}
+
+async function addBlackoutDate() {
+    const d = document.getElementById('newBlackoutDate').value;
+    if (!d) return;
+    await fetch('/api/admin/availability', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ blackout_date: d, action: 'add' })
+    });
+    location.reload();
+}
+
+async function removeBlackoutDate(d) {
+    await fetch('/api/admin/availability', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ blackout_date: d, action: 'remove' })
+    });
+    location.reload();
+}
+
+async function saveAdminSettings() {
+    const payload = {
+        phone: document.getElementById('setPhone').value,
+        whatsapp: document.getElementById('setWhatsApp').value,
+        email: document.getElementById('setEmail').value,
+        deposit_percentage: parseInt(document.getElementById('setDepositPct').value, 10),
+        tagline: document.getElementById('setTagline').value,
+        address: document.getElementById('setAddress').value
+    };
+    await fetch('/api/admin/settings', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+    });
+    alert('Site settings updated successfully.');
+}
+</script>

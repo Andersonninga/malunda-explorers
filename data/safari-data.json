@@ -1,0 +1,2470 @@
+{
+  "site_settings": {
+    "site_name": "Malunda Explorers",
+    "tagline": "Explore the Wild. Experience More. Create Memories.",
+    "sub_tagline": "Your journey into the wild begins here, where every encounter becomes a story worth telling.",
+    "phone": "+255 784 567 890",
+    "whatsapp": "+255784567890",
+    "email": "info@malundaexplorers.com",
+    "booking_email": "reservations@malundaexplorers.com",
+    "address": "Safari Way, Plot 42, Arusha, Tanzania",
+    "currency": "USD",
+    "currency_symbol": "$",
+    "deposit_percentage": 30,
+    "payment_methods": [
+      {
+        "id": "card",
+        "name": "Credit / Debit Card (Visa, MasterCard, Amex)",
+        "description": "Instant secure processing via PCI-DSS compliant gateway."
+      },
+      {
+        "id": "bank_transfer",
+        "name": "Direct Bank Wire Transfer (USD/EUR)",
+        "description": "International wire to CRDB Bank Arusha, Tanzania with official invoice."
+      },
+      {
+        "id": "mobile_money",
+        "name": "Tanzania Mobile Money (M-Pesa / Airtel Money / Tigo Pesa)",
+        "description": "Direct payment for East African local & regional travelers."
+      },
+      {
+        "id": "deposit_only",
+        "name": "Pay 30% Deposit Now (Balance due 30 days prior)",
+        "description": "Secure your dates and lodges today with only 30% down."
+      }
+    ],
+    "logo": "/images/logo.png",
+    "hero_headline": "Every Journey Tells a Story",
+    "hero_description": "Your journey into the wild begins here, where every encounter becomes a story worth telling. Discover Tanzania through authentic safari experiences, breathtaking landscapes, and personalized adventures designed around you."
+  },
+  "destinations": [
+    {
+      "id": "serengeti",
+      "slug": "serengeti",
+      "name": "Serengeti National Park",
+      "subtitle": "Endless Plains & The Great Wildebeest Migration",
+      "description": "Vast plains, extraordinary wildlife and some of Africa's most unforgettable natural spectacles. Serengeti is the crown jewel of African wilderness, hosting over two million wildebeest and zebras on their eternal migration journey.",
+      "hero_image": "/images/serengeti_migration.jpg",
+      "thumbnail": "/images/serengeti_migration.jpg",
+      "wildlife_highlights": [
+        "Big Five (Lion, Leopard, Elephant, Buffalo, Rhino)",
+        "Great Wildebeest Migration",
+        "Cheetah coalitions",
+        "Nile Crocodiles in Mara River",
+        "Over 500 bird species"
+      ],
+      "best_time": "Year-round; River crossings (July-October), Calving season (January-March)",
+      "recommended_duration": "3 - 5 Days",
+      "activities": [
+        "Game drives",
+        "Hot air balloon safaris",
+        "Bush dinners",
+        "Photographic safaris",
+        "Walking safaris in buffer zones"
+      ],
+      "coordinates": "-2.3333, 34.8333",
+      "gallery": [
+        "/images/serengeti_migration.jpg",
+        "/images/malunda-safari-010.jpg",
+        "/images/malunda-safari-046.jpg"
+      ]
+    },
+    {
+      "id": "ngorongoro",
+      "slug": "ngorongoro",
+      "name": "Ngorongoro Crater",
+      "subtitle": "The Eighth Wonder of the World & Wildlife Sanctuary",
+      "description": "Descend into one of Africa's most remarkable wildlife destinations, where dramatic landscapes surround an extraordinary concentration of wildlife. A pristine 600m deep volcanic caldera housing over 25,000 large animals.",
+      "hero_image": "/images/ngorongoro_crater.jpg",
+      "thumbnail": "/images/ngorongoro_crater.jpg",
+      "wildlife_highlights": [
+        "Endangered Black Rhino",
+        "Dense pride of lions",
+        "Giant bull tuskers",
+        "Thousands of pink flamingos on Lake Magadi",
+        "Spotted hyenas"
+      ],
+      "best_time": "Excellent year-round; dry season (June-October) has easiest wildlife viewing",
+      "recommended_duration": "1 - 2 Days",
+      "activities": [
+        "Crater floor game drive",
+        "Crater rim walking safari",
+        "Olduvai Gorge archaeological visit",
+        "Maasai boma cultural immersion"
+      ],
+      "coordinates": "-3.2428, 35.4897",
+      "gallery": [
+        "/images/ngorongoro_crater.jpg",
+        "/images/malunda-safari-011.jpg"
+      ]
+    },
+    {
+      "id": "tarangire",
+      "slug": "tarangire",
+      "name": "Tarangire National Park",
+      "subtitle": "Land of Giants, Ancient Baobabs & Elephant Herds",
+      "description": "Known for its magnificent elephants, ancient baobabs and distinctive landscapes, Tarangire offers a quieter and deeply rewarding safari experience along the scenic Tarangire River.",
+      "hero_image": "/images/Tarangire.jpeg",
+      "thumbnail": "/images/Tarangire.jpeg",
+      "wildlife_highlights": [
+        "Enormous elephant herds (up to 300 individuals)",
+        "Ancient thousand-year-old baobabs",
+        "Tree-climbing pythons",
+        "Oryx and gerenuk",
+        "Over 550 bird species"
+      ],
+      "best_time": "July to October (Dry season river congregation)",
+      "recommended_duration": "1 - 2 Days",
+      "activities": [
+        "Full day game drives",
+        "Walking safaris",
+        "Bird watching",
+        "Night game drives (in select conservancies)"
+      ],
+      "coordinates": "-3.8333, 36.0000",
+      "gallery": [
+        "/images/Tarangire.jpeg",
+        "/images/malunda-safari-100.jpg"
+      ]
+    },
+    {
+      "id": "lake-manyara",
+      "slug": "lake-manyara",
+      "name": "Lake Manyara National Park",
+      "subtitle": "Rift Valley Jewel & Tree-Climbing Lions",
+      "description": "A compact and diverse ecosystem where forests, wetlands, open plains and wildlife come together beneath the dramatic Rift Valley landscape, famous for tree-climbing lions and flamingo flocks.",
+      "hero_image": "/images/malunda-safari-015.jpg",
+      "thumbnail": "/images/malunda-safari-015.jpg",
+      "wildlife_highlights": [
+        "Legendary tree-climbing lions",
+        "Massive baboon troops",
+        "Lesser and Greater Flamingos",
+        "Hippos in hippo pool",
+        "Elephants in groundwater forest"
+      ],
+      "best_time": "Dry season (June-October) for mammals; Wet season (November-May) for flamingos and birds",
+      "recommended_duration": "1 Day",
+      "activities": [
+        "Treetop walkway canopy tour",
+        "Lake canoeing (seasonal)",
+        "Bird watching",
+        "Night game drive",
+        "Mto wa Mbu cultural tour"
+      ],
+      "coordinates": "-3.5000, 35.8333",
+      "gallery": [
+        "/images/malunda-safari-015.jpg",
+        "/images/malunda-safari-048.jpg"
+      ]
+    },
+    {
+      "id": "mount-kilimanjaro",
+      "slug": "mount-kilimanjaro",
+      "name": "Mount Kilimanjaro",
+      "subtitle": "Roof of Africa & Highest Free-Standing Mountain",
+      "description": "Experience the presence of Africa's highest mountain (5,895m), whether as the centerpiece of your journey with a summit expedition or as part of a scenic wider Tanzanian adventure.",
+      "hero_image": "/images/malunda-safari-038.jpg",
+      "thumbnail": "/images/malunda-safari-038.jpg",
+      "wildlife_highlights": [
+        "Blue monkeys & colobus in rainforest",
+        "Alpine vegetation",
+        "Giant groundsels and lobelias",
+        "Klipspringers",
+        "Birdlife"
+      ],
+      "best_time": "January-March and June-October (clearest skies and warmest conditions)",
+      "recommended_duration": "6 - 8 Days for summit; 1 Day for scenic foothills hike",
+      "activities": [
+        "Machame / Lemosho / Marangu route trekking",
+        "Kilimanjaro foothills day hikes",
+        "Chagga cultural village tours",
+        "Materuni waterfall coffee tours"
+      ],
+      "coordinates": "-3.0674, 37.3556",
+      "gallery": [
+        "/images/malunda-safari-038.jpg",
+        "/images/malunda-safari-039.jpg"
+      ]
+    },
+    {
+      "id": "zanzibar",
+      "slug": "zanzibar",
+      "name": "Zanzibar Archipelago",
+      "subtitle": "Turquoise Waters, Spice Island & Stone Town Heritage",
+      "description": "Complete your African journey with warm Indian Ocean waters, rich history, beautiful beaches and the distinctive character of Zanzibar. The perfect bush-to-beach finale.",
+      "hero_image": "/images/zanzibar_beach.jpg",
+      "thumbnail": "/images/zanzibar_beach.jpg",
+      "wildlife_highlights": [
+        "Bottlenose dolphins at Kizimkazi",
+        "Green turtles at Mnemba Atoll",
+        "Red Colobus Monkeys in Jozani Forest",
+        "Vibrant coral reef marine life"
+      ],
+      "best_time": "June to October and December to February (dry and sunny beach weather)",
+      "recommended_duration": "3 - 5 Days",
+      "activities": [
+        "Dhow sunset sailing",
+        "Spice plantation tours",
+        "UNESCO Stone Town historic walk",
+        "Scuba diving & snorkeling Mnemba",
+        "Seafood ocean dining"
+      ],
+      "coordinates": "-6.1659, 39.2026",
+      "gallery": [
+        "/images/zanzibar_beach.jpg",
+        "/images/malunda-safari-054.jpg"
+      ]
+    }
+  ],
+  "safari_experiences": [
+    {
+      "id": "private-safaris",
+      "title": "Private Safaris",
+      "short_desc": "Exclusive 4x4 vehicle and dedicated safari guide tailored completely to your schedule, pace, and interests.",
+      "image": "/images/malunda-safari-016.jpg",
+      "badge": "Ultimate Privacy"
+    },
+    {
+      "id": "tailor-made-safaris",
+      "title": "Tailor-Made Safaris",
+      "short_desc": "Bespoke itineraries crafted from scratch by our Arusha experts to fulfill your unique dream African safari.",
+      "image": "/images/malunda-safari-017.jpg",
+      "badge": "100% Custom"
+    },
+    {
+      "id": "luxury-safaris",
+      "title": "Luxury Safaris",
+      "short_desc": "Stay in premier five-star luxury tented lodges with gourmet dining, plunge pools, and bush champagne breakfasts.",
+      "image": "/images/malunda-safari-018.jpg",
+      "badge": "5-Star Wilderness"
+    },
+    {
+      "id": "classic-safaris",
+      "title": "Classic Safaris",
+      "short_desc": "The quintessential Tanzania wildlife adventure with authentic mid-range safari lodges and legendary game drives.",
+      "image": "/images/malunda-safari-019.jpg",
+      "badge": "Authentic Journey"
+    },
+    {
+      "id": "honeymoon-safaris",
+      "title": "Honeymoon Safaris",
+      "short_desc": "Intimate savannah sunsets, romantic candlelit bush dinners, private suites, and seamless Zanzibar beach extensions.",
+      "image": "/images/malunda-safari-020.jpg",
+      "badge": "Romance in the Wild"
+    },
+    {
+      "id": "family-safaris",
+      "title": "Family Safaris",
+      "short_desc": "Thoughtfully planned adventures for all ages with spacious family suites, educational wildlife tracking, and flexible days.",
+      "image": "/images/malunda-safari-021.jpg",
+      "badge": "All Generations"
+    },
+    {
+      "id": "great-migration-safaris",
+      "title": "Great Migration Safaris",
+      "short_desc": "Positioned right where the herd is moving: river crossings in northern Serengeti or the southern calving grounds.",
+      "image": "/images/malunda-safari-022.jpg",
+      "badge": "Natural Wonder"
+    },
+    {
+      "id": "cultural-experiences",
+      "title": "Cultural Experiences",
+      "short_desc": "Meaningful encounters with Hadzabe hunter-gatherers, Datoga blacksmiths, and authentic Maasai pastoralists.",
+      "image": "/images/malunda-safari-023.jpg",
+      "badge": "Deep Heritage"
+    },
+    {
+      "id": "day-trips",
+      "title": "Day Trips",
+      "short_desc": "Short, immersive wildlife and cultural day excursions departing conveniently from Arusha or Moshi.",
+      "image": "/images/malunda-safari-024.jpg",
+      "badge": "Quick Escapes"
+    }
+  ],
+  "packages": [
+    {
+      "id": "7-day-northern-circuit-signature",
+      "slug": "7-day-northern-circuit-signature",
+      "title": "7-Day Northern Circuit Signature Safari",
+      "subtitle": "Tarangire, Lake Manyara, Serengeti Plains & Ngorongoro Crater",
+      "destinations": [
+        "Tarangire",
+        "Lake Manyara",
+        "Serengeti",
+        "Ngorongoro"
+      ],
+      "days": 7,
+      "nights": 6,
+      "safari_style": "Classic & Private",
+      "accommodation_level": "Mid-range & Luxury Tented Camps",
+      "base_price": 3450,
+      "featured": true,
+      "image": "/images/malunda-safari-010.jpg",
+      "overview": "Our premier, most celebrated Tanzanian safari. Experience the full spectrum of Northern Tanzania's wildlife ecosystems: the elephant-rich woodlands of Tarangire, the rift valley waters of Manyara, three glorious days on the boundless Serengeti plains, culminating in an awe-inspiring descent into the Ngorongoro Crater.",
+      "highlights": [
+        "Complete exploration of all 4 Northern Circuit national parks",
+        "3 nights in the Serengeti tracking Big Cats and the Great Migration",
+        "Crater floor descent for rare Black Rhino sightings",
+        "Encounter thousands of elephants in Tarangire National Park",
+        "Private customized 4x4 Land Cruiser with pop-up photography roof"
+      ],
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Arusha to Tarangire National Park",
+          "desc": "Morning pickup from your Arusha hotel or Kilimanjaro Airport. Scenic drive to Tarangire National Park, famous for its majestic baobabs and gigantic elephant herds. Enjoy an afternoon game drive along the Tarangire River. Dinner and overnight at Maramboi Tented Camp."
+        },
+        {
+          "day": 2,
+          "title": "Tarangire to Lake Manyara National Park",
+          "desc": "Morning departure to Lake Manyara beneath the Great Rift Valley escarpment. Spot tree-climbing lions, troops of olive baboons, and thousands of flamingos. Overnight at Lake Manyara Serena Lodge overlooking the rift valley."
+        },
+        {
+          "day": 3,
+          "title": "Lake Manyara to Central Serengeti (Seronera)",
+          "desc": "Ascend the highlands and traverse the Ngorongoro Conservation Area, descending onto the endless savannah of the Serengeti. Afternoon game drive in the Seronera Valley tracking leopards and cheetahs. Overnight at Serengeti Safari Camp."
+        },
+        {
+          "day": 4,
+          "title": "Full Day Serengeti Wilderness & Big Cats",
+          "desc": "Sunrise morning game drive when predators are most active. Return to camp for bush brunch, followed by afternoon exploration of river loops and kopjes. Sunset over the savannah. Overnight at Serengeti Safari Camp."
+        },
+        {
+          "day": 5,
+          "title": "Serengeti Migration Tracking to Ngorongoro Rim",
+          "desc": "Early morning game drive capturing wildlife in golden light. Travel through wildlife corridors towards the crater rim with a cultural stop option at a Maasai community. Overnight at Ngorongoro Serena Safari Lodge on the rim."
+        },
+        {
+          "day": 6,
+          "title": "Ngorongoro Crater Floor Safari",
+          "desc": "Dawn descent 600 meters into the crater floor for an unforgettable 6-hour game drive. Spot the Big Five in a single morning, including endangered black rhinos and massive lions. Afternoon drive to Karatu. Overnight at Farm House Valley."
+        },
+        {
+          "day": 7,
+          "title": "Karatu to Arusha / Kilimanjaro Airport",
+          "desc": "Leisurely breakfast surrounded by coffee plantations. Optional stop at a local cultural market before private transfer to Arusha or JRO Airport for your departure flight or Zanzibar connection."
+        }
+      ],
+      "included": [
+        "All national park entrance, conservation, and crater service fees",
+        "Private 4x4 Safari Land Cruiser with pop-up roof and charging ports",
+        "Professional English-speaking Tanzanian safari naturalist guide",
+        "6 nights full-board accommodation as specified",
+        "Unlimited game drives with no mileage restrictions",
+        "Chilled bottled mineral water, tea, and coffee in vehicle",
+        "Government taxes and VAT",
+        "AMREF Flying Doctors emergency medical evacuation cover"
+      ],
+      "not_included": [
+        "International and domestic flights",
+        "Tanzania tourist visa ($50-$100 depending on nationality)",
+        "Travel and medical insurance",
+        "Optional Hot Air Balloon Safari in Serengeti ($599)",
+        "Gratuities for safari guide and lodge staff",
+        "Personal expenses, alcoholic beverages, and laundry"
+      ]
+    },
+    {
+      "id": "5-day-serengeti-ngorongoro-safari",
+      "slug": "5-day-serengeti-ngorongoro-safari",
+      "title": "5-Day Serengeti & Ngorongoro Explorer",
+      "subtitle": "The Ultimate Wildlife Condensed Odyssey",
+      "destinations": [
+        "Serengeti",
+        "Ngorongoro"
+      ],
+      "days": 5,
+      "nights": 4,
+      "safari_style": "Classic & Tailor-Made",
+      "accommodation_level": "Mid-range Safari Camps",
+      "base_price": 2190,
+      "featured": true,
+      "image": "/images/ngorongoro_crater.jpg",
+      "overview": "A meticulously curated 5-day journey spotlighting Tanzania's two most iconic wilderness gems: the vast Serengeti and the dramatic Ngorongoro Crater. Perfect for travelers seeking world-class wildlife within an efficient timeframe.",
+      "highlights": [
+        "Two full days deep inside the Serengeti National Park",
+        "High chances of witnessing Big Five wildlife encounters",
+        "Spectacular dawn game drives across the golden plains",
+        "Crater floor exploration with scenic hippo pool picnic"
+      ],
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Arusha to Central Serengeti",
+          "desc": "Early departure through the lush Great Rift Valley and Ngorongoro highlands into the legendary Serengeti. Evening game drive. Overnight at Embalakai Tented Camp."
+        },
+        {
+          "day": 2,
+          "title": "Full Day Serengeti Game Drive",
+          "desc": "Full day dedicated to the Seronera Valley and Retima Hippo Pool. Observe prides of lions resting on rocky kopjes. Overnight at Embalakai Tented Camp."
+        },
+        {
+          "day": 3,
+          "title": "Serengeti Plains to Ngorongoro Conservation Area",
+          "desc": "Morning game drive in Serengeti, then travel south to the crater highlands. Breathtaking sunset over the caldera. Overnight at Rhino Lodge."
+        },
+        {
+          "day": 4,
+          "title": "Ngorongoro Crater Floor Safari",
+          "desc": "Early morning descent for close encounters with lions, rhinos, flamingos, and hyenas. Afternoon transfer to Karatu. Overnight at Bougainvillea Safari Lodge."
+        },
+        {
+          "day": 5,
+          "title": "Karatu to Arusha / Departure",
+          "desc": "Morning departure via Mto wa Mbu village to Arusha for your connecting flight."
+        }
+      ],
+      "included": [
+        "All park fees and taxes",
+        "Private 4x4 vehicle with guide",
+        "4 nights full-board accommodation",
+        "Chilled water in vehicle",
+        "AMREF rescue cover"
+      ],
+      "not_included": [
+        "International flights",
+        "Visas",
+        "Gratuities",
+        "Hot air balloon safari"
+      ]
+    },
+    {
+      "id": "great-migration-safari",
+      "slug": "great-migration-safari",
+      "title": "8-Day Great Migration & Mara River Crossing",
+      "subtitle": "Witness Nature's Greatest Wildlife Spectacle on Earth",
+      "destinations": [
+        "Serengeti",
+        "Ngorongoro",
+        "Tarangire"
+      ],
+      "days": 8,
+      "nights": 7,
+      "safari_style": "Wildlife Special & Photographic",
+      "accommodation_level": "Luxury Mobile Tented Camps",
+      "base_price": 4850,
+      "featured": true,
+      "image": "/images/serengeti_migration.jpg",
+      "overview": "Designed specifically around the movements of the Great Migration. From dramatic river crossings along the northern Mara River with stalking crocodiles to the southern calving plains, this safari puts you front row to the world's most intense wildlife drama.",
+      "highlights": [
+        "Follow the mega-herds of 1.5+ million wildebeest and zebras",
+        "Expert migration tracking guide with insider radio network",
+        "4 nights in Northern Serengeti near Mara River crossing points",
+        "Includes Ngorongoro Crater and Tarangire Baobab valley"
+      ],
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Arusha to Tarangire",
+          "desc": "Encounter mega-elephants and baobabs. Overnight at Tarangire Safari Lodge."
+        },
+        {
+          "day": 2,
+          "title": "Tarangire to Central Serengeti",
+          "desc": "Travel into central Serengeti. Overnight at Kubu Kubu Tented Lodge."
+        },
+        {
+          "day": 3,
+          "title": "Central Serengeti to Northern Serengeti (Kogatende)",
+          "desc": "Journey north towards the Mara River where the migration congregates. Overnight at Mara River Tented Camp."
+        },
+        {
+          "day": 4,
+          "title": "Northern Serengeti Mara River Crossing",
+          "desc": "Station along key crossing points. Watch wildebeest plunge into crocodile-filled waters. Overnight at Mara River Tented Camp."
+        },
+        {
+          "day": 5,
+          "title": "Northern Serengeti Migration Tracking",
+          "desc": "Explore Lamai Wedge and river loops. Overnight at Mara River Tented Camp."
+        },
+        {
+          "day": 6,
+          "title": "Northern Serengeti to Ngorongoro Rim",
+          "desc": "Scenic drive south with wildlife viewing en route. Overnight at Ngorongoro Serena Lodge."
+        },
+        {
+          "day": 7,
+          "title": "Ngorongoro Crater Floor",
+          "desc": "Full crater exploration. Overnight at Gibbs Farm Karatu."
+        },
+        {
+          "day": 8,
+          "title": "Karatu to Arusha / Flight Home",
+          "desc": "Transfer to Arusha or JRO Airport."
+        }
+      ],
+      "included": [
+        "All park and crater fees",
+        "Luxury mobile camp accommodations",
+        "Private 4x4 vehicle with guide",
+        "All meals and safari drinks",
+        "AMREF rescue cover"
+      ],
+      "not_included": [
+        "International flights",
+        "Visas",
+        "Gratuities",
+        "Hot air balloon safari"
+      ]
+    },
+    {
+      "id": "3-day-tanzania-classic-safari",
+      "slug": "3-day-tanzania-classic-safari",
+      "title": "3-Day Tanzania Classic Safari",
+      "subtitle": "Tarangire National Park & Ngorongoro Crater",
+      "destinations": [
+        "Tarangire",
+        "Ngorongoro"
+      ],
+      "days": 3,
+      "nights": 2,
+      "safari_style": "Classic Safari",
+      "accommodation_level": "Mid-range Safari Lodge",
+      "base_price": 1250,
+      "featured": false,
+      "image": "/images/malunda-safari-028.jpg",
+      "overview": "The ideal short Tanzanian safari for travelers with limited time or those combining business in Arusha with an authentic wilderness escape. Experience the elephants of Tarangire and the wonders of Ngorongoro Crater in three action-packed days.",
+      "highlights": [
+        "Unforgettable elephant herds in Tarangire",
+        "Full morning game drive inside Ngorongoro Crater",
+        "Scenic Rift Valley viewpoints"
+      ],
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Arusha to Tarangire National Park",
+          "desc": "Game drive among baobabs and elephants. Overnight at Sangaiwe Tented Lodge."
+        },
+        {
+          "day": 2,
+          "title": "Tarangire to Ngorongoro Crater",
+          "desc": "Crater descent for Big Five tracking. Overnight in Karatu at Country Lodge."
+        },
+        {
+          "day": 3,
+          "title": "Karatu to Arusha",
+          "desc": "Morning coffee walk, transfer back to Arusha or JRO."
+        }
+      ],
+      "included": [
+        "Park fees",
+        "Private 4x4 Land Cruiser",
+        "2 nights lodging",
+        "All meals on safari"
+      ],
+      "not_included": [
+        "Flights",
+        "Visas",
+        "Tips"
+      ]
+    },
+    {
+      "id": "luxury-tanzania-safari",
+      "slug": "luxury-tanzania-safari",
+      "title": "6-Day Royal Wilderness Luxury Safari",
+      "subtitle": "Uncompromising 5-Star Elegance in the Heart of the Bush",
+      "destinations": [
+        "Serengeti",
+        "Ngorongoro",
+        "Tarangire"
+      ],
+      "days": 6,
+      "nights": 5,
+      "safari_style": "Luxury Safari",
+      "accommodation_level": "Ultra-Luxury Lodges & Camps",
+      "base_price": 5900,
+      "featured": true,
+      "image": "/images/malunda-safari-046.jpg",
+      "overview": "For the discerning traveler who expects the highest standard of luxury, privacy, and personalized service. Stay in handpicked luxury sanctuaries with fine dining, private plunge pools, and top-tier senior safari naturalists.",
+      "highlights": [
+        "Stay at legendary luxury properties like Four Seasons or Sanctuary Camps",
+        "Gourmet bush dining with premium wines and spirits included",
+        "Scenic bush flight option directly into the Serengeti",
+        "Private open-side or customized luxury Land Cruiser"
+      ],
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Fly Arusha to Serengeti Luxury Sanctuary",
+          "desc": "Scenic morning flight into Serengeti Seronera airstrip. Champagne welcome and afternoon luxury game drive. Overnight at Four Seasons Safari Lodge."
+        },
+        {
+          "day": 2,
+          "title": "Serengeti Deep Safari & Spa Relaxation",
+          "desc": "Private morning game drive followed by afternoon infinity pool views overlooking the animal waterhole. Overnight at Four Seasons Safari Lodge."
+        },
+        {
+          "day": 3,
+          "title": "Hot Air Balloon Safari & Migration",
+          "desc": "Dawn flight over the savannah followed by a 5-star champagne bush breakfast. Afternoon wildlife exploration. Overnight at Sanctuary Serengeti Camp."
+        },
+        {
+          "day": 4,
+          "title": "Serengeti to Ngorongoro Crater Luxury Lodge",
+          "desc": "Scenic helicopter or vehicle transfer to the iconic Ngorongoro Crater Lodge perched on the crater rim. Overnight at andBeyond Ngorongoro Crater Lodge."
+        },
+        {
+          "day": 5,
+          "title": "VIP Ngorongoro Crater Safari",
+          "desc": "Exclusive descent into the crater floor with silver-service picnic lunch. Overnight at andBeyond Ngorongoro Crater Lodge."
+        },
+        {
+          "day": 6,
+          "title": "Transfer to Arusha / Kilimanjaro Airport",
+          "desc": "Private transfer to airport for your onward connection."
+        }
+      ],
+      "included": [
+        "All luxury lodge accommodations",
+        "All drinks, cocktails, and wines",
+        "Hot air balloon safari",
+        "Private guide and vehicle",
+        "All park concessions and fees"
+      ],
+      "not_included": [
+        "International airfare",
+        "Visas",
+        "Discretionary staff gratuities"
+      ]
+    },
+    {
+      "id": "honeymoon-safari-zanzibar",
+      "slug": "honeymoon-safari-zanzibar",
+      "title": "9-Day Bush to Beach: Romance & Zanzibar",
+      "subtitle": "Serengeti Savannah Sunsets & Turquoise Indian Ocean Villas",
+      "destinations": [
+        "Serengeti",
+        "Ngorongoro",
+        "Zanzibar"
+      ],
+      "days": 9,
+      "nights": 8,
+      "safari_style": "Honeymoon & Romantic",
+      "accommodation_level": "Romantic Boutique Lodges & Beach Resort",
+      "base_price": 4200,
+      "featured": true,
+      "image": "/images/zanzibar_beach.jpg",
+      "overview": "The ultimate African romantic escape. Begin with 5 nights immersed in the drama and beauty of the Serengeti and Ngorongoro Crater, then fly directly to the tropical paradise of Zanzibar for 3 nights of barefoot beach relaxation and sunset dhow cruises.",
+      "highlights": [
+        "Private candlelit bush dinners under the African stars",
+        "Complimentary honeymoon champagne and special lodge amenities",
+        "Flight from Serengeti directly to Zanzibar included",
+        "Private sunset dhow cruise along Zanzibar's northern coast"
+      ],
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Arusha to Tarangire",
+          "desc": "Romantic safari kickoff with elephant sightings. Overnight at Kuro Tarangire."
+        },
+        {
+          "day": 2,
+          "title": "Tarangire to Serengeti",
+          "desc": "Scenic drive into central Serengeti. Candlelight bush dinner. Overnight at Melia Serengeti Lodge."
+        },
+        {
+          "day": 3,
+          "title": "Serengeti Romance & Wildlife",
+          "desc": "Private safari through kopjes and plains. Overnight at Melia Serengeti Lodge."
+        },
+        {
+          "day": 4,
+          "title": "Serengeti to Ngorongoro Rim",
+          "desc": "Sunset overlooking the world-famous crater. Overnight at Ngorongoro Lion's Paw Camp."
+        },
+        {
+          "day": 5,
+          "title": "Crater Safari & Fly to Zanzibar",
+          "desc": "Morning crater floor safari, then transfer to Arusha for your short scenic flight to Zanzibar. Overnight at The Residence Zanzibar."
+        },
+        {
+          "day": 6,
+          "title": "Zanzibar Turquoise Beach Relaxation",
+          "desc": "Leisurely day by your private ocean villa pool and spa. Overnight at The Residence Zanzibar."
+        },
+        {
+          "day": 7,
+          "title": "Private Sunset Dhow Cruise & Seafood Dinner",
+          "desc": "Sail traditional wooden dhow into the sunset with fresh seafood dinner. Overnight at The Residence Zanzibar."
+        },
+        {
+          "day": 8,
+          "title": "Stone Town & Spice Island Tour",
+          "desc": "Explore historic Stone Town alleys and spice plantations. Overnight at Park Hyatt Zanzibar."
+        },
+        {
+          "day": 9,
+          "title": "Departure Zanzibar",
+          "desc": "Private transfer to Zanzibar International Airport (ZNZ)."
+        }
+      ],
+      "included": [
+        "Bush accommodations and 5-star beach resort",
+        "Internal flight Arusha to Zanzibar",
+        "All safari fees and private vehicle",
+        "Romantic extras and sunset dhow cruise"
+      ],
+      "not_included": [
+        "International flights",
+        "Visas",
+        "Tips"
+      ]
+    },
+    {
+      "id": "family-tanzania-safari",
+      "slug": "family-tanzania-safari",
+      "title": "6-Day Family Tanzania Safari & Discovery",
+      "subtitle": "Safe, Inspiring, Educational Adventure for All Generations",
+      "destinations": [
+        "Tarangire",
+        "Lake Manyara",
+        "Ngorongoro"
+      ],
+      "days": 6,
+      "nights": 5,
+      "safari_style": "Family Safari",
+      "accommodation_level": "Family Suites & Swimming Pool Lodges",
+      "base_price": 2800,
+      "featured": false,
+      "image": "/images/malunda-safari-047.jpg",
+      "overview": "Specially designed for families traveling with children or teenagers. Shorter driving distances, child-friendly safari lodges with swimming pools, interactive bushcraft and animal tracking lessons led by patient, certified guides.",
+      "highlights": [
+        "Junior Ranger wildlife tracking certificate for kids",
+        "Treetop canopy walkway walk in Lake Manyara",
+        "Cultural visit to a local school and village community",
+        "Spacious interconnected family suites"
+      ],
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Arusha to Tarangire",
+          "desc": "Gentle first day watching playful baby elephants. Overnight at Maramboi Tented Camp."
+        },
+        {
+          "day": 2,
+          "title": "Tarangire to Lake Manyara Canopy",
+          "desc": "Treetop walkway and flamingo lake exploration. Overnight at Manyara Serena Safari Lodge."
+        },
+        {
+          "day": 3,
+          "title": "Manyara to Karatu Coffee Estate",
+          "desc": "Farm walks, cycling, and village interaction. Overnight at Farm House Valley."
+        },
+        {
+          "day": 4,
+          "title": "Full Day Ngorongoro Crater Exploration",
+          "desc": "Crater descent with picnic lunch at the hippo pool. Overnight at Farm House Valley."
+        },
+        {
+          "day": 5,
+          "title": "Hadzabe Bushmen Archery & Cultural Morning",
+          "desc": "Learn ancient tracking and bow-and-arrow skills with Hadzabe elders. Overnight at Farm House Valley."
+        },
+        {
+          "day": 6,
+          "title": "Return to Arusha",
+          "desc": "Farewell lunch and airport transfer."
+        }
+      ],
+      "included": [
+        "Family lodge suites",
+        "Child safari activity kits",
+        "All park entrance and activity fees",
+        "Private spacious Land Cruiser"
+      ],
+      "not_included": [
+        "Flights",
+        "Visas",
+        "Tips"
+      ]
+    },
+    {
+      "id": "kilimanjaro-machame-safari",
+      "slug": "kilimanjaro-machame-safari",
+      "title": "10-Day Kilimanjaro Summit & Wildlife Combo",
+      "subtitle": "Roof of Africa Trek (Machame Route) & Tarangire/Ngorongoro Safari",
+      "destinations": [
+        "Mount Kilimanjaro",
+        "Tarangire",
+        "Ngorongoro"
+      ],
+      "days": 10,
+      "nights": 9,
+      "safari_style": "Trekking & Adventure Safari",
+      "accommodation_level": "Alpine Mountain Camping & Safari Lodge",
+      "base_price": 3950,
+      "featured": false,
+      "image": "/images/malunda-safari-038.jpg",
+      "overview": "Combine the triumphant achievement of standing at Uhuru Peak (5,895m) with the well-deserved reward of a 3-day wildlife safari through Tarangire and Ngorongoro Crater.",
+      "highlights": [
+        "6-day Machame Route with high acclimatization success rate",
+        "Full mountain crew: lead guide, assistant, chef, and porters",
+        "Celebratory safari in Tarangire & Ngorongoro after summiting",
+        "All mountain equipment, pulse oximeters, and mountain rescue included"
+      ],
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Machame Gate to Machame Camp",
+          "desc": "Trek through rainforest zone. (3,000m)"
+        },
+        {
+          "day": 2,
+          "title": "Machame Camp to Shira Camp",
+          "desc": "Cross heath and moorland to Shira plateau. (3,840m)"
+        },
+        {
+          "day": 3,
+          "title": "Shira to Lava Tower to Barranco Camp",
+          "desc": "Climb high to Lava Tower (4,630m), sleep low at Barranco (3,950m)."
+        },
+        {
+          "day": 4,
+          "title": "Barranco Wall to Karanga Camp",
+          "desc": "Scramble the Great Barranco Wall to Karanga Valley. (3,995m)"
+        },
+        {
+          "day": 5,
+          "title": "Karanga to Barafu Base Camp",
+          "desc": "Final ascent to base camp. Rest for midnight summit push. (4,673m)"
+        },
+        {
+          "day": 6,
+          "title": "Summit Day: Uhuru Peak (5,895m) to Mweka Camp",
+          "desc": "Reach the Roof of Africa at sunrise! Descend to Mweka Camp (3,100m)."
+        },
+        {
+          "day": 7,
+          "title": "Mweka Gate to Arusha Hotel",
+          "desc": "Receive summit certificates and transfer to luxury hotel in Arusha."
+        },
+        {
+          "day": 8,
+          "title": "Safari Day 1: Tarangire National Park",
+          "desc": "Relax in comfortable safari vehicle watching giant elephant herds."
+        },
+        {
+          "day": 9,
+          "title": "Safari Day 2: Ngorongoro Crater Floor",
+          "desc": "Descend into the crater for Big Five sightings."
+        },
+        {
+          "day": 10,
+          "title": "Safari Day 3: Arusha Transfer & Farewell",
+          "desc": "Airport transfer for flight home."
+        }
+      ],
+      "included": [
+        "All Kilimanjaro park, camping, and rescue fees",
+        "Mountain crew and chef",
+        "Mountain tents and dining mess",
+        "3-day safari with private vehicle and lodge"
+      ],
+      "not_included": [
+        "Sleeping bag rental",
+        "International flights",
+        "Visas",
+        "Porters tips"
+      ]
+    }
+  ],
+  "optional_extras": [
+    {
+      "id": "balloon_safari",
+      "name": "Hot Air Balloon Safari (Serengeti)",
+      "price": 599,
+      "price_type": "per_person",
+      "description": "Drift silently over the Serengeti at sunrise followed by an elegant champagne bush breakfast."
+    },
+    {
+      "id": "maasai_visit",
+      "name": "Authentic Maasai Boma Cultural Experience",
+      "price": 65,
+      "price_type": "per_person",
+      "description": "Engage respectfully with Maasai elders, learn traditions, beadwork, and ceremonial songs."
+    },
+    {
+      "id": "olduvai_gorge",
+      "name": "Olduvai Gorge & Museum Historical Excursion",
+      "price": 45,
+      "price_type": "per_person",
+      "description": "Visit the cradle of mankind where Dr. Leakey discovered early hominid fossils."
+    },
+    {
+      "id": "zanzibar_extension",
+      "name": "3-Night Zanzibar Beach Extension Package",
+      "price": 850,
+      "price_type": "per_person",
+      "description": "Includes domestic flight from Arusha to Zanzibar, beachfront boutique hotel, and airport transfers."
+    },
+    {
+      "id": "private_vehicle",
+      "name": "Exclusive Private 4x4 Vehicle Upgrade",
+      "price": 250,
+      "price_type": "per_day",
+      "description": "Guaranteed 100% private customized safari vehicle with dedicated senior naturalist."
+    },
+    {
+      "id": "airport_transfers",
+      "name": "VIP Airport Transfers (JRO/Arusha)",
+      "price": 60,
+      "price_type": "per_booking",
+      "description": "Private chauffeur meet & greet at Kilimanjaro International Airport (JRO) to your hotel."
+    },
+    {
+      "id": "bush_dinner",
+      "name": "Romantic Candlelit Bush Dinner Under The Stars",
+      "price": 120,
+      "price_type": "per_person",
+      "description": "Private dinner set up under the African night sky with campfire and Maasai warriors."
+    },
+    {
+      "id": "celebration_package",
+      "name": "Special Celebration / Honeymoon Amenity Pack",
+      "price": 180,
+      "price_type": "per_booking",
+      "description": "Chilled sparkling wine, bespoke safari cake, fresh flowers, and celebratory lodge upgrades."
+    }
+  ],
+  "accommodation_tiers": [
+    {
+      "id": "budget",
+      "name": "Budget Safari Camping & Tents",
+      "description": "Comfortable dome tents in scenic public campsites with private chef and bedding provided.",
+      "multiplier": 0.85
+    },
+    {
+      "id": "mid-range",
+      "name": "Mid-Range Safari Lodges & Permanent Tented Camps",
+      "description": "En-suite safari lodges and tented camps with swimming pools, hot showers, and full restaurant service.",
+      "multiplier": 1
+    },
+    {
+      "id": "luxury",
+      "name": "Luxury Tented Lodges",
+      "description": "Superior luxury camps with wooden decks, panoramic savannah views, gourmet cuisine, and premium amenities.",
+      "multiplier": 1.45
+    },
+    {
+      "id": "premium",
+      "name": "Premium / Ultra-Luxury Sanctuaries",
+      "description": "World-renowned 5-star wilderness properties (e.g. Four Seasons, andBeyond) with private plunge pools, butler service, and fine vintage cellars.",
+      "multiplier": 2.1
+    }
+  ],
+  "testimonials": [
+    {
+      "id": 1,
+      "author": "Dr. Sarah & Marcus Jenkins",
+      "country": "United Kingdom",
+      "safari": "7-Day Northern Circuit Signature",
+      "rating": 5,
+      "quote": "Malunda Explorers delivered the journey of a lifetime. From our guide Peter's uncanny ability to spot leopards in the Serengeti to the breathtaking sunrise over Ngorongoro, every detail was executed with quiet professionalism and genuine warmth. We felt in safe, expert hands every second.",
+      "date": "August 2026",
+      "photo": "/images/malunda-safari-033.jpg"
+    },
+    {
+      "id": 2,
+      "author": "The Van Der Bilt Family",
+      "country": "Netherlands",
+      "safari": "Family Tanzania Safari & Discovery",
+      "rating": 5,
+      "quote": "Traveling with three kids aged 8, 12, and 15 can be daunting, but Malunda Explorers made it effortless. The customized Land Cruiser had plenty of room and charging ports, the lodges were incredible, and our children still talk about the Hadzabe archery lesson. Truly authentic!",
+      "date": "July 2026",
+      "photo": "/images/malunda-safari-034.jpg"
+    },
+    {
+      "id": 3,
+      "author": "Elena Rostova & David Chen",
+      "country": "United States & Singapore",
+      "safari": "9-Day Bush to Beach: Romance & Zanzibar",
+      "rating": 5,
+      "quote": "Our honeymoon was pure perfection. The private bush dinner under the Serengeti stars was tears-in-eyes magical, followed by three blissful days in Zanzibar. Malunda’s local perspective and thoughtfulness set them far apart from commercial operators.",
+      "date": "September 2026",
+      "photo": "/images/malunda-safari-035.jpg"
+    }
+  ],
+  "faqs": [
+    {
+      "category": "Booking & Payments",
+      "question": "How do I book a safari with Malunda Explorers?",
+      "answer": "Booking is simple and transparent. You can choose any of our featured safari packages or use our interactive booking system to configure your dates, travelers, and accommodation. Once you submit, you receive an immediate booking reference (e.g., ME-2026-0001) and our safari director confirms availability within a few hours. To lock in lodge bookings, a 30% deposit is payable online or via wire transfer."
+    },
+    {
+      "category": "Booking & Payments",
+      "question": "Do I need to pay a deposit?",
+      "answer": "Yes. A 30% deposit is required at the time of confirmation to secure high-demand national park permits, luxury tented camp rooms, and private 4x4 vehicles. The remaining balance of 70% is due 30 days prior to your safari start date, or upon arrival in Arusha by prior arrangement."
+    },
+    {
+      "category": "Booking & Payments",
+      "question": "What payment methods are available?",
+      "answer": "We accept major credit and debit cards (Visa, MasterCard, American Express) via secure encrypted gateway, international direct bank wire transfers in USD or EUR to our CRDB Bank account in Arusha, and East African mobile money (M-Pesa, Airtel Money)."
+    },
+    {
+      "category": "Booking & Payments",
+      "question": "What is your cancellation policy?",
+      "answer": "Cancellations made more than 60 days before safari departure receive a 90% refund of total deposits (10% retained for unrecoverable park and administrative costs). Cancellations between 30 and 59 days receive a 50% refund. Cancellations under 30 days are non-refundable as lodges have locked in bookings, though we always assist in rescheduling where possible."
+    },
+    {
+      "category": "Safari Experience",
+      "question": "Can I customize my safari itinerary?",
+      "answer": "Absolutely! Tailor-made journeys are our specialty. You can adjust the number of days, swap destinations, alter accommodation tiers (budget, mid-range, or 5-star luxury), and add extensions like Zanzibar or Mount Kilimanjaro."
+    },
+    {
+      "category": "Safari Experience",
+      "question": "What is included in a Malunda Explorers safari?",
+      "answer": "Our safaris are all-inclusive on the ground: all Tanzania National Park entrance fees, conservation fees, concession fees, crater service permits, private 4x4 Land Cruiser with pop-up roof and English-speaking guide, all meals (breakfast, lunch/picnic, dinner), unlimited chilled bottled water in the vehicle, all lodge accommodations, and AMREF Flying Doctors emergency medical evacuation insurance."
+    },
+    {
+      "category": "Safari Experience",
+      "question": "What is not included in the safari price?",
+      "answer": "International airfare to Tanzania, Tanzania entry visa fees ($50 for most nationalities, $100 for US citizens), personal travel and health insurance, alcoholic beverages and personal laundry at lodges (unless booked under Ultra-Luxury tier), gratuities for your guide and lodge staff, and optional activities like hot air balloon rides."
+    },
+    {
+      "category": "Tanzania Travel",
+      "question": "What is the best time to visit Tanzania for a safari?",
+      "answer": "Tanzania is a premier year-round safari destination. The dry season from late June to October offers prime wildlife viewing around water sources and river crossings of the Great Migration. January to March is fantastic in the southern Serengeti for the wildebeest calving season with high predator action. The short rains in November-December and long rains in April-May offer lush emerald scenery and fewer crowds."
+    },
+    {
+      "category": "Tanzania Travel",
+      "question": "Is Tanzania suitable for family safaris with children?",
+      "answer": "Yes, Tanzania is exceptionally warm and welcoming to families. We recommend children be 5 years or older to comfortably enjoy game drives. Our family safaris feature interconnected rooms, swimming pools, flexible schedules, and engaging cultural activities like archery with the Hadzabe."
+    },
+    {
+      "category": "Tanzania Travel",
+      "question": "Can you arrange airport transfers and Zanzibar extensions?",
+      "answer": "Yes, we handle seamless transfers between Kilimanjaro International Airport (JRO), Arusha Airport (ARK), and local hotels. We also organize domestic bush flights directly from Serengeti airstrips to Zanzibar for stress-free bush-to-beach vacations."
+    },
+    {
+      "category": "Tanzania Travel",
+      "question": "What happens after I book?",
+      "answer": "Immediately after submitting your booking, you receive a confirmation email with your booking reference. Within 12-24 hours, our safari operations team sends you a personalized welcome pack containing your day-by-day itinerary, lodge confirmations, Tanzania packing list, visa advice, and direct WhatsApp contact with your dedicated safari coordinator."
+    }
+  ],
+  "gallery_items": [
+    {
+      "id": 3,
+      "category": "safari-vehicles",
+      "title": "Cheetah Surveying the Serengeti Plains #3",
+      "image": "/images/malunda-safari-038.jpg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 4,
+      "category": "camps-lodges",
+      "title": "Ngorongoro Crater Caldera at Dawn #4",
+      "image": "/images/malunda-safari-039.jpg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 8,
+      "category": "kilimanjaro",
+      "title": "Maasai Traditional Gathering & Dance #8",
+      "image": "/images/malunda-safari-043.jpg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 10,
+      "category": "landscapes",
+      "title": "Flamingos Grazing at Lake Manyara #10",
+      "image": "/images/malunda-safari-045.jpg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 11,
+      "category": "safari-vehicles",
+      "title": "Sunset Over the African Wilderness #11",
+      "image": "/images/malunda-safari-046.jpg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 12,
+      "category": "camps-lodges",
+      "title": "Baby Elephant Playing with Herd #12",
+      "image": "/images/malunda-safari-047.jpg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 13,
+      "category": "people-culture",
+      "title": "Leopard Camouflaged in Acacia Tree #13",
+      "image": "/images/malunda-safari-048.jpg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 17,
+      "category": "wildlife",
+      "title": "Safari Sundowner Campfire Gathering #17",
+      "image": "/images/malunda-safari-052.jpg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 18,
+      "category": "landscapes",
+      "title": "Kilimanjaro View Above Clouds #18",
+      "image": "/images/malunda-safari-053.jpg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 19,
+      "category": "safari-vehicles",
+      "title": "Zanzibar Beach & Coastal Waters #19",
+      "image": "/images/malunda-safari-054.jpg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 20,
+      "category": "camps-lodges",
+      "title": "Safari Vehicle Crossing Water Stream #20",
+      "image": "/images/malunda-safari-055.jpg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 21,
+      "category": "people-culture",
+      "title": "Maasai Beadwork & Cultural Exchange #21",
+      "image": "/images/malunda-safari-056.jpg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 22,
+      "category": "tanzania",
+      "title": "Tree-Climbing Lion in Lake Manyara #22",
+      "image": "/images/malunda-safari-057.jpg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 23,
+      "category": "zanzibar",
+      "title": "Black Rhino Sighting in Ngorongoro #23",
+      "image": "/images/malunda-safari-058.jpg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 24,
+      "category": "kilimanjaro",
+      "title": "Bush Breakfast in Northern Serengeti #24",
+      "image": "/images/malunda-safari-059.jpg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 25,
+      "category": "wildlife",
+      "title": "African Lion Pride Resting on Kopje #25",
+      "image": "/images/malunda-safari-060.jpg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 27,
+      "category": "safari-vehicles",
+      "title": "Cheetah Surveying the Serengeti Plains #27",
+      "image": "/images/malunda-safari-062.jpg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 28,
+      "category": "camps-lodges",
+      "title": "Ngorongoro Crater Caldera at Dawn #28",
+      "image": "/images/malunda-safari-063.jpg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 29,
+      "category": "people-culture",
+      "title": "Baobabs Along Tarangire Riverbed #29",
+      "image": "/images/malunda-safari-064.jpg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 30,
+      "category": "tanzania",
+      "title": "Custom 4x4 Safari Land Cruiser on Game Drive #30",
+      "image": "/images/malunda-safari-065.jpg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 31,
+      "category": "zanzibar",
+      "title": "Luxury Bush Tented Suite Deck #31",
+      "image": "/images/malunda-safari-066.jpg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 32,
+      "category": "kilimanjaro",
+      "title": "Maasai Traditional Gathering & Dance #32",
+      "image": "/images/malunda-safari-067.jpg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 34,
+      "category": "landscapes",
+      "title": "Flamingos Grazing at Lake Manyara #34",
+      "image": "/images/malunda-safari-069.jpg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 40,
+      "category": "kilimanjaro",
+      "title": "Buffalo Herd Near Waterhole #40",
+      "image": "/images/malunda-safari-075.jpg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 44,
+      "category": "camps-lodges",
+      "title": "Safari Vehicle Crossing Water Stream #44",
+      "image": "/images/malunda-safari-079.jpg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 45,
+      "category": "people-culture",
+      "title": "Maasai Beadwork & Cultural Exchange #45",
+      "image": "/images/malunda-safari-080.jpg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 46,
+      "category": "tanzania",
+      "title": "Tree-Climbing Lion in Lake Manyara #46",
+      "image": "/images/malunda-safari-081.jpg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 47,
+      "category": "zanzibar",
+      "title": "Black Rhino Sighting in Ngorongoro #47",
+      "image": "/images/malunda-safari-082.jpg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 48,
+      "category": "kilimanjaro",
+      "title": "Bush Breakfast in Northern Serengeti #48",
+      "image": "/images/malunda-safari-083.jpg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 49,
+      "category": "wildlife",
+      "title": "African Lion Pride Resting on Kopje #49",
+      "image": "/images/malunda-safari-084.jpg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 50,
+      "category": "landscapes",
+      "title": "Matriarch Elephant Leading Herd #50",
+      "image": "/images/malunda-safari-085.jpg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 51,
+      "category": "safari-vehicles",
+      "title": "Cheetah Surveying the Serengeti Plains #51",
+      "image": "/images/malunda-safari-086.jpg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 52,
+      "category": "camps-lodges",
+      "title": "Ngorongoro Crater Caldera at Dawn #52",
+      "image": "/images/malunda-safari-087.jpg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 53,
+      "category": "people-culture",
+      "title": "Baobabs Along Tarangire Riverbed #53",
+      "image": "/images/malunda-safari-088.jpg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 54,
+      "category": "tanzania",
+      "title": "Custom 4x4 Safari Land Cruiser on Game Drive #54",
+      "image": "/images/malunda-safari-089.jpg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 55,
+      "category": "zanzibar",
+      "title": "Luxury Bush Tented Suite Deck #55",
+      "image": "/images/malunda-safari-090.jpg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 56,
+      "category": "kilimanjaro",
+      "title": "Maasai Traditional Gathering & Dance #56",
+      "image": "/images/malunda-safari-091.jpg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 38,
+      "category": "vehicles",
+      "title": "Custom 4x4 Safari Land Cruiser on Game Drive",
+      "image": "/images/malunda-safari-001.jpg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 39,
+      "category": "accommodations",
+      "title": "Luxury Bush Tented Camp at Dusk",
+      "image": "/images/malunda-safari-002.jpg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 40,
+      "category": "cultural",
+      "title": "Authentic Maasai Cultural Boma Experience",
+      "image": "/images/malunda-safari-003.jpg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 41,
+      "category": "wildlife",
+      "title": "Tanzania Wildlife Safari Encounter",
+      "image": "/images/malunda-safari-010.jpg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 42,
+      "category": "vehicles",
+      "title": "Custom 4x4 Safari Land Cruiser on Game Drive",
+      "image": "/images/malunda-safari-011.jpg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 43,
+      "category": "accommodations",
+      "title": "Luxury Bush Tented Camp at Dusk",
+      "image": "/images/malunda-safari-015.jpg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 44,
+      "category": "cultural",
+      "title": "Authentic Maasai Cultural Boma Experience",
+      "image": "/images/malunda-safari-021 - Copy (2).jpg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 45,
+      "category": "wildlife",
+      "title": "Tanzania Wildlife Safari Encounter",
+      "image": "/images/malunda-safari-028.jpg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 46,
+      "category": "vehicles",
+      "title": "Custom 4x4 Safari Land Cruiser on Game Drive",
+      "image": "/images/malunda-safari-100.jpg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 47,
+      "category": "landscapes",
+      "title": "Ngorongoro Crater Caldera",
+      "image": "/images/ngorongoro_crater.jpg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 48,
+      "category": "wildlife",
+      "title": "The Great Wildebeest Migration, Serengeti",
+      "image": "/images/serengeti_migration.jpg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 49,
+      "category": "landscapes",
+      "title": "Tarangire Baobab Valley",
+      "image": "/images/Tarangire.jpeg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 50,
+      "category": "vehicles",
+      "title": "Custom 4x4 Safari Land Cruiser on Game Drive",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.57.52.jpeg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 51,
+      "category": "accommodations",
+      "title": "Luxury Bush Tented Camp at Dusk",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.57.53.jpeg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 52,
+      "category": "cultural",
+      "title": "Authentic Maasai Cultural Boma Experience",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.57.54.jpeg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 53,
+      "category": "wildlife",
+      "title": "Tanzania Wildlife Safari Encounter",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.06 (1).jpeg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 54,
+      "category": "vehicles",
+      "title": "Custom 4x4 Safari Land Cruiser on Game Drive",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.06 (2).jpeg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 55,
+      "category": "accommodations",
+      "title": "Luxury Bush Tented Camp at Dusk",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.06 (3).jpeg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 56,
+      "category": "cultural",
+      "title": "Authentic Maasai Cultural Boma Experience",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.06.jpeg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 57,
+      "category": "wildlife",
+      "title": "Tanzania Wildlife Safari Encounter",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.07 (1).jpeg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 58,
+      "category": "vehicles",
+      "title": "Custom 4x4 Safari Land Cruiser on Game Drive",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.07 (2).jpeg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 59,
+      "category": "accommodations",
+      "title": "Luxury Bush Tented Camp at Dusk",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.07.jpeg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 60,
+      "category": "cultural",
+      "title": "Authentic Maasai Cultural Boma Experience",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.08 (1).jpeg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 61,
+      "category": "wildlife",
+      "title": "Tanzania Wildlife Safari Encounter",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.08 (2).jpeg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 62,
+      "category": "vehicles",
+      "title": "Custom 4x4 Safari Land Cruiser on Game Drive",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.08 (3).jpeg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 63,
+      "category": "accommodations",
+      "title": "Luxury Bush Tented Camp at Dusk",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.08 (4).jpeg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 64,
+      "category": "cultural",
+      "title": "Authentic Maasai Cultural Boma Experience",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.08.jpeg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 65,
+      "category": "wildlife",
+      "title": "Tanzania Wildlife Safari Encounter",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.09 (1).jpeg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 66,
+      "category": "vehicles",
+      "title": "Custom 4x4 Safari Land Cruiser on Game Drive",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.09 (2).jpeg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 67,
+      "category": "accommodations",
+      "title": "Luxury Bush Tented Camp at Dusk",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.09 (3).jpeg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 68,
+      "category": "cultural",
+      "title": "Authentic Maasai Cultural Boma Experience",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.09.jpeg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 69,
+      "category": "wildlife",
+      "title": "Tanzania Wildlife Safari Encounter",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.10 (1).jpeg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 70,
+      "category": "vehicles",
+      "title": "Custom 4x4 Safari Land Cruiser on Game Drive",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.10 (2).jpeg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 71,
+      "category": "accommodations",
+      "title": "Luxury Bush Tented Camp at Dusk",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.10 (3).jpeg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 72,
+      "category": "cultural",
+      "title": "Authentic Maasai Cultural Boma Experience",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.10.jpeg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 73,
+      "category": "wildlife",
+      "title": "Tanzania Wildlife Safari Encounter",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.11 (1).jpeg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 74,
+      "category": "vehicles",
+      "title": "Custom 4x4 Safari Land Cruiser on Game Drive",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.11 (2).jpeg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 75,
+      "category": "accommodations",
+      "title": "Luxury Bush Tented Camp at Dusk",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.11 (3).jpeg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 76,
+      "category": "cultural",
+      "title": "Authentic Maasai Cultural Boma Experience",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.11.jpeg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 77,
+      "category": "wildlife",
+      "title": "Tanzania Wildlife Safari Encounter",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.12 (1).jpeg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 78,
+      "category": "vehicles",
+      "title": "Custom 4x4 Safari Land Cruiser on Game Drive",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.12 (2).jpeg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 79,
+      "category": "accommodations",
+      "title": "Luxury Bush Tented Camp at Dusk",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.12.jpeg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 80,
+      "category": "cultural",
+      "title": "Authentic Maasai Cultural Boma Experience",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.13 (1).jpeg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 81,
+      "category": "wildlife",
+      "title": "Tanzania Wildlife Safari Encounter",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.13 (2).jpeg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 82,
+      "category": "vehicles",
+      "title": "Custom 4x4 Safari Land Cruiser on Game Drive",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.13 (3).jpeg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 83,
+      "category": "accommodations",
+      "title": "Luxury Bush Tented Camp at Dusk",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.13 (4).jpeg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 84,
+      "category": "cultural",
+      "title": "Authentic Maasai Cultural Boma Experience",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.13.jpeg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 85,
+      "category": "wildlife",
+      "title": "Tanzania Wildlife Safari Encounter",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.14 (1).jpeg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 86,
+      "category": "vehicles",
+      "title": "Custom 4x4 Safari Land Cruiser on Game Drive",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.14 (2).jpeg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 87,
+      "category": "accommodations",
+      "title": "Luxury Bush Tented Camp at Dusk",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.14.jpeg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 88,
+      "category": "cultural",
+      "title": "Authentic Maasai Cultural Boma Experience",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.15 (1).jpeg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 89,
+      "category": "wildlife",
+      "title": "Tanzania Wildlife Safari Encounter",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.15 (2).jpeg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 90,
+      "category": "vehicles",
+      "title": "Custom 4x4 Safari Land Cruiser on Game Drive",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.15.jpeg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 91,
+      "category": "accommodations",
+      "title": "Luxury Bush Tented Camp at Dusk",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.16 (2).jpeg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 92,
+      "category": "cultural",
+      "title": "Authentic Maasai Cultural Boma Experience",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.17.jpeg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 93,
+      "category": "wildlife",
+      "title": "Tanzania Wildlife Safari Encounter",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.18.jpeg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 94,
+      "category": "vehicles",
+      "title": "Custom 4x4 Safari Land Cruiser on Game Drive",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.19 (1).jpeg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 95,
+      "category": "accommodations",
+      "title": "Luxury Bush Tented Camp at Dusk",
+      "image": "/images/WhatsApp Image 2026-10-07 at 19.58.19.jpeg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    },
+    {
+      "id": 96,
+      "category": "zanzibar",
+      "title": "Zanzibar White Sands & Turquoise Ocean",
+      "image": "/images/zanzibar_beach.jpg",
+      "caption": "Authentic moments captured on safari with Malunda Explorers in Tanzania."
+    }
+  ],
+  "bookings": [
+    {
+      "booking_ref": "ME-2026-3784",
+      "created_at": "2026-10-14T14:45:21.792Z",
+      "safari_id": "7-day-northern-circuit-signature",
+      "safari_name": "7-Day Northern Circuit Signature Safari",
+      "travel_date": "2027-04-14",
+      "duration_days": 7,
+      "travelers": {
+        "adults": 2,
+        "children": 0,
+        "rooms": 1,
+        "children_ages": "",
+        "special_requirements": ""
+      },
+      "accommodation_tier": "mid-range",
+      "accommodation_name": "Mid-Range Safari Lodges",
+      "extras": [],
+      "customer": {
+        "full_name": "Eleanor Vance",
+        "email": "test.traveler.mv881zo8@example.com",
+        "phone": "+1 555 789 0123",
+        "country": "Canada",
+        "contact_method": "WhatsApp",
+        "flight_info": "",
+        "dietary": "",
+        "special_requests": "",
+        "pickup_location": "Kilimanjaro International Airport (JRO)"
+      },
+      "pricing": {
+        "total_price": 6900,
+        "deposit_required": 2070,
+        "balance_due": 0,
+        "base_rate": 3450,
+        "currency": "USD"
+      },
+      "payment": {
+        "method": "card",
+        "payment_type": "deposit",
+        "payment_status": "Fully Paid",
+        "amount_paid": 9970,
+        "transaction_id": "TXN-85DB22BE"
+      },
+      "booking_status": "Confirmed",
+      "internal_notes": "Online booking registered. Welcome pack and safari itinerary queued.",
+      "modification_request": {
+        "requested_at": "2026-10-14T14:45:21.803Z",
+        "new_date": "2026-11-20",
+        "notes": "Flight rescheduled by airline",
+        "status": "Pending Review"
+      }
+    },
+    {
+      "booking_ref": "ME-2026-5277",
+      "created_at": "2026-10-14T12:44:41.777Z",
+      "safari_id": "7-day-northern-circuit-signature",
+      "safari_name": "7-Day Northern Circuit Signature Safari",
+      "travel_date": "2027-04-11",
+      "duration_days": 7,
+      "travelers": {
+        "adults": 2,
+        "children": 0,
+        "rooms": 1,
+        "children_ages": "",
+        "special_requirements": ""
+      },
+      "accommodation_tier": "mid-range",
+      "accommodation_name": "Mid-Range Safari Lodges",
+      "extras": [],
+      "customer": {
+        "full_name": "Eleanor Vance",
+        "email": "test.traveler.mv83qt93@example.com",
+        "phone": "+1 555 789 0123",
+        "country": "Canada",
+        "contact_method": "WhatsApp",
+        "flight_info": "",
+        "dietary": "",
+        "special_requests": "",
+        "pickup_location": "Kilimanjaro International Airport (JRO)"
+      },
+      "pricing": {
+        "total_price": 6900,
+        "deposit_required": 2070,
+        "balance_due": 0,
+        "base_rate": 3450,
+        "currency": "USD"
+      },
+      "payment": {
+        "method": "card",
+        "payment_type": "deposit",
+        "payment_status": "Fully Paid",
+        "amount_paid": 9970,
+        "transaction_id": "TXN-967408D2"
+      },
+      "booking_status": "Confirmed",
+      "internal_notes": "Online booking registered. Welcome pack and safari itinerary queued.",
+      "modification_request": {
+        "requested_at": "2026-10-14T12:44:41.787Z",
+        "new_date": "2026-11-20",
+        "notes": "Flight rescheduled by airline",
+        "status": "Pending Review"
+      }
+    },
+    {
+      "booking_ref": "ME-2026-3759",
+      "created_at": "2026-10-07T16:33:43.405Z",
+      "safari_id": "7-day-northern-circuit-signature",
+      "safari_name": "7-Day Northern Circuit Signature Safari",
+      "travel_date": "2026-12-20",
+      "duration_days": 7,
+      "travelers": {
+        "adults": 2,
+        "children": 0,
+        "rooms": 1
+      },
+      "accommodation_tier": "luxury",
+      "accommodation_name": "Luxury Tented Lodges",
+      "extras": [],
+      "customer": {
+        "fullName": "Alexander Wright",
+        "email": "awright@example.com",
+        "phone": "+44 7123 456789",
+        "country": "United Kingdom"
+      },
+      "pricing": {
+        "total": 11450,
+        "depositAmount": 3435,
+        "balanceDue": 8015
+      },
+      "payment": {
+        "method": "card",
+        "payment_status": "Deposit Paid",
+        "amount_paid": 3435,
+        "transaction_id": "TXN-01WXP88T"
+      },
+      "booking_status": "Confirmed",
+      "internal_notes": "Online booking registered. Welcome pack queued."
+    },
+    {
+      "booking_ref": "ME-2026-8320",
+      "created_at": "2026-10-07T16:21:36.855Z",
+      "safari_id": "5-day-serengeti-ngorongoro-safari",
+      "safari_name": "5-Day Serengeti & Ngorongoro Explorer",
+      "travel_date": "2026-10-22",
+      "duration_days": 5,
+      "travelers": {
+        "adults": 1,
+        "children": 0,
+        "rooms": 1,
+        "special_requirements": "testing Additionnal"
+      },
+      "accommodation_tier": "budget",
+      "accommodation_name": "Budget",
+      "extras": [
+        "olduvai_gorge"
+      ],
+      "customer": {
+        "fullName": "Anderson Ninga",
+        "email": "andersonninga43@gmail.com",
+        "phone": "+255625838226",
+        "whatsapp": "+255625838226",
+        "country": "Tanzania",
+        "contactMethod": "Email",
+        "flightInfo": "KLM",
+        "dietary": "Vegeterian",
+        "specialRequests": "testing Additionnal"
+      },
+      "pricing": {
+        "basePricePerAdult": 2190,
+        "adjustedPerAdult": 1862,
+        "adultsTotal": 1862,
+        "childrenTotal": 0,
+        "extrasTotal": 45,
+        "subtotal": 1907,
+        "total": 1907,
+        "depositAmount": 572,
+        "balanceDue": 1335
+      },
+      "payment": {
+        "method": "card",
+        "payment_status": "Deposit Paid",
+        "amount_paid": 572,
+        "transaction_id": "TXN-ST64KUHG"
+      },
+      "booking_status": "Confirmed",
+      "internal_notes": "Online booking registered. Welcome pack queued."
+    },
+    {
+      "booking_ref": "ME-2026-0001",
+      "created_at": "2026-09-28T10:15:00Z",
+      "safari_id": "7-day-northern-circuit-signature",
+      "safari_name": "7-Day Northern Circuit Signature Safari",
+      "travel_date": "2026-11-15",
+      "duration_days": 7,
+      "travelers": {
+        "adults": 2,
+        "children": 0,
+        "rooms": 1,
+        "special_requirements": "Vegetarian meals requested for one traveler."
+      },
+      "accommodation_tier": "luxury",
+      "accommodation_name": "Luxury Tented Lodges",
+      "extras": [
+        "balloon_safari",
+        "airport_transfers"
+      ],
+      "customer": {
+        "full_name": "Marcus & Sarah Jenkins",
+        "email": "marcus.jenkins@example.co.uk",
+        "phone": "+44 7700 900123",
+        "whatsapp": "+447700900123",
+        "country": "United Kingdom",
+        "contact_method": "WhatsApp",
+        "flight_info": "KLM Flight 569 arriving JRO 20:30"
+      },
+      "pricing": {
+        "base_per_person": 3450,
+        "tier_multiplier": 1.45,
+        "adjusted_base_per_person": 5002.5,
+        "total_travelers_price": 10005,
+        "extras_total": 1258,
+        "subtotal": 11263,
+        "taxes": 0,
+        "total_price": 11263,
+        "deposit_required": 3378.9,
+        "balance_due": 7884.1
+      },
+      "payment": {
+        "method": "card",
+        "method_name": "Credit / Debit Card (Visa)",
+        "amount_paid": 3378.9,
+        "payment_status": "Deposit Paid",
+        "transaction_id": "TXN-CRD-984210"
+      },
+      "booking_status": "Confirmed",
+      "internal_notes": "Lodge rooms confirmed at Melia Serengeti and Ngorongoro Serena. Balloon flight voucher issued with Serengeti Balloon Safaris."
+    },
+    {
+      "booking_ref": "ME-2026-0002",
+      "created_at": "2026-10-01T14:40:00Z",
+      "safari_id": "5-day-serengeti-ngorongoro-safari",
+      "safari_name": "5-Day Serengeti & Ngorongoro Explorer",
+      "travel_date": "2026-12-05",
+      "duration_days": 5,
+      "travelers": {
+        "adults": 4,
+        "children": 0,
+        "rooms": 2,
+        "special_requirements": "Please arrange twin beds for room 2."
+      },
+      "accommodation_tier": "mid-range",
+      "accommodation_name": "Mid-Range Safari Lodges",
+      "extras": [
+        "maasai_visit",
+        "private_vehicle"
+      ],
+      "customer": {
+        "full_name": "Henrik Lindqvist",
+        "email": "henrik.l@nordic-travel.se",
+        "phone": "+46 70 123 4567",
+        "whatsapp": "+46701234567",
+        "country": "Sweden",
+        "contact_method": "Email",
+        "flight_info": "Ethiopian Airlines ET815 arriving JRO 12:45"
+      },
+      "pricing": {
+        "base_per_person": 2190,
+        "tier_multiplier": 1,
+        "adjusted_base_per_person": 2190,
+        "total_travelers_price": 8760,
+        "extras_total": 1510,
+        "subtotal": 10270,
+        "taxes": 0,
+        "total_price": 10270,
+        "deposit_required": 3081,
+        "balance_due": 7189
+      },
+      "payment": {
+        "method": "bank_transfer",
+        "method_name": "Direct Bank Wire Transfer",
+        "amount_paid": 10270,
+        "payment_status": "Fully Paid",
+        "transaction_id": "WIRE-SEB-5510294"
+      },
+      "booking_status": "Fully Paid",
+      "internal_notes": "Full payment received via CRDB SWIFT wire. Guide assigned: Jackson Mushi."
+    },
+    {
+      "booking_ref": "ME-2026-0003",
+      "created_at": "2026-10-05T09:20:00Z",
+      "safari_id": "9-day-honeymoon-safari-zanzibar",
+      "safari_name": "9-Day Bush to Beach: Romance & Zanzibar",
+      "travel_date": "2027-01-10",
+      "duration_days": 9,
+      "travelers": {
+        "adults": 2,
+        "children": 0,
+        "rooms": 1,
+        "special_requirements": "Honeymoon celebration, flower bed decoration."
+      },
+      "accommodation_tier": "luxury",
+      "accommodation_name": "Romantic Boutique Lodges & Resort",
+      "extras": [
+        "celebration_package",
+        "bush_dinner"
+      ],
+      "customer": {
+        "full_name": "Lucas & Sophia Moreau",
+        "email": "sophia.moreau@paris-design.fr",
+        "phone": "+33 6 12 34 56 78",
+        "whatsapp": "+33612345678",
+        "country": "France",
+        "contact_method": "WhatsApp",
+        "flight_info": "Air France AF812 to JRO, departing ZNZ on Qatar Airways"
+      },
+      "pricing": {
+        "base_per_person": 4200,
+        "tier_multiplier": 1.45,
+        "adjusted_base_per_person": 6090,
+        "total_travelers_price": 12180,
+        "extras_total": 420,
+        "subtotal": 12600,
+        "taxes": 0,
+        "total_price": 12600,
+        "deposit_required": 3780,
+        "balance_due": 8820
+      },
+      "payment": {
+        "method": "deposit_only",
+        "method_name": "Deposit Payment (30%)",
+        "amount_paid": 3780,
+        "payment_status": "Deposit Paid",
+        "transaction_id": "TXN-STRIPE-88219"
+      },
+      "booking_status": "Confirmed",
+      "internal_notes": "Honeymoon welcome champagne confirmed at Melia Serengeti and The Residence Zanzibar."
+    },
+    {
+      "booking_ref": "ME-2026-0004",
+      "created_at": "2026-10-06T16:10:00Z",
+      "safari_id": "great-migration-safari",
+      "safari_name": "8-Day Great Migration & Mara River Crossing",
+      "travel_date": "2027-08-15",
+      "duration_days": 8,
+      "travelers": {
+        "adults": 2,
+        "children": 0,
+        "rooms": 1,
+        "special_requirements": "Photography focus - please ensure window seats and charging adapters."
+      },
+      "accommodation_tier": "luxury",
+      "accommodation_name": "Luxury Mobile Tented Camps",
+      "extras": [
+        "balloon_safari",
+        "airport_transfers"
+      ],
+      "customer": {
+        "full_name": "Christopher Vance",
+        "email": "cvance@wildlifephotos.com",
+        "phone": "+1 415 889 2011",
+        "whatsapp": "+14158892011",
+        "country": "United States",
+        "contact_method": "Email",
+        "flight_info": "Delta/KLM into JRO"
+      },
+      "pricing": {
+        "base_per_person": 4850,
+        "tier_multiplier": 1.45,
+        "adjusted_base_per_person": 7032.5,
+        "total_travelers_price": 14065,
+        "extras_total": 1258,
+        "subtotal": 15323,
+        "taxes": 0,
+        "total_price": 15323,
+        "deposit_required": 4596.9,
+        "balance_due": 10726.1
+      },
+      "payment": {
+        "method": "card",
+        "method_name": "Credit Card",
+        "amount_paid": 0,
+        "payment_status": "Unpaid",
+        "transaction_id": ""
+      },
+      "booking_status": "Pending",
+      "internal_notes": "Pending client credit card auth for deposit. Kogatende migration camp held on 48h provisional hold."
+    }
+  ],
+  "inquiries": [
+    {
+      "id": "INQ-MV881ZPY",
+      "created_at": "2026-10-14T14:45:21.814Z",
+      "full_name": "Marcus & Clara Vance",
+      "email": "marcus@example.com",
+      "phone": "+44 7900 123456",
+      "country": "United Kingdom",
+      "travel_dates": "August 2027",
+      "travelers": "2 Adults",
+      "duration": "8-10 days",
+      "budget": "$5,000 - $8,000",
+      "destinations": "Serengeti, Ngorongoro, Zanzibar",
+      "safari_style": "Luxury Tented Safari",
+      "accommodation": "Luxury Boutique Camps",
+      "message": "Looking for a private safari with hot air balloon over Serengeti.",
+      "status": "New Inquiry"
+    },
+    {
+      "id": "INQ-MV83QTAV",
+      "created_at": "2026-10-14T12:44:41.815Z",
+      "full_name": "Marcus & Clara Vance",
+      "email": "marcus@example.com",
+      "phone": "+44 7900 123456",
+      "country": "United Kingdom",
+      "travel_dates": "August 2027",
+      "travelers": "2 Adults",
+      "duration": "8-10 days",
+      "budget": "$5,000 - $8,000",
+      "destinations": "Serengeti, Ngorongoro, Zanzibar",
+      "safari_style": "Luxury Tented Safari",
+      "accommodation": "Luxury Boutique Camps",
+      "message": "Looking for a private safari with hot air balloon over Serengeti.",
+      "status": "New Inquiry"
+    },
+    {
+      "id": "INQ-MV83OT5M",
+      "created_at": "2026-10-14T12:43:08.314Z",
+      "full_name": "Marcus & Clara Vance",
+      "email": "marcus@example.com",
+      "phone": "+44 7900 123456",
+      "country": "United Kingdom",
+      "travel_dates": "August 2027",
+      "travelers": "2 Adults",
+      "duration": "8-10 days",
+      "budget": "$5,000 - $8,000",
+      "destinations": "Serengeti, Ngorongoro, Zanzibar",
+      "safari_style": "Luxury Tented Safari",
+      "accommodation": "Luxury Boutique Camps",
+      "message": "Looking for a private safari with hot air balloon over Serengeti.",
+      "status": "New Inquiry"
+    },
+    {
+      "id": "INQ-MV83JVDZ",
+      "created_at": "2026-10-14T12:39:17.927Z",
+      "full_name": "Marcus & Clara Vance",
+      "email": "marcus@example.com",
+      "phone": "+44 7900 123456",
+      "country": "United Kingdom",
+      "travel_dates": "August 2027",
+      "travelers": "2 Adults",
+      "duration": "8-10 days",
+      "budget": "$5,000 - $8,000",
+      "destinations": "Serengeti, Ngorongoro, Zanzibar",
+      "safari_style": "Luxury Tented Safari",
+      "accommodation": "Luxury Boutique Camps",
+      "message": "Looking for a private safari with hot air balloon over Serengeti.",
+      "status": "New Inquiry"
+    },
+    {
+      "id": "INQ-MV83IKKZ",
+      "created_at": "2026-10-14T12:38:17.267Z",
+      "full_name": "Marcus & Clara Vance",
+      "email": "marcus@example.com",
+      "phone": "+44 7900 123456",
+      "country": "United Kingdom",
+      "travel_dates": "August 2027",
+      "travelers": "2 Adults",
+      "duration": "8-10 days",
+      "budget": "$5,000 - $8,000",
+      "destinations": "Serengeti, Ngorongoro, Zanzibar",
+      "safari_style": "Luxury Tented Safari",
+      "accommodation": "Luxury Boutique Camps",
+      "message": "Looking for a private safari with hot air balloon over Serengeti.",
+      "status": "New Inquiry"
+    }
+  ],
+  "payment_transactions": [
+    {
+      "transaction_id": "TXN-MAN-MV881ZQ3",
+      "booking_ref": "ME-2026-3784",
+      "payment_method": "Bank Wire Transfer",
+      "amount": 1000,
+      "currency": "USD",
+      "status": "completed",
+      "gateway": "Admin Manual Entry (Receipt #CRDB-889911)",
+      "created_at": "2026-10-14T14:45:21.819Z",
+      "verified": true
+    },
+    {
+      "transaction_id": "TXN-WEBHOOK-1791989121806",
+      "booking_ref": "ME-2026-3784",
+      "payment_method": "Stripe Verified",
+      "amount": 6900,
+      "currency": "USD",
+      "status": "completed",
+      "gateway": "Stripe Verified",
+      "created_at": "2026-10-14T14:45:21.808Z",
+      "verified": true
+    },
+    {
+      "transaction_id": "TXN-85DB22BE",
+      "booking_ref": "ME-2026-3784",
+      "payment_method": "card",
+      "payment_type": "deposit",
+      "amount": 2070,
+      "currency": "USD",
+      "status": "completed",
+      "gateway": "Secure PCI Card Sandbox",
+      "created_at": "2026-10-14T14:45:21.792Z",
+      "verified": true
+    },
+    {
+      "transaction_id": "TXN-MAN-MV83QTB0",
+      "booking_ref": "ME-2026-5277",
+      "payment_method": "Bank Wire Transfer",
+      "amount": 1000,
+      "currency": "USD",
+      "status": "completed",
+      "gateway": "Admin Manual Entry (Receipt #CRDB-889911)",
+      "created_at": "2026-10-14T12:44:41.820Z",
+      "verified": true
+    },
+    {
+      "transaction_id": "TXN-WEBHOOK-1791981881807",
+      "booking_ref": "ME-2026-5277",
+      "payment_method": "Stripe Verified",
+      "amount": 6900,
+      "currency": "USD",
+      "status": "completed",
+      "gateway": "Stripe Verified",
+      "created_at": "2026-10-14T12:44:41.809Z",
+      "verified": true
+    },
+    {
+      "transaction_id": "TXN-967408D2",
+      "booking_ref": "ME-2026-5277",
+      "payment_method": "card",
+      "payment_type": "deposit",
+      "amount": 2070,
+      "currency": "USD",
+      "status": "completed",
+      "gateway": "Secure PCI Card Sandbox",
+      "created_at": "2026-10-14T12:44:41.777Z",
+      "verified": true
+    },
+    {
+      "transaction_id": "TXN-MAN-MV83JVE4",
+      "booking_ref": "ME-2026-8236",
+      "payment_method": "Bank Wire Transfer",
+      "amount": 1000,
+      "currency": "USD",
+      "status": "completed",
+      "gateway": "Admin Manual Entry (Receipt #CRDB-889911)",
+      "created_at": "2026-10-14T12:39:17.932Z",
+      "verified": true
+    },
+    {
+      "transaction_id": "TXN-WEBHOOK-1791981557911",
+      "booking_ref": "ME-2026-8236",
+      "payment_method": "Stripe Verified",
+      "amount": 6900,
+      "currency": "USD",
+      "status": "completed",
+      "gateway": "Stripe Verified",
+      "created_at": "2026-10-14T12:39:17.913Z",
+      "verified": true
+    },
+    {
+      "transaction_id": "TXN-031D81CC",
+      "booking_ref": "ME-2026-8236",
+      "payment_method": "card",
+      "payment_type": "deposit",
+      "amount": 2070,
+      "currency": "USD",
+      "status": "completed",
+      "gateway": "Secure PCI Card Sandbox",
+      "created_at": "2026-10-14T12:39:17.894Z",
+      "verified": true
+    },
+    {
+      "transaction_id": "TXN-MAN-MV83IKL3",
+      "booking_ref": "ME-2026-1824",
+      "payment_method": "Bank Wire Transfer",
+      "amount": 1000,
+      "currency": "USD",
+      "status": "completed",
+      "gateway": "Admin Manual Entry (Receipt #CRDB-889911)",
+      "created_at": "2026-10-14T12:38:17.271Z",
+      "verified": true
+    },
+    {
+      "transaction_id": "TXN-WEBHOOK-1791981497258",
+      "booking_ref": "ME-2026-1824",
+      "payment_method": "Stripe Verified",
+      "amount": 6900,
+      "currency": "USD",
+      "status": "completed",
+      "gateway": "Stripe Verified",
+      "created_at": "2026-10-14T12:38:17.259Z",
+      "verified": true
+    },
+    {
+      "transaction_id": "TXN-33BA1749",
+      "booking_ref": "ME-2026-1824",
+      "payment_method": "card",
+      "payment_type": "deposit",
+      "amount": 2070,
+      "currency": "USD",
+      "status": "completed",
+      "gateway": "Secure PCI Card Sandbox",
+      "created_at": "2026-10-14T12:38:17.240Z",
+      "verified": true
+    },
+    {
+      "transaction_id": "TXN-01WXP88T",
+      "booking_ref": "ME-2026-3759",
+      "payment_method": "card",
+      "payment_type": "deposit",
+      "amount": 3435,
+      "currency": "USD",
+      "status": "completed",
+      "gateway": "Stripe Sandbox",
+      "created_at": "2026-10-07T16:35:00.000Z",
+      "verified": true
+    }
+  ],
+  "blackout_dates": [
+    "2026-12-25",
+    "2027-01-01"
+  ],
+  "capacity_per_departure": 6,
+  "audit_logs": [
+    {
+      "timestamp": "2026-10-14T14:45:21.819Z",
+      "action": "OFFLINE_PAYMENT_RECORDED",
+      "ref": "ME-2026-3784",
+      "actor": "Admin Staff",
+      "details": "Recorded offline payment of $1000 via Bank Wire Transfer. Receipt: CRDB-889911. Note: Received wire transfer at Arusha HQ"
+    },
+    {
+      "timestamp": "2026-10-14T14:45:21.808Z",
+      "action": "WEBHOOK_PROCESSED",
+      "ref": "ME-2026-3784",
+      "actor": "Payment Gateway",
+      "details": "Received verified payment webhook for $6900. Status: completed"
+    },
+    {
+      "timestamp": "2026-10-14T14:45:21.803Z",
+      "action": "MODIFICATION_REQUESTED",
+      "ref": "ME-2026-3784",
+      "actor": "test.traveler.mv881zo8@example.com",
+      "details": "Requested new travel date: 2026-11-20. Note: Flight rescheduled by airline"
+    },
+    {
+      "timestamp": "2026-10-14T14:45:21.792Z",
+      "action": "BOOKING_CREATED",
+      "ref": "ME-2026-3784",
+      "actor": "Eleanor Vance (test.traveler.mv881zo8@example.com)",
+      "details": "Booking created for 7-Day Northern Circuit Signature Safari on 2027-04-14. Total: $6900"
+    },
+    {
+      "timestamp": "2026-10-14T12:44:41.820Z",
+      "action": "OFFLINE_PAYMENT_RECORDED",
+      "ref": "ME-2026-5277",
+      "actor": "Admin Staff",
+      "details": "Recorded offline payment of $1000 via Bank Wire Transfer. Receipt: CRDB-889911. Note: Received wire transfer at Arusha HQ"
+    },
+    {
+      "timestamp": "2026-10-14T12:44:41.809Z",
+      "action": "WEBHOOK_PROCESSED",
+      "ref": "ME-2026-5277",
+      "actor": "Payment Gateway",
+      "details": "Received verified payment webhook for $6900. Status: completed"
+    },
+    {
+      "timestamp": "2026-10-14T12:44:41.787Z",
+      "action": "MODIFICATION_REQUESTED",
+      "ref": "ME-2026-5277",
+      "actor": "test.traveler.mv83qt93@example.com",
+      "details": "Requested new travel date: 2026-11-20. Note: Flight rescheduled by airline"
+    },
+    {
+      "timestamp": "2026-10-14T12:44:41.777Z",
+      "action": "BOOKING_CREATED",
+      "ref": "ME-2026-5277",
+      "actor": "Eleanor Vance (test.traveler.mv83qt93@example.com)",
+      "details": "Booking created for 7-Day Northern Circuit Signature Safari on 2027-04-11. Total: $6900"
+    },
+    {
+      "timestamp": "2026-10-14T12:39:17.932Z",
+      "action": "OFFLINE_PAYMENT_RECORDED",
+      "ref": "ME-2026-8236",
+      "actor": "Admin Staff",
+      "details": "Recorded offline payment of $1000 via Bank Wire Transfer. Receipt: CRDB-889911. Note: Received wire transfer at Arusha HQ"
+    },
+    {
+      "timestamp": "2026-10-14T12:39:17.913Z",
+      "action": "WEBHOOK_PROCESSED",
+      "ref": "ME-2026-8236",
+      "actor": "Payment Gateway",
+      "details": "Received verified payment webhook for $6900. Status: completed"
+    },
+    {
+      "timestamp": "2026-10-14T12:39:17.905Z",
+      "action": "MODIFICATION_REQUESTED",
+      "ref": "ME-2026-8236",
+      "actor": "test.traveler.1791981557892@example.com",
+      "details": "Requested new travel date: 2026-11-20. Note: Flight rescheduled by airline"
+    },
+    {
+      "timestamp": "2026-10-14T12:39:17.894Z",
+      "action": "BOOKING_CREATED",
+      "ref": "ME-2026-8236",
+      "actor": "Eleanor Vance (test.traveler.1791981557892@example.com)",
+      "details": "Booking created for 7-Day Northern Circuit Signature Safari on 2026-11-15. Total: $6900"
+    },
+    {
+      "timestamp": "2026-10-14T12:38:17.271Z",
+      "action": "OFFLINE_PAYMENT_RECORDED",
+      "ref": "ME-2026-1824",
+      "actor": "Admin Staff",
+      "details": "Recorded offline payment of $1000 via Bank Wire Transfer. Receipt: CRDB-889911. Note: Received wire transfer at Arusha HQ"
+    },
+    {
+      "timestamp": "2026-10-14T12:38:17.259Z",
+      "action": "WEBHOOK_PROCESSED",
+      "ref": "ME-2026-1824",
+      "actor": "Payment Gateway",
+      "details": "Received verified payment webhook for $6900. Status: completed"
+    },
+    {
+      "timestamp": "2026-10-14T12:38:17.253Z",
+      "action": "MODIFICATION_REQUESTED",
+      "ref": "ME-2026-1824",
+      "actor": "test.traveler.1791981497238@example.com",
+      "details": "Requested new travel date: 2026-11-20. Note: Flight rescheduled by airline"
+    },
+    {
+      "timestamp": "2026-10-14T12:38:17.241Z",
+      "action": "BOOKING_CREATED",
+      "ref": "ME-2026-1824",
+      "actor": "Eleanor Vance (test.traveler.1791981497238@example.com)",
+      "details": "Booking created for 7-Day Northern Circuit Signature Safari on 2026-11-15. Total: $6900"
+    },
+    {
+      "timestamp": "2026-10-07T16:33:43.405Z",
+      "action": "BOOKING_CREATED",
+      "ref": "ME-2026-3759",
+      "actor": "Customer (Online)",
+      "details": "Initial booking registered for 7-Day Northern Circuit Signature"
+    }
+  ]
+}
