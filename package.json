@@ -1,0 +1,24 @@
+{
+  "name": "malunda-explorers",
+  "version": "1.0.0",
+  "description": "Premium Tanzania Safari & Travel Booking System",
+  "main": "server.js",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test": "node test/booking-system.test.js"
+  },
+  "keywords": [
+    "tanzania",
+    "safari",
+    "booking",
+    "serengeti",
+    "travel",
+    "malunda"
+  ],
+  "author": "Malunda Explorers",
+  "license": "GPL-2.0"
+}
