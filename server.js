@@ -312,8 +312,14 @@ const server = http.createServer((req, res) => {
   const pathname = parsed.pathname;
 
   // Serve static files from public directory (CSS, JS, Images, etc.)
-  if (pathname.startsWith('/css/') || pathname.startsWith('/js/') || pathname.startsWith('/images/')) {
-    const filePath = path.join(PUBLIC_DIR, pathname);
+  // Supports both direct /css/style.css and relative paths like /safaris/css/style.css
+  let staticPath = pathname;
+  if (staticPath.includes('/css/')) staticPath = staticPath.slice(staticPath.indexOf('/css/'));
+  else if (staticPath.includes('/js/')) staticPath = staticPath.slice(staticPath.indexOf('/js/'));
+  else if (staticPath.includes('/images/')) staticPath = staticPath.slice(staticPath.indexOf('/images/'));
+
+  if (staticPath.startsWith('/css/') || staticPath.startsWith('/js/') || staticPath.startsWith('/images/')) {
+    const filePath = path.join(PUBLIC_DIR, staticPath);
     if (fs.existsSync(filePath) && fs.statSync(filePath).isFile()) {
       const ext = path.extname(filePath).toLowerCase();
       const mimeTypes = {
