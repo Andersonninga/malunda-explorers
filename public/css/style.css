@@ -396,7 +396,7 @@ ul, ol {
   align-items: center;
   justify-content: center;
   background: linear-gradient(rgba(15, 34, 21, 0.55), rgba(15, 34, 21, 0.72)),
-              url('/images/malunda-safari-001.jpg') center/cover no-repeat;
+              url('../images/malunda-safari-001.jpg') center/cover no-repeat;
   color: #ffffff;
   text-align: center;
   padding: 6rem 1.5rem 8rem;
